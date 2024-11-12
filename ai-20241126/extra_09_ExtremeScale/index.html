@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/E09_Ray/">
+        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_09_ExtremeScale/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Hands-on: Hyper-parameter tuning the PyTorch model using Ray - LUMI training materials</title>
+        <title>Extreme-scale AI - LUMI training materials</title>
       
     
     
@@ -114,9 +114,9 @@
 
   
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LUMI training materials - Hands-on: Hyper-parameter tuning the PyTorch model using Ray" />
+  <meta property="og:title" content="LUMI training materials - Extreme-scale AI" />
   <meta property="og:description" content="None" />
-  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/E09_Ray/" />
+  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_09_ExtremeScale/" />
   <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1080" />
@@ -126,7 +126,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LUMIhpc" />
   <meta name="twitter:creator" content="@LUMIhpc" />
-  <meta name="twitter:title" content="LUMI training materials - Hands-on: Hyper-parameter tuning the PyTorch model using Ray" />
+  <meta name="twitter:title" content="LUMI training materials - Extreme-scale AI" />
   <meta name="twitter:description" content="None" />
   <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
 
@@ -188,7 +188,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hands-on-hyper-parameter-tuning-the-pytorch-model-using-ray" class="md-skip">
+        <a href="#extreme-scale-ai" class="md-skip">
           Skip to content
         </a>
       
@@ -245,7 +245,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hands-on: Hyper-parameter tuning the PyTorch model using Ray
+              Extreme-scale AI
             
           </span>
         </div>
@@ -2939,6 +2939,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#extra-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#qa" class="md-nav__link">
     <span class="md-ellipsis">
       Q&amp;A
@@ -2962,12 +2971,48 @@
                   
 
 
-<h1 id="hands-on-hyper-parameter-tuning-the-pytorch-model-using-ray">Hands-on: Hyper-parameter tuning the PyTorch model using Ray<a class="headerlink" href="#hands-on-hyper-parameter-tuning-the-pytorch-model-using-ray" title="Permanent link">&para;</a></h1>
+<h1 id="extreme-scale-ai">Extreme-scale AI<a class="headerlink" href="#extreme-scale-ai" title="Permanent link">&para;</a></h1>
+<p><em>Presenters:</em> Samuel Antão (AMD) and Harvey Richardson (HPE)</p>
+<p>Content:</p>
+<ul>
+<li>Model parallelism on LUMI via FSDP or DeepSpeed</li>
+<li>Scaling beyond a single node </li>
+<li>Loading training data from Lustre and LUMI-O</li>
+</ul>
 <!--
-[Exercises on the course GitHub](https://github.com/Lumi-supercomputer/Getting_Started_with_AI_workshop/tree/ai-20241126/09_Hyper-parameter_tuning_using_Ray_on_LUMI).
+<video src="https://462000265.lumidata.eu/ai-20241126/recordings/10_ExtremeScale.mp4" controls="controls"></video>
 -->
 
-<!--<video src="https://462000265.lumidata.eu/ai-20241126/recordings/E09_Ray.mp4" controls="controls"></video>
+<h2 id="extra-materials">Extra materials<a class="headerlink" href="#extra-materials" title="Permanent link">&para;</a></h2>
+<!--
+-   [Presentation slides](https://462000265.lumidata.eu/ai-20241126/files/LUMI-ai-20241126-10-Extreme_scale_AI.pdf)
+-->
+
+<ul>
+<li><a href="../E09_ExtremeScale/">Demo and hands-on exercises</a></li>
+</ul>
+<!--
+## Remark: Why is binding not easier in Slurm?
+
+There are some reasons why the situation with the binding is not better:
+
+-   Slurm GPU binding is broken and uses a technique that breaks communication with RCCL and GPU-aware MPI
+
+-   One change that would offer some improvement is system-wide and would have a large impact on LUMI-C also, 
+    necessitating retraining all users and probably making some use scenarios on that partition difficult.
+
+-   It is not easy either because you can only do something with few environment variables or a pre-made script 
+    if every user would nicely request 7 cores per GPU requested. On `small-g` you now basically have a lot of 
+    fragmentation. I'm not sure if "CPU" could be redefined in Slurm to mean "1 CCD" but that might very well 
+    be the change that sysadmins told me would also be in effect on LUMI-C where it would not be appreciated by 
+    users.
+
+-   And as we say in another course: "Slurm is not a good scheduler, but we don't have a better one yet".
+    Current HPC schedulers were designed in the days that nodes had just one or 2 CPU cores and no accelerators
+    and they don't sufficiently understand the hierarchy in resources and proximity between various components.
+
+-   Preset are not easy. What may be ideal for some AI workflows may not work for others, or may not work for all
+    the other users on LUMI that do simulation or other types of data processing and analysis.
 -->
 
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>

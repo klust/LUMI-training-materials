@@ -2171,12 +2171,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/E09_Ray/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/E10_ExtremeScale/</loc>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/E09_ExtremeScale/</loc>
          <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2226,22 +2221,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_09_Ray/</loc>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_09_ExtremeScale/</loc>
          <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_10_ExtremeScale/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_11_LUMIO/</loc>
-         <lastmod>2024-11-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_12_Coupling/</loc>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20241126/extra_10_Coupling/</loc>
          <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
