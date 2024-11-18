@@ -3141,7 +3141,7 @@ aspects that are important to know to run on LUMI efficiently and define
 jobs that can scale.</p>
 <h2 id="why-do-i-kneed-to-know-this">Why do I kneed to know this?<a class="headerlink" href="#why-do-i-kneed-to-know-this" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide Why know..." loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/WhyKnow.png" /></p>
+<p><img alt="Slide Why know..." loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/WhyKnow.png" /></p>
 </figure>
 <p>You may wonder why you need to know about system architecture if all you want to do is to run 
 some programs.</p>
@@ -3191,7 +3191,7 @@ bullet of the above list. If a support team could do that, it would basically im
 do all the research that users do and much faster as they are assumed to have the answer ready in hours...</p>
 <h2 id="lumi-is">LUMI is ...<a class="headerlink" href="#lumi-is" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide LUMI is..." loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/LUMIIs.png" /></p>
+<p><img alt="Slide LUMI is..." loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/LUMIIs.png" /></p>
 </figure>
 <p>LUMI is a pre-exascale supercomputer, and not a superfast PC nor a compute cloud architecture.</p>
 <p>Each of these architectures have their own strengths and weaknesses and offer different 
@@ -3315,7 +3315,7 @@ problems (and are an important cause of those stability problems), not everythin
 hope (think of the scheduler and file system IOPS discussed later in this course), ...</p>
 <h2 id="lumi-spec-sheet-a-modular-system">LUMI spec sheet: A modular system<a class="headerlink" href="#lumi-spec-sheet-a-modular-system" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide LUMI is..." loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/LUMISpecs.png" /></p>
+<p><img alt="Slide LUMI is..." loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/LUMISpecs.png" /></p>
 </figure>
 <p>So we've already seen that LUMI is in the first place a EuroHPC pre-exascale machine.
 LUMI is built to prepare for the exascale era and to fit in the EuroHPC ecosystem. 
@@ -3400,7 +3400,7 @@ people to set it up and manage it.</p>
 <p>In this section of the course we will now build up LUMI step by step.</p>
 <h2 id="building-lumi-the-cpu-amd-7xx3-milanzen3-cpu">Building LUMI: The CPU AMD 7xx3 (Milan/Zen3) CPU<a class="headerlink" href="#building-lumi-the-cpu-amd-7xx3-milanzen3-cpu" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide The AMD EPYC 7xx3 (Milan/Zen3) CPU" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/AMDMilanCCD.png" /></p>
+<p><img alt="Slide The AMD EPYC 7xx3 (Milan/Zen3) CPU" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/AMDMilanCCD.png" /></p>
 </figure>
 <p>The LUMI-C and LUMI-G compute nodes use third generation AMD EPYC CPUs.
 Whereas Intel CPUs launched in the same period were built out of a single large
@@ -3419,7 +3419,7 @@ be found on Intel Skylake server processors and later generations. Hence the num
 of floating point operations that a core can in theory do each clock cycle is 16 (in 
 double precision) rather than the 32 some Intel processors are capable of. </p>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide The AMD EPYC 7xx3 (Milan/Zen3) CPU (2)" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/AMDMilanCPU.png" /></p>
+<p><img alt="Slide The AMD EPYC 7xx3 (Milan/Zen3) CPU (2)" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/AMDMilanCPU.png" /></p>
 </figure>
 <p>The full processor package for the AMD EPYC processors used in LUMI have
 8 such Core Complex Dies for a total of 64 cores. The <strong>caches are not
@@ -3466,7 +3466,7 @@ cores spread over all CCDs are used</strong>.</p>
 
 <h2 id="building-lumi-a-lumi-c-node">Building LUMI: a LUMI-C node<a class="headerlink" href="#building-lumi-a-lumi-c-node" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide LUMI-C node" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/AMDMilanNode.png" /></p>
+<p><img alt="Slide LUMI-C node" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/AMDMilanNode.png" /></p>
 </figure>
 <p>A compute node is then built out of two such processor packages, connected 
 through 4 16-bit wide Infinity Fabric connections with a total theoretical
@@ -3477,7 +3477,7 @@ on a single socket</strong>. Only one of the two sockets has a direct connection
 high performance Slingshot interconnect though.</p>
 <h3 id="a-strong-hierarchy-in-the-node">A strong hierarchy in the node<a class="headerlink" href="#a-strong-hierarchy-in-the-node" title="Permanent link">&para;</a></h3>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide Strong hierarchy" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/AMDMilanHierarchy.png" /></p>
+<p><img alt="Slide Strong hierarchy" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/AMDMilanHierarchy.png" /></p>
 </figure>
 <p>As can be seen from the node architecture in the previous slide, the CPU compute
 nodes have a very hierarchical architecture. When mapping an application onto 
@@ -3514,7 +3514,7 @@ CCDs in those 2 NUMA domains unless communication through the L3 threads would b
 application.</p>
 <h3 id="hierarchy-delays-in-numbers">Hierarchy: delays in numbers<a class="headerlink" href="#hierarchy-delays-in-numbers" title="Permanent link">&para;</a></h3>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide Delays in numbers" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/AMDMilanDelays.png" /></p>
+<p><img alt="Slide Delays in numbers" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/AMDMilanDelays.png" /></p>
 </figure>
 <p>This slide shows the Advanced Configuration and Power Interface
 System Locality distance Information Table (ACPI SLIT)
@@ -3532,7 +3532,7 @@ the amount of memory you require, even if that is more cores than you
 really need (and you will be billed for them).</p>
 <h2 id="building-lumi-concept-lumi-g-node">Building LUMI: Concept LUMI-G node<a class="headerlink" href="#building-lumi-concept-lumi-g-node" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide Concept LUMI-G node" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/GPUnodeConcept.png" /></p>
+<p><img alt="Slide Concept LUMI-G node" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/GPUnodeConcept.png" /></p>
 </figure>
 <p>This slide shows a conceptual view of a LUMI-G compute node. This node is
 unlike any Intel-architecture-CPU-with-NVIDIA-GPU compute node you may have 
@@ -3596,12 +3596,12 @@ see specialised accelerators for inference.</p>
 <p>But so far for the sales presentation, let's get back to reality...</p>
 <h2 id="building-lumi-what-a-lumi-g-node-really-looks-like">Building LUMI: What a LUMI-G node really looks like<a class="headerlink" href="#building-lumi-what-a-lumi-g-node-really-looks-like" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide Real LUMI-G node" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/GPUnodeReal.png" /></p>
+<p><img alt="Slide Real LUMI-G node" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/GPUnodeReal.png" /></p>
 </figure>
 <p>Or the full picture with the bandwidths added to it:</p>
 <figure>
   <img 
-    src="https://462000265.lumidata.eu/2day-next/img/lumig-node-architecture-rings.svg" 
+    src="https://462000265.lumidata.eu/2day-20241210/img/lumig-node-architecture-rings.svg" 
     width="842"
     alt="LUMI-G compute nodes overview"
   >
@@ -3728,7 +3728,7 @@ and GPU dies is all but logical:</p>
 
 <h3 id="what-the-future-looks-like">What the future looks like...<a class="headerlink" href="#what-the-future-looks-like" title="Permanent link">&para;</a></h3>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide The future we're preparing for..." loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/GPUnodeFuture.png" /></p>
+<p><img alt="Slide The future we're preparing for..." loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/GPUnodeFuture.png" /></p>
 </figure>
 <p>Some users may be annoyed by the "small" amount of memory on each node. Others
 may be annoyed by the limited CPU capacity on a node compared to some systems 
@@ -3780,7 +3780,7 @@ though that Intel will revert to a traditional design for Falcon Shores and push
 out the integrated CPU+GPU model to a later generation.</p>
 <h2 id="building-lumi-the-slingshot-interconnect">Building LUMI: The Slingshot interconnect<a class="headerlink" href="#building-lumi-the-slingshot-interconnect" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide Slingshot interconnect" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/Slingshot.png" /></p>
+<p><img alt="Slide Slingshot interconnect" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/Slingshot.png" /></p>
 </figure>
 <p>All nodes of LUMI, including the login, management and storage nodes, are linked
 together using the Slingshot interconnect (and almost all use Slingshot 11, the full
@@ -3825,7 +3825,7 @@ the switch in its group that connects to the other group, a second hop to the ot
 a third hop in the destination group to the switch the destination node is attached to.</p>
 <h2 id="assembling-lumi">Assembling LUMI<a class="headerlink" href="#assembling-lumi" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide HPE Cray EX System" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/AssemblyEX.png" /></p>
+<p><img alt="Slide HPE Cray EX System" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/AssemblyEX.png" /></p>
 </figure>
 <p>Let's now have a look at how everything connects together to the supercomputer LUMI.
 It does show that LUMI is not your standard cluster build out of standard servers.</p>
@@ -3875,7 +3875,7 @@ switch blade environment is certainly less hostile to such storage than the very
 compute blades.</p>
 <h2 id="lumi-assembled">LUMI assembled<a class="headerlink" href="#lumi-assembled" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Slide LUMI" loading="lazy" src="https://462000265.lumidata.eu/2day-next/img/LUMI-2day-next-01-Architecture/AssemblyLUMI.png" /></p>
+<p><img alt="Slide LUMI" loading="lazy" src="https://462000265.lumidata.eu/2day-20241210/img/LUMI-2day-20241210-01-Architecture/AssemblyLUMI.png" /></p>
 </figure>
 <p>This slide shows LUMI fully assembled (as least as it was at the end of 2022).</p>
 <p>At the front there are 5 rows of cabinets similar to the ones in the exploded Cray EX picture 
