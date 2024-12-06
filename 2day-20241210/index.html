@@ -24,7 +24,7 @@
     
     
       
-        <title>Supercomputing with LUMI - Online course, December 10-11, 2024 - LUMI training materials</title>
+        <title>Intro to Supercomputing with LUMI - Online course, December 10-11, 2024 - LUMI training materials</title>
       
     
     
@@ -118,7 +118,7 @@
 
   
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LUMI training materials - Supercomputing with LUMI - Online course, December 10-11, 2024" />
+  <meta property="og:title" content="LUMI training materials - Intro to Supercomputing with LUMI - Online course, December 10-11, 2024" />
   <meta property="og:description" content="None" />
   <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20241210/" />
   <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
@@ -130,7 +130,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LUMIhpc" />
   <meta name="twitter:creator" content="@LUMIhpc" />
-  <meta name="twitter:title" content="LUMI training materials - Supercomputing with LUMI - Online course, December 10-11, 2024" />
+  <meta name="twitter:title" content="LUMI training materials - Intro to Supercomputing with LUMI - Online course, December 10-11, 2024" />
   <meta name="twitter:description" content="None" />
   <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
 
@@ -192,7 +192,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#supercomputing-with-lumi-online-course-december-10-11-2024" class="md-skip">
+        <a href="#intro-to-supercomputing-with-lumi-online-course-december-10-11-2024" class="md-skip">
           Skip to content
         </a>
       
@@ -249,7 +249,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Supercomputing with LUMI - Online course, December 10-11, 2024
+              Intro to Supercomputing with LUMI - Online course, December 10-11, 2024
             
           </span>
         </div>
@@ -3274,7 +3274,7 @@
                   
 
 
-<h1 id="supercomputing-with-lumi-online-course-december-10-11-2024">Supercomputing with LUMI - Online course, December 10-11, 2024<a class="headerlink" href="#supercomputing-with-lumi-online-course-december-10-11-2024" title="Permanent link">&para;</a></h1>
+<h1 id="intro-to-supercomputing-with-lumi-online-course-december-10-11-2024">Intro to Supercomputing with LUMI - Online course, December 10-11, 2024<a class="headerlink" href="#intro-to-supercomputing-with-lumi-online-course-december-10-11-2024" title="Permanent link">&para;</a></h1>
 <h2 id="course-organisation">Course organisation<a class="headerlink" href="#course-organisation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="schedule/">Schedule</a></li>
@@ -3284,15 +3284,18 @@
 -->
 
 <ul>
-<li>Project for the course: <code>project_465001603</code>.</li>
+<li>
+<p>Project for the course: <code>project_465001603</code>.</p>
+<p>This project provides resources for the exercises. The project should not be used for your own work!</p>
+</li>
+<li>
+<p>There are two Slurm reservations for the course for the exercises on he second day:</p>
+<ul>
+<li>CPU nodes: <code>LUMI_Intro_small</code> (on the <code>small</code> Slurm partition)</li>
+<li>GPU nodes: <code>LUMI_Intro_standard-g</code> (on the <code>standard-g</code> Slurm partition)</li>
 </ul>
-<!--
--   There are two Slurm reservations for the course:
-
-    -   CPU nodes: `LUMI_Intro_SURF_small` (on the `small` Slurm partition)
-    -   GPU nodes: `LUMI_Intro_SURF_standardg` (on the `standard-g` Slurm partition)
--->
-
+</li>
+</ul>
 <!--
 ## Setting up for the exercises
 
@@ -3347,6 +3350,174 @@ materials are uploaded.</p>
 </tbody>
 </table>
 <p>Work copy during preparations:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Presentation</th>
+<th style="text-align: left;">Slides</th>
+<th style="text-align: left;">Notes</th>
+<th style="text-align: left;">Exercises</th>
+<th style="text-align: left;">Recording</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="MI01-IntroductionCourse/">Welcome and Introduction</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-I01-IntroductionCourse.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="MI01-IntroductionCourse/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduction to the course notes</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="00-Introduction/">N</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M01-Architecture/">LUMI Architecture</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-01-Architecture.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="M01-Architecture/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M02-CPE/">HPE Cray Programming Environment</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-02-CPE.pdf">S</a></td>
+<td style="text-align: left;"><a href="02-CPE/">N</a></td>
+<td style="text-align: left;"><a href="E02-CPE/">E</a></td>
+<td style="text-align: left;"><a href="M02-CPE/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M03-Access/">Getting Access to LUMI</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-03-Access.pdf">S</a></td>
+<td style="text-align: left;"><a href="03-Access/">N</a></td>
+<td style="text-align: left;"><a href="E03-Access/">E</a></td>
+<td style="text-align: left;"><a href="M03-Access/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="ME03-Exercises-1/">Exercises 1</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M04-Modules/">Modules on LUMI</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-04-Modules.pdf">S</a></td>
+<td style="text-align: left;"><a href="04-Modules/">N</a></td>
+<td style="text-align: left;"><a href="E04-Modules/">E</a></td>
+<td style="text-align: left;"><a href="M04-Modules/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="ME04-Exercises-2/">Exercises 2</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M05-SoftwareStacks/">LUMI Software Stacks</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-05-SoftwareStacks.pdf">S</a></td>
+<td style="text-align: left;"><a href="05-SoftwareStacks/">N</a></td>
+<td style="text-align: left;"><a href="E05-SoftwareStacks/">E</a></td>
+<td style="text-align: left;"><a href="M05-SoftwareStacks/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="ME05-Exercises-3/">Exercises 3</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M06-Support/">LUMI Support and Documentation</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-06-Support.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="M06-Support/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="MI02-WrapUpDay1/">Wrap-Up Day 1</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-I02-WrapUpDay1.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="MI02-WrapUpDay1/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="MI03-IntroductionDay2/">Introduction Day 2</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-I03-IntroductionDay2.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="MI03-IntroductionDay2/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M07-Slurm/">Slurm on LUMI</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-07-Slurm.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="E07-Slurm/">E</a></td>
+<td style="text-align: left;"><a href="M07-Slurm/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M08-Binding/">Process and Thread Distribution and Binding</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-08-Binding.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="E08-Binding/">E</a></td>
+<td style="text-align: left;"><a href="M08-Binding/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="ME08-Exercises-4/">Exercises 4</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M09-Lustre/">Using Lustre</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-09-Lustre.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="M09-Lustre/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M10-ObjectStorage/">Object Storage</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-10-ObjectStorage.pdf">S</a></td>
+<td style="text-align: left;"><a href="10-ObjectStorage/">N</a></td>
+<td style="text-align: left;"><a href="E10-ObjectStorage">E</a></td>
+<td style="text-align: left;"><a href="M10-ObjectStorage/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="ME10-Exercises-5/">Exercises 5</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="M11-Containers/">Containers on LUMI-C and LUMI-G</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-11-Containers.pdf">S</a></td>
+<td style="text-align: left;"><a href="11-Containers/">N</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="M11-Containers/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="MI04-WhatElse/">What Else?</a></td>
+<td style="text-align: left;"><a href="https://462000265.lumidata.eu/2day-20241210/files/LUMI-2day-20241210-I04-WhatElse.pdf">S</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="MI04-WhatElse/">V</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">A1 Additional documentation</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;"><a href="A01-Documentation/">N</a></td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+</tbody>
+</table>
+<p>Copy from previous notes, still including links to notes that are no longer valid:</p>
 <table>
 <thead>
 <tr>
