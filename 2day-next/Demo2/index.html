@@ -3355,7 +3355,7 @@ for internal testing.</p>
 <h2 id="step-1-getting-some-files-that-we-will-use">Step 1: Getting some files that we will use<a class="headerlink" href="#step-1-getting-some-files-that-we-will-use" title="Permanent link">&para;</a></h2>
 <p>Let's create an installation directory for the demo. Set the environment variable
 <code>installdir</code> to a proper value for the directories on LUMI that you have access to.</p>
-<div class="highlight"><pre><span></span><code><span class="nv">installdir</span><span class="o">=</span>/project/project_465001102/kurtlust/DEMO2
+<div class="highlight"><pre><span></span><code><span class="nv">installdir</span><span class="o">=</span>/project/project_465001603/kurtlust/DEMO2
 mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$installdir</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$installdir</span><span class="s2">&quot;</span>
 </code></pre></div>
 <p>We are now in the installation directory of which we also ensured its existence first.
@@ -3520,7 +3520,7 @@ but RCCL is basically the equivalent of NVIDIA NCCL.</p>
 </code></pre></div>
 <p>Fourth, we need to ensure that each task uses the proper GPU. This is one point where we 
 assume that one GPU (GCD) per task is used. The script also assumes that the
-<a href="../07-Binding/#linear-assignment-of-gcd-then-match-the-cores">"Linear assignment of GCD, then match the cores" idea</a>
+<a href="../08-Binding/#linear-assignment-of-gcd-then-match-the-cores">"Linear assignment of GCD, then match the cores" idea</a>
 is used, so we will need some more complicated CPU mapping in the job script.</p>
 <p>PyTorch also needs some initialisation that are basically the same on NVIDIA and
 AMD hardware. This includes setting a master for the communication (the first node of 
@@ -3554,7 +3554,7 @@ srun<span class="w"> </span>--ntasks<span class="o">=</span><span class="k">$((<
 <span class="w">    </span>conda-python-distributed<span class="w"> </span>-u<span class="w"> </span>mnist_DDP.py<span class="w"> </span>--gpu<span class="w"> </span>--modelpath<span class="w"> </span>model
 </code></pre></div>
 <p>Launch the script by setting some environment variables to use the course account and reservation:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">SBATCH_ACCOUNT</span><span class="o">=</span>project_465001102
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">SBATCH_ACCOUNT</span><span class="o">=</span>project_465001603
 <span class="nb">export</span><span class="w"> </span><span class="nv">SBATCH_RESERVATION</span><span class="o">=</span>TODO
 </code></pre></div>
 <p>and then launching the job script:</p>
