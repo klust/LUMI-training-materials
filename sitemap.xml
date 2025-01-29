@@ -393,7 +393,23 @@
          <lastmod>2025-01-29</lastmod>
     </url>
     <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/index.links.noGit/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/index.noLinks.noGit/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/schedule.links.noGit/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
          <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/schedule/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/schedule.noLinks.noGit/</loc>
          <lastmod>2025-01-29</lastmod>
     </url>
     <url>
@@ -737,7 +753,83 @@
          <lastmod>2025-01-29</lastmod>
     </url>
     <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/000-Introduction/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/101-Architecture/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/102-CPE/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/103-Access/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/104-Modules/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/105-SoftwareStacks/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/106-Support/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/201-Slurm/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/202-Binding/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/203-Lustre/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/204-ObjectStorage/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/205-Containers/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
          <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/A01-Documentation/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/E102-CPE/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/E103-Access/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/E104-Modules/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/E105-SoftwareStacks/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/E201-Slurm/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/E202-Binding/</loc>
+         <lastmod>2025-01-29</lastmod>
+    </url>
+    <url>
+         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/E204-ObjectStorage/</loc>
          <lastmod>2025-01-29</lastmod>
     </url>
     <url>
