@@ -3679,7 +3679,7 @@ these notes as not every Lmod configuration is the same.</p>
 </div>
 <h2 id="module-environments">Module environments<a class="headerlink" href="#module-environments" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Module environments" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleEnvironments.png" /></p>
+<p><img alt="Module environments" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleEnvironments.png" /></p>
 </figure>
 <p>An HPC cluster is a multi-user machine. Different users may need different 
 versions of the same application, and each user has their own preferences for
@@ -3771,7 +3771,7 @@ to track the evolution and transition to a new version at the best suited moment
 </div>
 <h2 id="exploring-modules-with-lmod">Exploring modules with Lmod<a class="headerlink" href="#exploring-modules-with-lmod" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Exploring modules with Lmod" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ExploringWithLmod.png" /></p>
+<p><img alt="Exploring modules with Lmod" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ExploringWithLmod.png" /></p>
 </figure>
 <p>Contrary to some other module systems, or even some other Lmod installations, <strong>not all modules are
 immediately available for loading</strong>. So don't be disappointed by the few modules you will see with
@@ -3814,7 +3814,7 @@ and system caches are hard to manage also.</p>
 </ul>
 <h2 id="benefits-of-a-hierarchy">Benefits of a hierarchy<a class="headerlink" href="#benefits-of-a-hierarchy" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Benefits of a hierarchy" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/BenefitsHierarchy.png" /></p>
+<p><img alt="Benefits of a hierarchy" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/BenefitsHierarchy.png" /></p>
 </figure>
 <p>When the hierarchy is well designed, you get <strong>some protection from loading modules that do
 not work together well</strong>. E.g., in the HPE Cray PE it is not possible to load the MPI
@@ -3831,9 +3831,9 @@ a different programming environment in the default login environment right after
 </code></pre></div>
 <p>which results in the next slide:</p>
 <!-- Used window size 23x95 -->
-<!-- ![module load PrgEnv-gnu](https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules-img/img_BenefitsHierarchyDemo.png) -->
+<!-- ![module load PrgEnv-gnu](https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules-img/img_BenefitsHierarchyDemo.png) -->
 <figure style="border: 1px solid #000">
-<p><img alt="module load PrgEnv-gnu" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/BenefitsHierarchyDemo.png" /></p>
+<p><img alt="module load PrgEnv-gnu" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/BenefitsHierarchyDemo.png" /></p>
 </figure>
 <p>The first two lines of output are due to to other mechanisms that are at work here, 
 and the order of the lines may seem strange but that has to do with the way Lmod works
@@ -3855,7 +3855,7 @@ when the <code>cce/17.0.1</code> module was unloaded and <code>gcc-native/13.2</
 the <code>gcc-native/13.2</code> compiler. </p>
 <h2 id="about-module-names-and-families">About module names and families<a class="headerlink" href="#about-module-names-and-families" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Module names and families" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleNamesFamilies.png" /></p>
+<p><img alt="Module names and families" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleNamesFamilies.png" /></p>
 </figure>
 <p>In Lmod you <strong>cannot have two modules with the same name loaded at the same time</strong>.
 On LUMI, when you load a module with the same name as an already loaded module, that
@@ -3895,7 +3895,7 @@ on this feature being enabled to make live easier for users.</p>
 </div>
 <h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Extensions" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleExtensions.png" /></p>
+<p><img alt="Extensions" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleExtensions.png" /></p>
 </figure>
 <p>It would not make sense to have a separate module for each of the hundreds of R
 packages or tens of Python packages that a software stack may contain.
@@ -3914,7 +3914,7 @@ information at the moment as they too contain several packages that may benefit 
 to optimised math libraries.</p>
 <h2 id="searching-for-modules-the-module-spider-command">Searching for modules: The module spider command<a class="headerlink" href="#searching-for-modules-the-module-spider-command" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpider.png" /></p>
+<p><img alt="module spider" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpider.png" /></p>
 </figure>
 <p>There are three ways to use <code>module spider</code>, discovering software in more and more detail.
 All variants however will by default only check the Cray PE, the CrayEnv stack and the
@@ -3952,10 +3952,10 @@ statement and the cache is regenerated during that period.</p>
 <p>Let's first run the <code>module spider</code> command. The output varies over time, but at the time of writing,
 and leaving out a lot of the output, one would have gotten:</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderCommand_1.png" /></p>
+<p><img alt="module spider 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderCommand_1.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderCommand_2.png" /></p>
+<p><img alt="module spider 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderCommand_2.png" /></p>
 </figure>
 <p>In the above display, the <code>ARMForge</code> module is currently available in only one version.
 The <code>Autoconf</code> package is offered in two versions, but in both cases as an extension of another
@@ -3963,7 +3963,7 @@ module as the blue <code>(E)</code> in the output shows. The <code>Blosc</code> 
 but they are not all shown as the <code>...</code> suggests.</p>
 <p>After a few more screens, we get the last one:</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider 3" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderCommand_3.png" /></p>
+<p><img alt="module spider 3" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderCommand_3.png" /></p>
 </figure>
 <p>On the second screen we see, e.g., the ARMForge module which was available in just a single version
 at that time, and then Autoconf where the version is in blue and followed by <code>(E)</code>. This denotes
@@ -3977,7 +3977,7 @@ for the command.</p>
 </code></pre></div>
 <p>produces</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider FFTW" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderFFTW.png" /></p>
+<p><img alt="module spider FFTW" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderFFTW.png" /></p>
 </figure>
 <p>This shows that the FFTW library is actually provided by the <code>cray-fftw</code> module and was at the time
 that this was tested available in 4 versions. 
@@ -3989,10 +3989,10 @@ check for a specific version, so let's run</p>
 </code></pre></div>
 <p>This produces:</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider cray-fftw/3.3.10.7" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderFFTWVersion_1.png" /></p>
+<p><img alt="module spider cray-fftw/3.3.10.7" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderFFTWVersion_1.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider cray-fftw/3.3.10.7" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderFFTWVersion_2.png" /></p>
+<p><img alt="module spider cray-fftw/3.3.10.7" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderFFTWVersion_2.png" /></p>
 </figure>
 <p>We now get a long list of possible combinations of modules that would enable us to load this module.
 What these modules are will be explained in the next session of this course. However, it does show
@@ -4006,17 +4006,17 @@ The command does work well with the software managed by the LUMI User Support Te
 next two examples will show.</p>
 <h3 id="example-3-searching-for-gnuplot">Example 3: Searching for GNUplot<a class="headerlink" href="#example-3-searching-for-gnuplot" title="Permanent link">&para;</a></h3>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider for a regular package" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderRegular.png" /></p>
+<p><img alt="module spider for a regular package" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderRegular.png" /></p>
 </figure>
 <p>To see if GNUplot is available, we'd first search for the name of the package:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>spider<span class="w"> </span>gnuplot
 </code></pre></div>
 <p>This produces:</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider GNUplot screen 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderGnuplot_1.png" /></p>
+<p><img alt="module spider GNUplot screen 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderGnuplot_1.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider GNUplot screen 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderGnuplot_2.png" /></p>
+<p><img alt="module spider GNUplot screen 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderGnuplot_2.png" /></p>
 </figure>
 <!-- The output again shows that the search is not case sensitive which is fortunate as uppercase and lowercase
 letters are not always used in the same way on different clusters. Some management tools for scientific software
@@ -4035,10 +4035,10 @@ line in terms of the other software that you will be using.</p>
 </code></pre></div>
 <p>This produces:</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider gnuplot/5.4.10-cpeGNU-24.03 screen 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderGnuplotVersion_1.png" /></p>
+<p><img alt="module spider gnuplot/5.4.10-cpeGNU-24.03 screen 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderGnuplotVersion_1.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider gnuplot/5.4.10-cpeGNU-24.03 screen 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderGnuplotVersion_2.png" /></p>
+<p><img alt="module spider gnuplot/5.4.10-cpeGNU-24.03 screen 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderGnuplotVersion_2.png" /></p>
 </figure>
 <p>In this case, this module is provided by 3 different combinations of modules that also will be explained
 in the next part of this course. Furthermore, the output of the command now also shows some help information
@@ -4050,7 +4050,7 @@ and we sometimes have to do some effort to fit all information in there.</p>
 worth looking there also.</p>
 <h3 id="example-4-searching-for-an-extension-of-a-module-cmake">Example 4: Searching for an extension of a module: CMake.<a class="headerlink" href="#example-4-searching-for-an-extension-of-a-module-cmake" title="Permanent link">&para;</a></h3>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider for extensions" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderExtensions.png" /></p>
+<p><img alt="module spider for extensions" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderExtensions.png" /></p>
 </figure>
 <p>The <code>cmake</code> command on LUMI is available in the operating system image, but as is often the case with
 such tools distributed with the OS, it is a rather old version and you may want to use a newer one.</p>
@@ -4061,7 +4061,7 @@ powers of <code>module spider</code> and try</p>
 </code></pre></div>
 <p>which produces</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider cmake" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderCMake.png" /></p>
+<p><img alt="module spider cmake" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderCMake.png" /></p>
 </figure>
 <p>The output above shows us that there are actually 3 other versions of CMake on the system, but their
 version is followed by <code>(E)</code> which says that they are extensions of other modules.
@@ -4072,7 +4072,7 @@ how to find out which module actually provides the CMake tools. So let's try</p>
 </code></pre></div>
 <p>which produces</p>
 <figure style="border: 1px solid #000">
-<p><img alt="module spider CMake/3.29.3" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleSpiderCMakeVersion_1.png" /></p>
+<p><img alt="module spider CMake/3.29.3" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleSpiderCMakeVersion_1.png" /></p>
 </figure>
 <p>This shows us that the version is provided by a number of <code>buildtools</code> modules, and for each of those
 modules also shows us which other modules should be loaded to get access to the commands. E.g.,
@@ -4089,7 +4089,7 @@ one such combination.</p>
 <p>to get even more information about the buildtools module, including any help included in the module.</p>
 <h2 id="alternative-search-the-module-keyword-command">Alternative search: the module keyword command<a class="headerlink" href="#alternative-search-the-module-keyword-command" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="module keyword" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleKeyword.png" /></p>
+<p><img alt="module keyword" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleKeyword.png" /></p>
 </figure>
 <p>Lmod has a second way of searching for modules: <code>module keyword</code>. It searches 
 in some of the information included in module files for the
@@ -4103,10 +4103,10 @@ One could try</p>
 <p>which produces the following output:</p>
 <!-- Use a window of 95x23 -->
 <figure style="border: 1px solid #000">
-<p><img alt="module keyword https screen 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleKeywordHTTPS_1.png" /></p>
+<p><img alt="module keyword https screen 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleKeywordHTTPS_1.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module keyword https screen 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleKeywordHTTPS_2.png" /></p>
+<p><img alt="module keyword https screen 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleKeywordHTTPS_2.png" /></p>
 </figure>
 <p><code>cURL</code> and <code>wget</code> are indeed 
 two tools that can be used to fetch files from the internet.</p>
@@ -4129,7 +4129,7 @@ but more about that in the tutorial section on LUMI software stacks.</p>
 </div>
 <h2 id="sticky-modules-and-the-module-purge-command">Sticky modules and the module purge command<a class="headerlink" href="#sticky-modules-and-the-module-purge-command" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Sticky modules and module purge" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/StickyModules.png" /></p>
+<p><img alt="Sticky modules and module purge" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/StickyModules.png" /></p>
 </figure>
 <p>On some systems you will be taught to avoid <code>module purge</code> as many HPC systems do their default user
 configuration also through modules. This advice is often given on Cray systems as it is a common
@@ -4152,40 +4152,40 @@ chosen a software stack but want to clean up your environment.</p>
 time of writing of these notes (the exact list of modules shown is a bit fluid):</p>
 <!-- Use a window of 95x23 -->
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_1.png" /></p>
+<p><img alt="module avail slide 1" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_1.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_2.png" /></p>
+<p><img alt="module avail slide 2" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_2.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 3" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_3.png" /></p>
+<p><img alt="module avail slide 3" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_3.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 4" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_4.png" /></p>
+<p><img alt="module avail slide 4" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_4.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 5" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_5.png" /></p>
+<p><img alt="module avail slide 5" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_5.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 6" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_6.png" /></p>
+<p><img alt="module avail slide 6" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_6.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 7" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_7.png" /></p>
+<p><img alt="module avail slide 7" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_7.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 8" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_8.png" /></p>
+<p><img alt="module avail slide 8" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_8.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 9" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_9.png" /></p>
+<p><img alt="module avail slide 9" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_9.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 10" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_10.png" /></p>
+<p><img alt="module avail slide 10" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_10.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 11" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_11.png" /></p>
+<p><img alt="module avail slide 11" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_11.png" /></p>
 </figure>
 <figure style="border: 1px solid #000">
-<p><img alt="module avail slide 12" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ModuleAvail_12.png" /></p>
+<p><img alt="module avail slide 12" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ModuleAvail_12.png" /></p>
 </figure>
 <p>Next to the names of modules you sometimes see one or more letters.
 The <code>(D)</code> means that that is currently the default version of the module, the one that will be loaded
@@ -4209,7 +4209,7 @@ the view didn't work and so that extensions that were not in available modules, 
 is fixed in current versions.</p>
 <h2 id="changing-how-the-module-list-is-displayed">Changing how the module list is displayed<a class="headerlink" href="#changing-how-the-module-list-is-displayed" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Changing how the module list is displayed" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/ChangingDisplayStyle.png" /></p>
+<p><img alt="Changing how the module list is displayed" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/ChangingDisplayStyle.png" /></p>
 </figure>
 <p>You may have noticed in the above example that we don't show directories of module files
 in the overview (as is the case on most clusters) but descriptive texts about the module group.
@@ -4274,7 +4274,7 @@ modules.</p>
 </div>
 <h2 id="getting-help-with-the-module-help-command">Getting help with the module help command<a class="headerlink" href="#getting-help-with-the-module-help-command" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="Getting help" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/GettingHelp.png" /></p>
+<p><img alt="Getting help" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/GettingHelp.png" /></p>
 </figure>
 <p>Lmod has the <code>module help</code> command to get help on modules</p>
 <div class="highlight"><pre><span></span><code>$ module help
@@ -4298,7 +4298,7 @@ $ module whatis Subversion/1.14.3
 </code></pre></div>
 <h2 id="a-note-on-caching">A note on caching<a class="headerlink" href="#a-note-on-caching" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="A note on caching" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/NoteCaching.png" /></p>
+<p><img alt="A note on caching" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/NoteCaching.png" /></p>
 </figure>
 <p>Modules are stored as (small) files in the file system. Having a large module system with
 much software preinstalled for everybody means a lot of small files which will make
@@ -4318,7 +4318,7 @@ software that is installed in the central stacks as we are not sure when that ca
 in good shape.</p>
 <h2 id="a-note-on-other-commands">A note on other commands<a class="headerlink" href="#a-note-on-other-commands" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
-<p><img alt="A note on other commands" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-04-Modules/NoteOtherCommands.png" /></p>
+<p><img alt="A note on other commands" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-104-Modules/NoteOtherCommands.png" /></p>
 </figure>
 <p>As this tutorial assumes some experience with using modules on other clusters, we haven't paid
 much attention to some of the basic commands that are mostly the same across all three
