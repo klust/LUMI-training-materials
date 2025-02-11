@@ -3530,6 +3530,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#setting-up-for-the-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up for the exercises
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#course-materials" class="md-nav__link">
     <span class="md-ellipsis">
       Course materials
@@ -3579,7 +3588,7 @@ but are natural discussions.</p>
     the system architecture, programming environments, software setup, running jobs efficiently,
     various types of data storage, and using containers which are essential for Python etc.</p>
 <p>This part of the course is largely equivalent to the previous 2-day intro courses in
-<a href="../2day-20240502/">May 2024</a> and <a href="../2day-20241210/">December 2024</a>.</p>
+<a href="../2day-20240502/">May 2024</a> and <a href="./">December 2024</a>.</p>
 </li>
 <li>
 <p>Days 3-5 of the course are at a more advanced level and focus on the needs of developers of
@@ -3655,6 +3664,44 @@ for more information on public transportation in Stockholm.</p>
 on a smartphone, will give you a QR code that you can use at ticket barriers. 
 Tickets can be bought using a credit card in the app. Physical cards are also available, but cost 50 SEK for the card, 
 plus extra for the tickets you put on it.  Credit cards can also be used with contactless pay as you go to buy a single.</p>
+</li>
+</ul>
+<h2 id="setting-up-for-the-exercises">Setting up for the exercises<a class="headerlink" href="#setting-up-for-the-exercises" title="Permanent link">&para;</a></h2>
+<p>During the course, you can use the training project <code>project_465001726</code> for the exercises.
+After the course, it is still possible to make almost all exercises in your own project.
+They need only very little resources. The <a href="E204-ObjectStorage/">"Object Storage" exercises</a>
+in <a href="ME204-Exercises-5/">Exercise session 5</a> do require data in the training project, so
+these exercises should really be made while the training project is still active. For the
+exercises from <a href="ME202-Exercises-4/">Exercise session 4</a> you can no longer use the reservation
+if they are not made during the second course day (the reservation expires at 5pm CET/ 6pm EET that
+day).</p>
+<ul>
+<li>
+<p>Create a directory in the scratch of your project, or if you want to
+    keep the exercises around for a while, in a subdirectory of your project directory 
+    or in your home directory (though we don't recommend the latter).
+    Then go into that directory.</p>
+<p>E.g., in the scratch directory of your project:</p>
+<div class="highlight"><pre><span></span><code>mkdir -p /scratch/project_465001726/course-20250303-$USER/exercises
+cd /scratch/project_465001726/course-20250303-$USER/exercises
+</code></pre></div>
+<p>where you have to replace <code>project_465001726</code> using the number of your own project.</p>
+<p>If you have no other project on LUMI, you can also use the scratch of the
+course project <code>project_465001726</code>. Do use a personal subdirectory as in the
+following commands:</p>
+<div class="highlight"><pre><span></span><code>mkdir -p /scratch/project_465001726/$USER/exercises
+cd /scratch/project_465001726/$USER/exercises
+</code></pre></div>
+</li>
+<li>
+<p>Now download the exercises and un-tar:</p>
+<div class="highlight"><pre><span></span><code>wget https://462000265.lumidata.eu/2p3day-20250303/files/exercises-20250303.tar.gz
+tar -xf exercises-20250303.tar.gz
+</code></pre></div>
+<p><a href="https://462000265.lumidata.eu/2p3day-20250303/files/exercises-20250303.tar.gz">Link to the tar-file with the exercises</a></p>
+</li>
+<li>
+<p>You're all set to go!</p>
 </li>
 </ul>
 <h2 id="course-materials">Course materials<a class="headerlink" href="#course-materials" title="Permanent link">&para;</a></h2>
