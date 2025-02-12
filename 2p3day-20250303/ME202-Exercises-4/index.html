@@ -3497,6 +3497,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercises" class="md-nav__link">
     <span class="md-ellipsis">
       Exercises
@@ -3530,50 +3539,55 @@
 
 
 <h1 id="exercises-4-running-jobs-with-slurm">Exercises 4: Running jobs with Slurm<a class="headerlink" href="#exercises-4-running-jobs-with-slurm" title="Permanent link">&para;</a></h1>
-<!--
-## Intro
-
-For these exercises, you'll need to take care of some settings:
-
--   For the CPU exercises we advise to use the `small` partition and for the 
-    exercises on GPU the `standard-g` partition.
-
--   During the course you can use the course training project `project_465001726`
+<h2 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h2>
+<p>For these exercises, you'll need to take care of some settings:</p>
+<ul>
+<li>
+<p>For the CPU exercises we advise to use the <code>small</code> partition and for the 
+    exercises on GPU the <code>standard-g</code> partition.</p>
+</li>
+<li>
+<p>During the course you can use the course training project <code>project_465001726</code>
     for these exercises. A few days after the course you will need to use a different project
-    on LUMI. 
-
--   On March 4 we have a reservation that you can use (through `#SBATCH --reservation=...`):
-
-    -   For the `small` partition, the reservation name is `LUMI_Intro_small`
-
-    -   For the `standard-g` partition, the reservation name is `LUMI_Intro_standard-g`
-
-An alternative (during the course only) for manually specifying 
+    on LUMI. </p>
+</li>
+<li>
+<p>On March 4 we have a reservation that you can use (through <code>#SBATCH --reservation=...</code>):</p>
+<ul>
+<li>
+<p>For the <code>small</code> partition, the reservation name is <code>LUMI_Intro_small</code></p>
+</li>
+<li>
+<p>For the <code>standard-g</code> partition, the reservation name is <code>LUMI_Intro_standard-g</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>An alternative (during the course only) for manually specifying 
 the account, the partition and the reservation, is to set
-them through modules. For this, first add an additional directory to the module search path:
-
+them through modules. For this, first add an additional directory to the module search path:</p>
 <div class="highlight"><pre><span></span><code>module use /appl/local/training/modules/2p3day-20250303
 </code></pre></div>
-
-and then you can load either the module `exercises/small` or `exercises/standard-g`.
-
-!!! Note "Check what these modules do..."
-    Try, e.g., 
-
-    <div class="highlight"><pre><span></span><code>module show exercises/small
+<p>and then you can load either the module <code>exercises/small</code> or <code>exercises/standard-g</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Check what these modules do...</p>
+<p>Try, e.g., </p>
+<div class="highlight"><pre><span></span><code>module show exercises/small
 </code></pre></div>
-
-    to get an idea of what these modules do. Can you see which environment variables they set?
--->
-
+<p>to get an idea of what these modules do. Can you see which environment variables they set?</p>
+</div>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
-<p>Exercises will be made available during the course</p>
-<!--
--   Start with the [exercises on "Slurm on LUMI"](E201-Slurm.md)
+<!-- Exercises will be made available during the course -->
 
--   Proceed with the [exercises on "Process and Thread Distribution and Binding"](E202-Binding.md)
--->
-
+<ul>
+<li>
+<p>Start with the <a href="../E201-Slurm/">exercises on "Slurm on LUMI"</a></p>
+<p>You may want to postpone the advanced exercise a bit as that one takes a lot of time.</p>
+</li>
+<li>
+<p>Proceed with the <a href="../E202-Binding/">exercises on "Process and Thread Distribution and Binding"</a></p>
+</li>
+</ul>
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
 <p>/</p>
 

@@ -3551,7 +3551,7 @@ You can use the <code>man taskset</code> command to see how the tool works.</p>
 </li>
 <li>
 <p>Next we'll try a hybrid MPI/OpenMP program.
-    For this we will use the <code>hybrid_check</code> tool from the <code>lumi-CPEtools</code> module of the LUMI Software Stack. 
+    For this we will use the <code>hybrid_check</code> tool from the <code>lumi-CPEtools</code> module of the LUMI Software Library. 
     This module is preinstalled on the system and has versions for all versions of the <code>LUMI</code> software stack
     and all toolchains and partitions in those stacks.</p>
 <p>Use the simple job script below to run a parallel program with multiple tasks (MPI ranks) and threads (OpenMP). 
@@ -3565,7 +3565,7 @@ Submit with <code>sbatch</code> on the CPU partition and check task and thread a
 #SBATCH --account=&lt;project_id&gt;      # Project for billing
 
 module load LUMI/24.03
-module load lumi-CPEtools/1.1-cpeGNU-24.03
+module load lumi-CPEtools/1.2-cpeGNU-24.03
 
 srun --cpus-per-task=$SLURM_CPUS_PER_TASK hybrid_check -n -r
 </code></pre></div>
@@ -3635,6 +3635,12 @@ was a newer but not fully supported <code>rocm</code> module on the system.</p>
 module load PrgEnv-cray
 module load rocm/6.0.3
 </code></pre></div>
+<p>Alternatively, you can build in the <code>LUMI/24.03</code> stack using the EasyBuild toolchain instead
+of <code>PrgEnv-cray</code>:</p>
+<div class="highlight"><pre><span></span><code>module load LUMI/24.03 partition/G cpeCray
+</code></pre></div>
+<p>In this case, you do not need to load the ROCm module as it is loaded automatically by
+<code>cpeCray/24.03</code> when working in <code>partition/G</code>.</p>
 <p>To build the code, use</p>
 <div class="highlight"><pre><span></span><code>make LMOD_SYSTEM_NAME=&quot;frontier&quot;
 </code></pre></div>

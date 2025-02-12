@@ -3525,7 +3525,7 @@
 <ol>
 <li>
 <p>We return to the hybrid MPI/OpenMP example from the
-    <a href="E07-Slurm.md">Slurm exercises</a>. </p>
+    <a href="../E201-Slurm/">Slurm exercises</a>. </p>
 <div class="highlight"><pre><span></span><code>#!/bin/bash -l
 #SBATCH --partition=small           # Partition (queue) name
 #SBATCH --nodes=1                   # Total number of nodes
@@ -3535,7 +3535,7 @@
 #SBATCH --account=&lt;project_id&gt;      # Project for billing
 
 module load LUMI/24.03
-module load lumi-CPEtools/1.1-cpeGNU-24.03
+module load lumi-CPEtools/1.2-cpeGNU-24.03
 
 srun --cpus-per-task=$SLURM_CPUS_PER_TASK hybrid_check -n -r
 </code></pre></div>
@@ -3549,15 +3549,11 @@ a specific core. </p>
 export OMP_PLACES=cores
 export OMP_PROC_BIND=close
 </code></pre></div>
-<p>You can also use an MPI runtime variable to have MPI itself report a cpu mask summary for each MPI rank:</p>
-<div class="highlight"><pre><span></span><code>export MPICH_CPUMASK_DISPLAY=1
-</code></pre></div>
-<p>Note <code>hybrid_check</code> and MPICH cpu mask may not be consistent. It is found to be confusing.</p>
 <p>To avoid having to use the <code>--cpus-per-task</code> flag, you can also set the environment variable <code>SRUN_CPUS_PER_TASK</code>
 instead: </p>
 <div class="highlight"><pre><span></span><code>export SRUN_CPUS_PER_TASK=16 
 </code></pre></div>
-<p>On LUMI this is not strictly necessary as the Slurm SBATCH processing has been modified to set
+<p>On LUMI this is not strictly necessary as the Slurm <code>sbatch</code> processing has been modified to set
 this environment variable, but that was a clunky patch to reconstruct some old behaviour of Slurm
 and we have already seen cases where the patch did not work (but that were more complex cases that
 required different environment variables for a similar function).</p>
@@ -3573,7 +3569,7 @@ some start with <code>SLURM_</code> but a few start with <code>SRUN_</code> whil
 #SBATCH --account=&lt;project_id&gt;      # Project for billing
 
 module load LUMI/24.03
-module load lumi-CPEtools/1.1-cpeGNU-24.03
+module load lumi-CPEtools/1.2-cpeGNU-24.03
 
 export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
 
@@ -3581,17 +3577,24 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 export OMP_PROC_BIND=close
 export OMP_PLACES=cores
 
-export MPICH_CPUMASK_DISPLAY=1
-
 srun hybrid_check -n -r
 </code></pre></div>
-<p>Note that MPI returns the CPU mask per process in binary form (a long string of zeros and ones)
-where the last number is for core 0. Also, you'll see that with the OpenMP environment variables
-set, it will look like only one core can be used by each MPI task, but that is because it only
+</details>
+<details class="note">
+<summary>Using <code>MPICH_CPUMASK_DISPLAY</code></summary>
+<p>Cray MPICH can also return information about the CPU mask per process in binary form (a long string of zeros and ones)
+where the last number is for core 0. For this, you need to set</p>
+<div class="highlight"><pre><span></span><code>export MPICH_CPUMASK_DISPLAY=1
+</code></pre></div>
+<p>You'll see that with the OpenMP environment variables set as in the example,
+it will look like only one core can be used by each MPI task, but that is because it only
 shows the mask for the main process which becomes OpenMP thread 0. Remove the OpenMP environment
 variables and you'll see that each task now gets 16 possible cores to run on, and the same is true
 for each OpenMP thread (at least when using the GNU compilers, the Cray compilers have different
 default behaviour for OpenMP which actually makes more sense for most scientific computing codes).</p>
+<p>The format in which the mask is reported, is different from that used by <code>hybrid_check</code>, where
+the first digit corresponds to core 0. The <code>MPICH_CPUMASK_DISPLAY</code> style of reporting corresponds
+to the way Slurm CPU masks for <code>--cpu-bind</code> are constructed.</p>
 </details>
 </li>
 <li>
@@ -3616,7 +3619,7 @@ slides and we only need to adapt the CPU mask:</p>
 #SBATCH --hint=nomultithread
 
 module load LUMI/24.03 partition/G
-module load lumi-CPEtools/1.1-cpeGNU-24.03
+module load lumi-CPEtools/1.2-cpeGNU-24.03
 
 cat &lt;&lt; EOF &gt; select_gpu_$SLURM_JOB_ID
 #!/bin/bash
