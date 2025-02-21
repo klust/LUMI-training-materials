@@ -3555,10 +3555,10 @@
 <p>On March 4 we have a reservation that you can use (through <code>#SBATCH --reservation=...</code>):</p>
 <ul>
 <li>
-<p>For the <code>small</code> partition, the reservation name is <code>LUMI_Intro_small</code></p>
+<p>For the <code>small</code> partition, the reservation name is <code>LUMI_intro_cpu</code></p>
 </li>
 <li>
-<p>For the <code>standard-g</code> partition, the reservation name is <code>LUMI_Intro_standard-g</code></p>
+<p>For the <code>standard-g</code> partition, the reservation name is <code>LUMI_intro_gpu</code></p>
 </li>
 </ul>
 </li>
@@ -3568,11 +3568,11 @@ the account, the partition and the reservation, is to set
 them through modules. For this, first add an additional directory to the module search path:</p>
 <div class="highlight"><pre><span></span><code>module use /appl/local/training/modules/2p3day-20250303
 </code></pre></div>
-<p>and then you can load either the module <code>exercises/small</code> or <code>exercises/standard-g</code>.</p>
+<p>and then you can load either the module <code>exercises/intro-C</code> or <code>exercises/intro-G</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Check what these modules do...</p>
 <p>Try, e.g., </p>
-<div class="highlight"><pre><span></span><code>module show exercises/small
+<div class="highlight"><pre><span></span><code>module show exercises/intro-C
 </code></pre></div>
 <p>to get an idea of what these modules do. Can you see which environment variables they set?</p>
 </div>
