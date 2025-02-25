@@ -3759,7 +3759,7 @@ LUMI is down. Moreover, the server software of LUMI-O can often be upgraded on-t
 noticeable downtime. Client and server also communicate through a web-based API.</p>
 <p><strong><em>Organisation of data</em></strong></p>
 <p>The organisation of data is also very different on Lustre and LUMI-O. 
-Lustre, although very different of the local filesystem(s) on your laptop or smartphone
+Lustre, although very different from the local filesystem(s) on your laptop or smartphone
 or more traditional networked filesystems common for networks of PCs or workstations,
 uses the same organisation of data as those filesystems. Data is organised in files
 stored in a hierarchical directory structure. In fact, Lustre behaves as much as possible
@@ -3796,7 +3796,7 @@ stale objects from failed multipart uploads).
 The configuration that the LUMI-O tools generate for <code>s3cmd</code> enables multipart uploads of 
 big objects.</p>
 <p><strong><em>Optimised for?</em></strong></p>
-<p>Lustre is optimised first and for most for bandwidth to the compute nodes when doing
+<p>Lustre is optimised first and formost for bandwidth to the compute nodes when doing
 large file I/O operations from multiple nodes to a file. This optimisation for performance
 also implies that simpler schemes for redundancy have to be used. Data is protected from
 a single disk failure and on most systems even from dual disk failure, but performance
@@ -3852,11 +3852,11 @@ same high performance interconnect.</p>
 based Lustre filesystem is still not cheap and if you want a performant flash based filesystem that can
 endure a high write load also and not only a high read load, it is very expensive. The LUMI-O hardware 
 is a lot cheaper, though this is also partly because it has a lower bandwidth.</p>
-<p>The billing units accounted for storage on LUMI originally reflect the purchase cost per petabyte for LUMI-O and 
+<p>The billing units accounted for storage on LUMI originally reflected the purchase cost per petabyte for LUMI-O and 
 the Lustre filesystems, with the object storage billed at half the price of the hard disk based Lustre
 filesystems and the flash based Lustre filesystem at 10 times the cost of the hard disk based one.
-(These costs will be modified slightly in 2025 trying to better balance the load over the various
-storage options.)</p>
+These costs were modified slightly in early 2025 trying to better balance the load over the various
+storage options.</p>
 <figure style="border: 1px solid #000">
 <p><img alt="Slide Lustre vs LUMI-O (3)" loading="lazy" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-204-ObjectStorage/LustreVsLUMIO_3.png" /></p>
 </figure>
@@ -4101,7 +4101,7 @@ creation and if we click a bit further we will see what's going on:</p>
 <p><figure markdown style="border: 1px solid #000">
   <img alt="Slide Browsing through Open OnDemand (4)" loading="lazy" src="https://462000265.lumidata.eu/2p3day-20250303/img/LUMI-2p3day-20250303-204-ObjectStorage/LUMIOCredentialsOODBrowse_04.png" />
 </figure></p>
-<p>The top bar now shows <code>lumi-465000095-public:/training-materials-web/intro-evolving.files/</code> while we also get a list
+<p>The top bar now shows <code>lumi-465000095-public:/training-materials-web/intro-evolving/files/</code> while we also get a list
 of elements that look like files. These are the objects, but don't be mistaken: The name of the first object in the 
 list is not <code>exercises-evolving.tar</code>, but it is the object named 
 <code>intro-evolving/files/exercises-evolving.tar</code> in the bucket <code>training-materials-web</code> in the project <code>46500095</code>.
