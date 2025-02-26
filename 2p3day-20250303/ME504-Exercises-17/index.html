@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME306-Exercises-9/">
+        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME504-Exercises-17/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Exercise session 9: Cray PE Debugging Tools - LUMI training materials</title>
+        <title>Exercise session 17: Omniperf - LUMI training materials</title>
       
     
     
@@ -119,9 +119,9 @@
 
   
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LUMI training materials - Exercise session 9: Cray PE Debugging Tools" />
+  <meta property="og:title" content="LUMI training materials - Exercise session 17: Omniperf" />
   <meta property="og:description" content="None" />
-  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME306-Exercises-9/" />
+  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME504-Exercises-17/" />
   <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1080" />
@@ -131,7 +131,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LUMIhpc" />
   <meta name="twitter:creator" content="@LUMIhpc" />
-  <meta name="twitter:title" content="LUMI training materials - Exercise session 9: Cray PE Debugging Tools" />
+  <meta name="twitter:title" content="LUMI training materials - Exercise session 17: Omniperf" />
   <meta name="twitter:description" content="None" />
   <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
 
@@ -193,7 +193,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercise-session-9-cray-pe-debugging-tools" class="md-skip">
+        <a href="#exercise-session-17-omniperf" class="md-skip">
           Skip to content
         </a>
       
@@ -250,7 +250,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercise session 9: Cray PE Debugging Tools
+              Exercise session 17: Omniperf
             
           </span>
         </div>
@@ -3529,12 +3529,12 @@
                   
 
 
-<h1 id="exercise-session-9-cray-pe-debugging-tools">Exercise session 9: Cray PE Debugging Tools<a class="headerlink" href="#exercise-session-9-cray-pe-debugging-tools" title="Permanent link">&para;</a></h1>
+<h1 id="exercise-session-17-omniperf">Exercise session 17: Omniperf<a class="headerlink" href="#exercise-session-17-omniperf" title="Permanent link">&para;</a></h1>
 <!--
-Exercises are in `Exercises/HPE/day2/debugging`.
+Exercise assignments can be found in the [AMD exercise notes](https://hackmd.io/@sfantao/lumi-training-ams-2024),
+section on [Omniperf](https://hackmd.io/@sfantao/lumi-training-ams-2024#Omniperf).
 
-Try the debugging tools in this subdirectory.
-There are `Readme.md` files in every directory with more information.
+Exercise files can be copied from `Exercises/AMD/HPCTrainingExamples`.
 -->
 
 <h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
@@ -3542,28 +3542,30 @@ There are `Readme.md` files in every directory with more information.
 <!--
 Temporary location of materials (for the lifetime of the training project):
 
--   See `/project/project_465001726/Slides/HPE/Exercises.pdf`
-
--   Exercise files in `/project/project_465001726/Exercises/HPE/day2/debugging`
+-   Exercises can be copied from `/project/project_465001726/exercises/AMD/HPCTrainingExamples`
 -->
 
 <!--
-Temporary web-available materials:
+Materials on the web:
 
--    Overview exercise assignments day 1+2 temporarily available on
-     [this link](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-2_Exercises_day2.pdf)
+-   [AMD exercise assignments and notes](https://hackmd.io/@sfantao/lumi-training-ams-2024#Omniperf)
+
+    [PDF backup](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.pdf)
+    and [local web backup](exercises_AMD_hackmd.md#omniperf).
+
+-   Exercise files: 
+    [Download as .tar.bz2](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar.bz2)
+    or [download as .tar](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar)
 -->
 
 <!--
 Archived materials on LUMI:
 
--   Exercise assignments in `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_HPE.pdf`
+-   Exercise assignments PDF: `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.pdf`
 
--   Exercises as bizp2-compressed tar file in
-   `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_HPE.tar.bz2`
-
--   Exercises as uncompressed tar file in
-   `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_HPE.tar`
+-   Exercise files:
+    `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar.bz2`
+    or `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar`
 -->
 
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
