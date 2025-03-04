@@ -3556,7 +3556,26 @@ Materials will be made available after the lecture
 </li>
 </ul>
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
-<p>/</p>
+<ol>
+<li>
+<p>Loading LUMI/24.03 loads PrgEnv-cray module.  Would it be ok to switch to cpeCray?</p>
+<ul>
+<li>PrgEnv-cray is already loaded by default when you load LUMI/24.03. You can switch to a different PrgEnv using the <code>module load</code> command if you want.</li>
+</ul>
+</li>
+<li>
+<p>Any measurement about the toolchain providing the best BLAS ?</p>
+<ul>
+<li>Should be the same libsci, so same codebase. It should have similar performances but depends on compilers</li>
+</ul>
+</li>
+<li>
+<p>There is an easyconfig for OpenFOAM 10 provided by you, is it straightforward to change and reuse this for other versions?</p>
+<ul>
+<li>Sometimes yes, other times no. They change the building procedures and in those cases is not easy at all.</li>
+</ul>
+</li>
+</ol>
 
 
 
