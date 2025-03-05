@@ -3522,25 +3522,53 @@
 
 <h1 id="debugging-at-scale-gdb4hpc-valgrind4hpc-atp-stat">Debugging at Scale – gdb4hpc, valgrind4hpc, ATP, stat<a class="headerlink" href="#debugging-at-scale-gdb4hpc-valgrind4hpc-atp-stat" title="Permanent link">&para;</a></h1>
 <p><em>Presenter: Thierry Braconnier (HPE)</em></p>
+<p>Tools discussed:</p>
+<ul>
+<li>
+<p><a href="https://cpe.ext.hpe.com/docs/latest/debugging-tools/stat/index.html">STAT: Stack Trace Analysis Tool</a> (module <code>cray-stat</code>)</p>
+</li>
+<li>
+<p><a href="https://cpe.ext.hpe.com/docs/latest/debugging-tools/atp/index.html">ATP: Abnormal Termination Processing</a> (module <code>atp</code>)</p>
+</li>
+<li>
+<p><a href="https://cpe.ext.hpe.com/docs/latest/debugging-tools/gdb4hpc/index.html">GDB for HPC</a> (module <code>gdb4hpc</code>).
+    Works for CPU and GPU.</p>
+</li>
+<li>
+<p><a href="https://cpe.ext.hpe.com/docs/latest/debugging-tools/valgrind4hpc/guides/user_guide.html">Valgrind for HPC</a>
+    (module <code>valgrid4hpc</code>)</p>
+</li>
+<li>
+<p><a href="https://cpe.ext.hpe.com/docs/latest/debugging-tools/sanitizers4hpc/guides/user_guide.html">Sanitizers for HPC</a>
+    (module <code>sanitizers4hpc</code>)</p>
+</li>
+<li>
+<p><code>CRAY_ACC_DEBUG</code> environment variable for CCE OpenaCC/OpenMP offload</p>
+</li>
+</ul>
 <p>Course materials will be provided during and after the course.</p>
+<p>Temporary location of materials (for the lifetime of the training project):</p>
+<ul>
+<li>Slides: <code>/project/project_465001726/Slides/HPE/06_debugging_at_scale.pdf</code></li>
+</ul>
+<p>Archived materials on LUMI:</p>
+<ul>
+<li>Slides: <code>/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-306-Debugging_at_Scale.pdf</code></li>
+</ul>
 <!--
-Temporary location of materials (for the lifetime of the training project):
-
--   Slides: `/project/project_465001726/Slides/HPE/05_debugging_at_scale.pdf`
+-   Recording: `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-306-Debugging_at_Scale.mp4`
 -->
 
-<!--
-Archived materials on LUMI:
-
--   Slides: `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-306-Debugging_at_Scale.pdf`
-
--   Recording: `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-306-Debugging_at_Scale.pdf`
-
-These materials can only be distributed to actual users of LUMI (active user account).
--->
-
+<p>These materials can only be distributed to actual users of LUMI (active user account).</p>
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
-<p>/</p>
+<ol>
+<li>
+<p>How gdb4hpc launch call maps to srun? I mean number of ranks per node and cpus per task?</p>
+<ul>
+<li><em>You can use <code>--launcher-args="--tasks-per-node=4"</code> for example to inject arguments that will be passed to srun in the launch command. If you start gdb4hpc and type "help launch" you can get more information on this.</em></li>
+</ul>
+</li>
+</ol>
 
 
 

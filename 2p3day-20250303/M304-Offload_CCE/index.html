@@ -3540,7 +3540,42 @@ Course materials will be provided during and after the course.
 
 <p>These materials can only be distributed to actual users of LUMI (active user account).</p>
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
-<p>/</p>
+<ol>
+<li>
+<p>In case I have a complex Struct in C++ how can I map that with OpenMP on GPU?
+    <div class="highlight"><pre><span></span><code>struct Data{
+  subStruct Vc; 
+  double **array_of_array;
+  double max_mach;
+  double ... 
+  double ...
+}
+</code></pre></div>
+    How can I map Data? </p>
+<ul>
+<li><em>(Alfio) In OpenMP you can use <a href="https://www.openmp.org/spec-html/5.2/openmpsu61.html">Mapper Identiﬁers and mapper Modiﬁers</a>. <a href="https://passlab.github.io/Examples/contents/Chap_devices/9_declare_mapper_Directive.html">See this example</a></em></li>
+</ul>
+<p>Managed can help in this case (without deep copy)? </p>
+<ul>
+<li><em>Yes, indeed (note that managed is what C++ parellel frameworks do, e.g. SYCL)</em></li>
+</ul>
+<p>If he can show some example it would be helpful. </p>
+<ul>
+<li>
+<p><em><a href="https://passlab.github.io/Examples/contents/Chap_devices/9_declare_mapper_Directive.html">See this example</a></em></p>
+</li>
+<li>
+<p><em>This is an example that might need unified memory to work. And it will likely only be truly efficient on something like an MI300A.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sorry for the repetition, can you clarify better the differences between managed and unified memory</p>
+<ul>
+<li><em>(Alfio) Unified memory is related to OpenMP (aka Unified Shared Memory, USM), which uses managed memory in HIP (see <a href="https://rocm.docs.amd.com/projects/HIP/en/latest/doxygen/html/group___memory_m.html#gaadf4780d920bb6f5cc755880740ef7dc">HipMallocManaged in "HIP Runtime API Reference: Managed Memory"</a>)</em></li>
+</ul>
+</li>
+</ol>
 
 
 
