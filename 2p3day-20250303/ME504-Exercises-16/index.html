@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME502-Exercises-15/">
+        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME504-Exercises-16/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Exercise session 15: Lustre I/O - LUMI training materials</title>
+        <title>Exercise session 16: Omnitrace - LUMI training materials</title>
       
     
     
@@ -119,9 +119,9 @@
 
   
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LUMI training materials - Exercise session 15: Lustre I/O" />
+  <meta property="og:title" content="LUMI training materials - Exercise session 16: Omnitrace" />
   <meta property="og:description" content="None" />
-  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME502-Exercises-15/" />
+  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/ME504-Exercises-16/" />
   <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1080" />
@@ -131,7 +131,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LUMIhpc" />
   <meta name="twitter:creator" content="@LUMIhpc" />
-  <meta name="twitter:title" content="LUMI training materials - Exercise session 15: Lustre I/O" />
+  <meta name="twitter:title" content="LUMI training materials - Exercise session 16: Omnitrace" />
   <meta name="twitter:description" content="None" />
   <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
 
@@ -193,7 +193,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercise-session-15-lustre-io" class="md-skip">
+        <a href="#exercise-session-16-omnitrace" class="md-skip">
           Skip to content
         </a>
       
@@ -250,7 +250,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercise session 15: Lustre I/O
+              Exercise session 16: Omnitrace
             
           </span>
         </div>
@@ -3529,45 +3529,38 @@
                   
 
 
-<h1 id="exercise-session-15-lustre-io">Exercise session 15: Lustre I/O<a class="headerlink" href="#exercise-session-15-lustre-io" title="Permanent link">&para;</a></h1>
-<!--
-The files for the exercises can be found in `Exercises/HPE/day4/VH1-io`.
-Untar the file and you'll find a full I/O experiment with striping.
-
-Alternatively, look again at the MPI exercises with Apprentice
-If you did not do this before, set PAT_RT_SUMMARY=0. You get trace data per rank when you do this (huge file).
-Set only 2 cycles in the input file (indat).
-Use app2 on the .ap2 file to see new displays (see help).
--->
-
+<h1 id="exercise-session-16-omnitrace">Exercise session 16: Omnitrace<a class="headerlink" href="#exercise-session-16-omnitrace" title="Permanent link">&para;</a></h1>
+<p>Exercise assignments can be found in the <a href="https://hackmd.io/@sfantao/lumi-training-sto-2025">AMD exercise notes</a>,
+section on <a href="https://hackmd.io/@sfantao/lumi-training-sto-2025#Omnitrace">Omnitrace</a>.</p>
+<p>Exercise files can be copied from <code>Exercises/AMD/HPCTrainingExamples</code>.</p>
 <h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
-<p>No materials available at the moment.</p>
+<!-- No materials available at the moment. -->
+
+<p>Temporary location of materials (for the lifetime of the training project):</p>
+<ul>
+<li>Exercises can be copied from <code>/project/project_465001726/exercises/AMD/HPCTrainingExamples</code></li>
+</ul>
+<p>Materials on the web:</p>
+<ul>
+<li><a href="https://hackmd.io/@sfantao/lumi-training-sto-2025#Omnitrace">AMD exercise assignments and notes</a></li>
+</ul>
 <!--
-Temporary location of materials (for the lifetime of the training project):
+    [PDF backup](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.pdf)
+    and [local web backup](exercises_AMD_hackmd.md#omnitrace).
 
--   See the exercise assignments in
-    `/project/project_465001726/Slides/HPE/Exercises.pdf`.
-
--   Exercise files in `/project/project_465001726/Exercises/HPE/day4`
+-   Exercise files: 
+    [Download as .tar.bz2](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar.bz2)
+    or [download as .tar](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar)
 -->
 
+<p>Archived materials on LUMI:</p>
+<ul>
+<li>Exercise assignments PDF: <code>/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.pdf</code></li>
+</ul>
 <!--
-Temporary web-available materials:
-
--    Overview exercise assignments temporarily available on
-     [this link](https://462000265.lumidata.eu/2p3day-20250303/files/LUMI-2p3day-20250303-4_Exercises_day4.pdf)
--->
-
-<!--
-Archived materials on LUMI:
-
--   Exercise assignments in `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_HPE.pdf`
-
--   Exercises as bizp2-compressed tar file in
-    `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_HPE.tar.bz2`
-
--   Exercises as uncompressed tar file in
-    `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_HPE.tar`
+-   Exercise files:
+    `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar.bz2`
+    or `/appl/local/training/2p3day-20250303/files/LUMI-2p3day-20250303-Exercises_AMD.tar`
 -->
 
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
