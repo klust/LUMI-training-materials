@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20251022/ME203_AMD_tools_1/">
+        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_09_ExtremeScale/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Exercises session 7: AMD profiling tools and GPU optimizations. - LUMI training materials</title>
+        <title>Extreme-scale AI - LUMI training materials</title>
       
     
     
@@ -119,9 +119,9 @@
 
   
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LUMI training materials - Exercises session 7: AMD profiling tools and GPU optimizations." />
+  <meta property="og:title" content="LUMI training materials - Extreme-scale AI" />
   <meta property="og:description" content="None" />
-  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20251022/ME203_AMD_tools_1/" />
+  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_09_ExtremeScale/" />
   <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1080" />
@@ -131,7 +131,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LUMIhpc" />
   <meta name="twitter:creator" content="@LUMIhpc" />
-  <meta name="twitter:title" content="LUMI training materials - Exercises session 7: AMD profiling tools and GPU optimizations." />
+  <meta name="twitter:title" content="LUMI training materials - Extreme-scale AI" />
   <meta name="twitter:description" content="None" />
   <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
 
@@ -193,7 +193,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercises-session-7-amd-profiling-tools-and-gpu-optimizations" class="md-skip">
+        <a href="#extreme-scale-ai" class="md-skip">
           Skip to content
         </a>
       
@@ -250,7 +250,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercises session 7: AMD profiling tools and GPU optimizations.
+              Extreme-scale AI
             
           </span>
         </div>
@@ -4102,9 +4102,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#materials" class="md-nav__link">
+  <a href="#extra-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Materials
+      Extra materials
     </span>
   </a>
   
@@ -4135,25 +4135,51 @@
 
 
 
-<h1 id="exercises-session-7-amd-profiling-tools-and-gpu-optimizations">Exercises session 7: AMD profiling tools and GPU optimizations.<a class="headerlink" href="#exercises-session-7-amd-profiling-tools-and-gpu-optimizations" title="Permanent link">&para;</a></h1>
-<p>Exercises on AMD profiling tools and GPU optimizations.</p>
-<h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
-<p>No materials available at the moment.</p>
+<h1 id="extreme-scale-ai">Extreme-scale AI<a class="headerlink" href="#extreme-scale-ai" title="Permanent link">&para;</a></h1>
+<p><em>Presenters:</em> Samuel Antão (AMD)</p>
+<p>Content:</p>
+<ul>
+<li>Model parallelism on LUMI via FSDP or DeepSpeed</li>
+<li>Scaling beyond a single node </li>
+</ul>
 <!--
--   [Basic examples](https://hackmd.io/@sfantao/lumi-training-oslo2024-basic-examples)
+A video recording will follow.
+-->
 
-    Local copy as as [HTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-basic-examples.html)[^1]
-    or as as [MHTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-basic-examples.mhtml)[^2]
+<!--
+<video src="https://462000265.lumidata.eu/ai-20251008/recordings/09_ExtremeScale.mp4" controls="controls"></video>
+-->
 
--   [Advanced Omnitrace examples](https://hackmd.io/@sfantao/lumi-training-oslo2024-advanced-omnitrace)
+<h2 id="extra-materials">Extra materials<a class="headerlink" href="#extra-materials" title="Permanent link">&para;</a></h2>
+<p>More materials will become available during and shortly after the course</p>
+<!--
+-   [Presentation slides](https://462000265.lumidata.eu/ai-20251008/files/LUMI-ai-20251008-09-Extreme_scale_AI.pdf)
 
-    Local copy as as [HTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-advanced-omnitrace-examples.html)[^1]
-    or as as [MHTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-advanced-omnitrace-examples.mhtml)[^2]
+-   [Demo and hands-on exercises](E09_ExtremeScale.md)
+-->
 
-[^1]: Single-page HTML with embedded figures, but some layout issues.
+<!--
+## Remark: Why is binding not easier in Slurm?
 
-[^2]: Supported by several Chromium-based browsers, but currently due 
-to the way the pages are served, the page will be downloaded.
+There are some reasons why the situation with the binding is not better:
+
+-   Slurm GPU binding is broken and uses a technique that breaks communication with RCCL and GPU-aware MPI
+
+-   One change that would offer some improvement is system-wide and would have a large impact on LUMI-C also, 
+    necessitating retraining all users and probably making some use scenarios on that partition difficult.
+
+-   It is not easy either because you can only do something with few environment variables or a pre-made script 
+    if every user would nicely request 7 cores per GPU requested. On `small-g` you now basically have a lot of 
+    fragmentation. I'm not sure if "CPU" could be redefined in Slurm to mean "1 CCD" but that might very well 
+    be the change that sysadmins told me would also be in effect on LUMI-C where it would not be appreciated by 
+    users.
+
+-   And as we say in another course: "Slurm is not a good scheduler, but we don't have a better one yet".
+    Current HPC schedulers were designed in the days that nodes had just one or 2 CPU cores and no accelerators
+    and they don't sufficiently understand the hierarchy in resources and proximity between various components.
+
+-   Preset are not easy. What may be ideal for some AI workflows may not work for others, or may not work for all
+    the other users on LUMI that do simulation or other types of data processing and analysis.
 -->
 
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>

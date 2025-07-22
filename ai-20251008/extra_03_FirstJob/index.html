@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20251022/ME203_AMD_tools_1/">
+        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_03_FirstJob/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Exercises session 7: AMD profiling tools and GPU optimizations. - LUMI training materials</title>
+        <title>Your first training job on LUMI - LUMI training materials</title>
       
     
     
@@ -119,9 +119,9 @@
 
   
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LUMI training materials - Exercises session 7: AMD profiling tools and GPU optimizations." />
+  <meta property="og:title" content="LUMI training materials - Your first training job on LUMI" />
   <meta property="og:description" content="None" />
-  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20251022/ME203_AMD_tools_1/" />
+  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_03_FirstJob/" />
   <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1080" />
@@ -131,7 +131,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LUMIhpc" />
   <meta name="twitter:creator" content="@LUMIhpc" />
-  <meta name="twitter:title" content="LUMI training materials - Exercises session 7: AMD profiling tools and GPU optimizations." />
+  <meta name="twitter:title" content="LUMI training materials - Your first training job on LUMI" />
   <meta name="twitter:description" content="None" />
   <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
 
@@ -193,7 +193,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercises-session-7-amd-profiling-tools-and-gpu-optimizations" class="md-skip">
+        <a href="#your-first-training-job-on-lumi" class="md-skip">
           Skip to content
         </a>
       
@@ -250,7 +250,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercises session 7: AMD profiling tools and GPU optimizations.
+              Your first training job on LUMI
             
           </span>
         </div>
@@ -4102,9 +4102,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#materials" class="md-nav__link">
+  <a href="#extra-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Materials
+      Extra materials
     </span>
   </a>
   
@@ -4135,29 +4135,98 @@
 
 
 
-<h1 id="exercises-session-7-amd-profiling-tools-and-gpu-optimizations">Exercises session 7: AMD profiling tools and GPU optimizations.<a class="headerlink" href="#exercises-session-7-amd-profiling-tools-and-gpu-optimizations" title="Permanent link">&para;</a></h1>
-<p>Exercises on AMD profiling tools and GPU optimizations.</p>
-<h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
-<p>No materials available at the moment.</p>
+<h1 id="your-first-training-job-on-lumi">Your first training job on LUMI<a class="headerlink" href="#your-first-training-job-on-lumi" title="Permanent link">&para;</a></h1>
+<p><em>Presenters:</em> Mats Sjöberg (CSC) and Oskar Taubert (CSC)</p>
+<p>Content:</p>
+<ul>
+<li>Using LUMI via the command line</li>
+<li>Submitting and running AI training jobs using the batch system</li>
+</ul>
 <!--
--   [Basic examples](https://hackmd.io/@sfantao/lumi-training-oslo2024-basic-examples)
+A video recording will follow.
+-->
 
-    Local copy as as [HTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-basic-examples.html)[^1]
-    or as as [MHTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-basic-examples.mhtml)[^2]
+<!--
+<video src="https://462000265.lumidata.eu/ai-20251008/recordings/03_FirstJob.mp4" controls="controls"></video>
+-->
 
--   [Advanced Omnitrace examples](https://hackmd.io/@sfantao/lumi-training-oslo2024-advanced-omnitrace)
+<h2 id="extra-materials">Extra materials<a class="headerlink" href="#extra-materials" title="Permanent link">&para;</a></h2>
+<p>More materials will become available during and shortly after the course</p>
+<!--
 
-    Local copy as as [HTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-advanced-omnitrace-examples.html)[^1]
-    or as as [MHTML file](https://462000265.lumidata.eu/paow-20251022/files/LUMI-paow-20251022-advanced-omnitrace-examples.mhtml)[^2]
+-   [Presentation slides](https://462000265.lumidata.eu/ai-20251008/files/LUMI-ai-20251008-03-First_AI_job.pdf)
 
-[^1]: Single-page HTML with embedded figures, but some layout issues.
+-   [Hands-on exercises](E03_FirstJob.md)
 
-[^2]: Supported by several Chromium-based browsers, but currently due 
-to the way the pages are served, the page will be downloaded.
+-   [More extensive training materials on Slurm from the recent introductory "Supercomputing with LUMI" course from March 2025](../2p3day-20250303/index.md)
+
+    -   A more detailed introduction to Slurm but without AI-specific examples is given in the 
+        ["Slurm on LUMI" presentation](../2p3day-20250303/M201-Slurm.md).
+        It also discusses the `sacct` command that can be used to get at least some resource use info
+        from jobs.
+
+    -   The presentation ["Process and Thread Distribution and Binding"](../2p3day-20250303/M202-Binding.md)
+        is more oriented towards traditional HPC codes, but the discussion on a proper mapping
+        of GPU dies onto CPU chiplets is also relevant for AI applications. But that is a discussion
+        for the second day of this course/workshop.
 -->
 
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
-<p>/</p>
+<ol>
+<li>
+<p>Is there way to analyze memory usage afterwards, instead of using rocm-smi?</p>
+<ul>
+<li>
+<p>CPU memory:</p>
+<ul>
+<li>
+<p>While running, there is the <code>top</code> command. <code>htop</code> is also available in the <code>systools</code> module. This would show CPU memory usage. It requires of course opening another shell on the node, see also the LUMI documentation. </p>
+</li>
+<li>
+<p>After the job, information on CPU-attached RAM use can also be found via the <code>sacct</code> command. It is discussed in more detail in the Slurm session in our regular intro course (where we have 90 minutes just to explain how jobs work): https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/201-Slurm/#the-sacct-command. This will only report RAM, the GPU RAM usage is not reported in SLURM.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>GPU memory</p>
+<ul>
+<li>
+<p>PyTorch also reports on GPU memory use, so you may find this in your job output</p>
+</li>
+<li>
+<p>We have an easybuild recipe to install <code>nvtop</code>, but it hasn't been updated or tested for a while. And it is for during the job.</p>
+</li>
+<li>
+<p>But there is no way to analyse GPU memory usage afterwards unless you collected that data yourself during the run and stored it somewhere. Slurm will not give that information.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>On NVIDIA GPU, one can use NVTX or scalene-gui to profile GPU, which could be very helpful to address OOM issue. What is the best similar way to do it on AMD GPU?</p>
+<ul>
+<li>
+<p>We have an <a href="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/">extensive 4-day or 5-day training</a> 
+    covering profiling and debugging tools for AMD GPUs as an important part of the course:. It even includes a demo of over one hour where those tools are used to analyse performance of PyTorch. Part of the materials are available online, another part just on LUMI. Not sure if Samuel will mention those tools in his talks in this course.</p>
+<p>There is also more information in the presentation <a href="../extra_04_CheckingGPU/">"Understanding GPU activity &amp; checking jobs"</a>
+of this course.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Seems like the there's no difference between /GPT-neo-IMDB-finetuning.py and /reference-solution/GPT-neo-IMDB-finetuning.py. I'm not sure how to add the continuation from checkpoint.</p>
+<ul>
+<li>The differences are not in the python file but in the slurm job script <code>run.sh</code></li>
+</ul>
+</li>
+<li>
+<p>Will you please repeat how often you should have checkpointing? and is it set up in the finetuning.py document?</p>
+<ul>
+<li>Every couple of hours, depending how long you run. Do more checkpointings if unstable.</li>
+</ul>
+</li>
+</ol>
 
 
 
