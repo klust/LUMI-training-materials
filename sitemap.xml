@@ -393,23 +393,7 @@
          <lastmod>2025-08-04</lastmod>
     </url>
     <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/index.links.noGit/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/index.noLinks.noGit/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/schedule.links.noGit/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
          <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/schedule/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20240502/schedule.noLinks.noGit/</loc>
          <lastmod>2025-08-04</lastmod>
     </url>
     <url>
@@ -2801,14 +2785,6 @@
          <lastmod>2025-08-04</lastmod>
     </url>
     <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20250204/feedback.noGit/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20250204/remarks.noGit/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
          <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20250204/schedule/</loc>
          <lastmod>2025-08-04</lastmod>
     </url>
@@ -2906,94 +2882,6 @@
     </url>
     <url>
          <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20250527/where_to_eat/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E02_Webinterface/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E03_FirstJob/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E04_CheckingGPU/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E05_RunningContainers/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E06_BuildingContainers/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E08_MultipleGPUs/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E09_ExtremeScale/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/E12_Project_and_QA/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_00_Course_Introduction/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_01_Introduction/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_02_Webinterface/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_03_FirstJob/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_04_CheckingGPU/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_05_RunningContainers/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_06_BuildingContainers/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_07_VirtualEnvironments/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_08_MultipleGPUs/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_09_ExtremeScale/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_10_TrainingData/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/extra_11_Coupling/</loc>
-         <lastmod>2025-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://lumi-supercomputer.github.io/LUMI-training-materials/ai-20251008/schedule/</loc>
          <lastmod>2025-08-04</lastmod>
     </url>
     <url>
