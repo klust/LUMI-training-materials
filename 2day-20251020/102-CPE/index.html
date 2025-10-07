@@ -917,7 +917,7 @@
   
   
   <span class="md-ellipsis">
-    Ann.: Supercomputing with LUMI October 2025
+    Supercomputing with LUMI October 2025
     
   </span>
   
@@ -934,7 +934,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Ann.: Supercomputing with LUMI October 2025
+            Supercomputing with LUMI October 2025
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4680,7 +4680,7 @@ system when confronted with a talk about development tools is
 <em>"I only want to run some programs, why do I need to know about programming
 environments?"</em></p>
 <p>The answer is that Linux itself is not a proper supercomputer operating system.
-As we shall see, it is both too much and too litle, and
+As we shall see, it is both too much and too little, and
 development environments are therefore <strong>an intrinsic part of an HPC system</strong>. 
 No HPC system is as polished as a personal computer and the software users want to use
 is typically very unpolished. And some of the <strong>essential middleware</strong> that turns the hardware
@@ -4931,9 +4931,9 @@ There is a C/C++ compiler with advanced OpenMP offload support, based on clang
 and LLVM. The unified memory architecture of MI250X (and MI300A) is fully supported.
 The Fortran compiler is currently still based on the former PGI
 Fortran frontend (also known as classic flang) and misses OpenMP offload support.
-That is expected to change towards the end of 2025, when AMD expects to switch to
-the new Flang frontend. In fact, with ROCm 6.3 users can have early access, but
-unfortunately that version of ROCm cannot be supported on LUMI with the current
+With ROCm&trade; 7 AMD is switching to the new Fortran frontend, and in fact, 
+with ROCm 6.3 users can have early access, but
+unfortunately neither of these versions of ROCm can be supported on LUMI with the current
 driver version and will only be supportable after the update planned for the summer
 of 2025. The other issue is that switching to a different Fortran frontend may break
 the Fortran MPI bindings that come with Cray MPICH, as they include precompiled
@@ -4958,6 +4958,9 @@ serve as the information collecting tool for other profiling tools.</p>
     profiling and tracing tool, supporting C, C++, Fortran and Python on CPU
     and CP+GPU. It also supports interactive visualisation of trace data in a 
     web-based GUI (that can be installed as an app on your laptop).</p>
+<p>Before ROCm&trade; 6.2, this was not an official product but a product from AMD Research.
+With ROCm&trade; 6.2, it became an official part of ROCm&trade; and in ROCm&trade;6.3,
+it was renamed to ROCm Systems Profiler.</p>
 </li>
 <li>
 <p><a href="https://rocm.docs.amd.com/projects/omniperf/en/docs-6.2.0/">Omniperf</a> is 
@@ -4965,6 +4968,9 @@ serve as the information collecting tool for other profiling tools.</p>
     ROC-profiler under the hood to collect data, but offers several high level
     performance analysis tools (like roofline analyses, ...) to better understand
     application behaviour at a high level.</p>
+<p>Before ROCm&trade; 6.2, this was not an official product but a product from AMD Research.
+With ROCm&trade; 6.2, it became an official part of ROCm&trade; and in ROCm&trade;6.3,
+it was renamed to ROCm Compute Profiler or <code>rocprof-compute</code>.</p>
 <p>The tool now also has a standalone GUI which is much safer than the Grafana-based
 GUI used before.</p>
 </li>
@@ -5175,15 +5181,15 @@ be found in the manual page</p>
 <p>or its <a href="https://cpe.ext.hpe.com/docs/24.03/mpt/mpich/intro_mpi.html">web-based version</a>
 which may be for a newer version than available on LUMI.</p>
 <div class="admonition seealso">
-<p class="admonition-title">More on fine-tuning MPI performance</p>
+<p class="admonition-title">More on fine-tuning MPI performance in the March 2025 intensive course</p>
 <p>Getting the most out of MPI is essential if you want your application to scale.
 Each MPI implementation offers many features to fine-tune performance, and there is no
 single setting that is both optimal for almost everybody and also works well with all
 programs, also those that really hammer the network with lots of small messages.
 Unfortunately not all HPC centres discuss such issues in their trainings.
-In this "LUMI intensive" course, the presentation 
-<a href="M404-Cray_MPI_on_Slingshot.md">"MPI Topics on the HPE Cray EX Supercomputer"</a>
-on day 4 will give you more insight in tuning Cray MPICH.</p>
+In the March 2025 intensive course course, the presentation 
+<a href="../../2p3day-20250303/M404-Cray_MPI_on_Slingshot/">"MPI Topics on the HPE Cray EX Supercomputer"</a>
+on day 4 gives you more insight in tuning Cray MPICH.</p>
 </div>
 <h2 id="lmod">Lmod<a class="headerlink" href="#lmod" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
@@ -5516,8 +5522,9 @@ to find out where you can get more information about the environment variable <c
 <li>R: <code>cray-R</code></li>
 </ul>
 <p>The HPE Cray PE also offers other modules for debugging, profiling, performance analysis, etc. that
-are not covered in this short version of the LUMI course. Many more are covered in the 4-day
-courses for developers that we organise several times per year with the help of HPE and AMD.</p>
+are not covered in this short version of the LUMI course. Many more are covered in the advanced
+courses for developers and performance analysis and optimisation workshops 
+that we organise several times per year with the help of HPE and AMD.</p>
 <h2 id="warning-1-you-do-not-always-get-what-you-expect">Warning 1: You do not always get what you expect...<a class="headerlink" href="#warning-1-you-do-not-always-get-what-you-expect" title="Permanent link">&para;</a></h2>
 <figure style="border: 1px solid #000">
 <p><img alt="Slide You do not always get what you expect" loading="lazy" src="https://462000265.lumidata.eu/2day-20251020/img/LUMI-2day-20251020-102-CPE/WarningLibraryPath.png" /></p>
