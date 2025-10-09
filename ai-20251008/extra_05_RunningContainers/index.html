@@ -1027,7 +1027,7 @@
   
   
   <span class="md-ellipsis">
-    Ann.: AI workshop October 2025
+    AI workshop October 2025
     
   </span>
   
@@ -1044,7 +1044,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Ann.: AI workshop October 2025
+            AI workshop October 2025
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4484,45 +4484,147 @@
 A video recording will follow.
 -->
 
-<!--
 <video src="https://462000265.lumidata.eu/ai-20251008/recordings/05_RunningContainers.mp4" controls="controls"></video>
--->
 
 <h2 id="extra-materials">Extra materials<a class="headerlink" href="#extra-materials" title="Permanent link">&para;</a></h2>
 <p>More materials will become available during and shortly after the course</p>
-<!--
--   [Presentation slides](https://462000265.lumidata.eu/ai-20251008/files/LUMI-ai-20251008-05-Running_containers_on_LUMI.pdf)
-
--   [Hands-on exercises](E05_RunningContainers.md)
-
--   Documentation:
-
-    -   [LUMI docs "Container jobs" page](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/container-jobs/)
-
-    -   [LUMI Software Library](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/) for information about
-        the available EasyConfigs for containers
-
--   [Training materials from the most recent LUMI introductory training in March 2025](../2p3day-20250303/index.md)
-
-    -   The ["LUMI Software Stacks" talk](../2p3day-20250303/M105-SoftwareStacks.md)
-        discusses using EasyBuild among other things.
-
-    -   The ["Containers on LUMI-C and LUMI-G" talk](../2p3day-20250303/M205-Containers.md)
-        also covers the AI containers towards the end of the presentation.
-
--   And some demos from the [LUMI introductory training in March 2025](../2p3day-20250303/index.md)
-
-    -   ["Demo 1: Fooocus"](../2p3day-20250303/Demo1.md) 
-        extends a container installed with EasyBuild with additional packages and is based on the demo given
-        the EuroHPC master students at the most recent EuroHPC Summit Week.
-
-    -   ["Demo 2: A short walk-through for distributed learning"](../2p3day-20250303/Demo2.md)
-        demonstrates a procedure also covered in the documentation to do distributed learning using the
-        container with the module installed by EasyBuild.
--->
-
+<ul>
+<li>
+<p><a href="https://462000265.lumidata.eu/ai-20251008/files/LUMI-ai-20251008-05-Running_containers_on_LUMI.pdf">Presentation slides</a></p>
+</li>
+<li>
+<p><a href="../E05_RunningContainers/">Hands-on exercises</a></p>
+</li>
+<li>
+<p>Documentation:</p>
+<ul>
+<li>
+<p><a href="https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/container-jobs/">LUMI docs "Container jobs" page</a></p>
+</li>
+<li>
+<p><a href="https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/">LUMI Software Library</a> for information about
+    the available EasyConfigs for containers</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="../../2day-20250602/">Training materials from the most recent LUMI introductory training in June 2025</a></p>
+<ul>
+<li>
+<p>The <a href="../../2day-20250602/M105-SoftwareStacks/">"LUMI Software Stacks" talk</a>
+    discusses using EasyBuild among other things.</p>
+</li>
+<li>
+<p>The <a href="../../2day-20250602/M205-Containers/">"Containers on LUMI-C and LUMI-G" talk</a>
+    also covers the AI containers towards the end of the presentation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>And some demos from the <a href="../../2day-20250602/">LUMI introductory training in March 2025</a></p>
+<ul>
+<li>
+<p><a href="../../2day-20250602/Demo1/">"Demo 1: Fooocus"</a> 
+    extends a container installed with EasyBuild with additional packages and is based on the demo given
+    the EuroHPC master students at the most recent EuroHPC Summit Week. It uses among other things also
+    the "proot unprivileged build" approach mentioned in the presentation.</p>
+</li>
+<li>
+<p><a href="../../2day-20250602/Demo2/">"Demo 2: A short walk-through for distributed learning"</a>
+    demonstrates a procedure also covered in the documentation to do distributed learning using the
+    container with the module installed by EasyBuild. The approach is slightly different from the one 
+    used in this course though.</p>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
-<p>/</p>
+<ol>
+<li>
+<p>How can we extend the prebuilt containers with more libraries (after copying them to some of our own folders)?</p>
+<ul>
+<li>
+<p>Yes, that will be discussed in the comming sessions. Options includes create a sandbox 
+    out of the container to install your own software or use virtual environments.</p>
+</li>
+<li>
+<p>And in the training materials for this lecture, you will also soon find a link to 
+    an older demo where we use some approaches to extend the container (the FOOOCUS demo).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Is there a way to create a sigularity container from a requirements.txt or poetry files in a direct way?</p>
+<ul>
+<li>Yes. <a href="https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/l/lumi-container-wrapper/">"lumi-container-wrapper"</a> 
+    (or <a href="https://docs.lumi-supercomputer.eu/software/installing/container-wrapper/">this doc page</a>) is your tool. 
+    But you can't build a proper PyTorch container that way. For that, 
+    <a href="https://docs.lumi-supercomputer.eu/software/containers/singularity/#building-containers-using-the-cotainr-tool"><code>cotainr</code></a> 
+    which will be treated in the next presentation is your tool of choice. 
+    There is more needed than what pip etc. can do to make a working PyTorch container. 
+    But you can always extend an existing container with additional packages specified in a 
+    requirements.txt file, e.g., via a virtual environment, which is the last presentation of today.</li>
+</ul>
+</li>
+<li>
+<p>In the provided pytorch container, there is no ffmpeg library, however, it is in 
+    the <a href="https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/f/FFmpeg/">module FFmpeg</a>. 
+    How do I use the ffmpeg inside my pytorch container? 
+    No official package available for <a href="https://software.opensuse.org/package/ffmpeg">openSUSE Leap 15.5</a>, 
+    any instructions on how to install ffmpeg from source to my container? </p>
+<ul>
+<li>
+<p>You cannot use that version from the module in the container. 
+    You will have to extend the container with the FFmpeg package. 
+    If there is a SUSE package for that, and if so, you can use the "proot unprivileged build" proces for that. 
+    We have a demo, the Fooocus demo discussed above.. </p>
+<p>And if there is no package, you'll need to install it by hand. 
+The ffmpeg package on the system cannot be trivially imported in the container as it 
+has a lot of dependencies that would also need to be imported, 
+and as the compiler version used for these packages, may not be compatible either. 
+Unfortunately, the number of dependencies of FFmpeg is huge so this is a far from trivial undertaking...</p>
+<p>I don't know by heart how to use the SUSE <code>zypper</code> tool to install community packages, 
+but that might be the easiest solution if it can then still find all dependencies.</p>
+<p>I did also experiment a little with extending a Conda installation with conda 
+by running the commands in a <code>%post</code> section in a proot build process. 
+It did not work completely - the output of <code>conda list</code> did not correspond 
+to what was installed - but it did seem to install the packages I wanted, 
+so that may be another way.</p>
+</li>
+<li>
+<p>There is a conda package for ffmpeg. That might work.
+    You can try <code>pytorch::ffmpeg</code>
+    Or building from source. There should be instructions in the ffmpeg docs.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>I've exceeded disk quota when pulling a container from docker to singularity:
+    <div class="highlight"><pre><span></span><code>singularity pull my_container.sif            docker://rocm/pytorch:rocm6.4.4_ubuntu
+24.04_py3.12_pytorch_release_2.7.1
+
+FATAL:   While making image from oci registry: error fetching image to cache: while building SIF from layers: conveyor failed to get: error writing layer: write /users/masmagre/.singularity/cache/blob/blobs/sha256/c1974c40f700d776376f6394d8016636ef10037d2291ddd533015ec9b556414d455257573: disk quota exceeded
+</code></pre></div></p>
+<ul>
+<li>
+<p>This is an issue the lecturer unfortunately forgot to warn for (or I must have overlooked it). 
+    The default cache location is in the home directory, which is too small. 
+    The solution is to set another cache directory on /scratch or so using the environment variable 
+    <code>SINGULARITY_CACHEDIR</code>. (Or link the cache subdirectory of <code>˜/.singularity</code> to such a directory)</p>
+</li>
+<li>
+<p>I tend to do that kind of thing in a job on a single compute node and set the cache to <code>/tmp</code>.</p>
+<p>Which works also if you allocate enough memory to the job. Building larger containers may require 
+just taking an exclusive node, e.g., by using the <code>standard</code> partition if you have 
+CPU billing units left or on <code>standard-g</code>.</p>
+</li>
+<li>
+<p>Some more information about this can be found in the 
+    <a href="https://docs.lumi-supercomputer.eu/software/containers/singularity/#pulling-container-images-from-a-registry">LUMI documentation</a></p>
+</li>
+</ul>
+</li>
+</ol>
 
 
 

@@ -1027,7 +1027,7 @@
   
   
   <span class="md-ellipsis">
-    Ann.: AI workshop October 2025
+    AI workshop October 2025
     
   </span>
   
@@ -1044,7 +1044,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Ann.: AI workshop October 2025
+            AI workshop October 2025
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4482,18 +4482,22 @@
 A video recording will follow.
 -->
 
-<!--
 <video src="https://462000265.lumidata.eu/ai-20251008/recordings/03_FirstJob.mp4" controls="controls"></video>
--->
 
 <h2 id="extra-materials">Extra materials<a class="headerlink" href="#extra-materials" title="Permanent link">&para;</a></h2>
-<p>More materials will become available during and shortly after the course</p>
 <!--
+More materials will become available during and shortly after the course
+-->
 
--   [Presentation slides](https://462000265.lumidata.eu/ai-20251008/files/LUMI-ai-20251008-03-First_AI_job.pdf)
-
--   [Hands-on exercises](E03_FirstJob.md)
-
+<ul>
+<li>
+<p><a href="https://462000265.lumidata.eu/ai-20251008/files/LUMI-ai-20251008-03-First_AI_job.pdf">Presentation slides</a></p>
+</li>
+<li>
+<p><a href="../E03_FirstJob/">Hands-on exercises</a></p>
+</li>
+</ul>
+<!--
 -   [More extensive training materials on Slurm from the recent introductory "Supercomputing with LUMI" course from March 2025](../2p3day-20250303/index.md)
 
     -   A more detailed introduction to Slurm but without AI-specific examples is given in the 
@@ -4510,56 +4514,73 @@ A video recording will follow.
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Is there way to analyze memory usage afterwards, instead of using rocm-smi?</p>
+<p>Question from the audience about dynamic job size</p>
 <ul>
 <li>
-<p>CPU memory:</p>
-<ul>
-<li>
-<p>While running, there is the <code>top</code> command. <code>htop</code> is also available in the <code>systools</code> module. This would show CPU memory usage. It requires of course opening another shell on the node, see also the LUMI documentation. </p>
+<p>No, this cannot be done. And it is normal also, as there is no guarantee that the resources 
+    would be immediately available, so your job would be stuck while still keeping the nodes 
+    that it already has, which is very expensive.</p>
+<p>You can write dependent jobs, where you specify that one job should only start when another 
+job has finished. So you could have a second job with more resources that can get scheduled 
+as soon as the first job with fewer resources ends. 
+See <a href="https://slurm.schedmd.com/archive/slurm-23.02.7/sbatch.html#OPT_dependency">this part of the sbatch manual</a></p>
 </li>
 <li>
-<p>After the job, information on CPU-attached RAM use can also be found via the <code>sacct</code> command. It is discussed in more detail in the Slurm session in our regular intro course (where we have 90 minutes just to explain how jobs work): https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/201-Slurm/#the-sacct-command. This will only report RAM, the GPU RAM usage is not reported in SLURM.</p>
+<p>Running an inference service on a HPC system with inelastic job scheduling is not an ideal fit, 
+    but increasingly asked for and there are "overlay" solutions that try to provide a bridge 
+    at the cost of some efficiency.</p>
+</li>
+<li>
+<p>An HPC system has advantages over cloud infrastructure (it can be cheaper), but then it also 
+    comes with restrictions that a cloud infrastructure does not have...</p>
 </li>
 </ul>
 </li>
 <li>
-<p>GPU memory</p>
+<p>What does the flag <code>--overlap</code> do in <code>srun</code>?</p>
 <ul>
-<li>
-<p>PyTorch also reports on GPU memory use, so you may find this in your job output</p>
-</li>
-<li>
-<p>We have an easybuild recipe to install <code>nvtop</code>, but it hasn't been updated or tested for a while. And it is for during the job.</p>
-</li>
-<li>
-<p>But there is no way to analyse GPU memory usage afterwards unless you collected that data yourself during the run and stored it somewhere. Slurm will not give that information.</p>
-</li>
-</ul>
-</li>
+<li>It allows multiple job steps in Slurm to overlap resources such as CPU cores and GPUs. </li>
+<li>But this is a very brief introduction to Slurm. In the regular intro courses, we have </li>
+<li><a href="https://lumi-supercomputer.github.io/LUMI-training-materials/2day-20250602/M201-Slurm/">a 2 hour lecture</a> </li>
+<li>and even that is not enough to explain all that in detail...</li>
 </ul>
 </li>
 <li>
-<p>On NVIDIA GPU, one can use NVTX or scalene-gui to profile GPU, which could be very helpful to address OOM issue. What is the best similar way to do it on AMD GPU?</p>
+<p><strong><em>Info</em></strong> <a href="https://lumi-supercomputer.github.io/LUMI-training-materials/User-Coffee-Breaks/20240131-user-coffee-break-HyperQueue/">Link to the HyperQueue presentation mentioned after a question in the room</a></p>
+</li>
+<li>
+<p>I'm attempting to view the training stats on TensorBoard using the path to runs but it displays empty loss curves. 
+    Is this expected at this stage of the tutorial? EDIT: (<strong>It started showing some data</strong>)</p>
 <ul>
 <li>
-<p>We have an <a href="https://lumi-supercomputer.github.io/LUMI-training-materials/2p3day-20250303/">extensive 4-day or 5-day training</a> 
-    covering profiling and debugging tools for AMD GPUs as an important part of the course:. It even includes a demo of over one hour where those tools are used to analyse performance of PyTorch. Part of the materials are available online, another part just on LUMI. Not sure if Samuel will mention those tools in his talks in this course.</p>
-<p>There is also more information in the presentation <a href="../extra_04_CheckingGPU/">"Understanding GPU activity &amp; checking jobs"</a>
-of this course.</p>
+<p>Tensorboard is not the fastest.</p>
+</li>
+<li>
+<p>Also: it should write the tensorboard logs to scratch, not projappl (unless you change that).</p>
+</li>
+<li>
+<p>When you launch tensorboard you need to add the path <code>/scratch/project_465002178/USERNAME/runs/</code> 
+    to the TensorBoard log directory (replace <code>USERNAME</code> with your actual username)</p>
 </li>
 </ul>
 </li>
 <li>
-<p>Seems like the there's no difference between /GPT-neo-IMDB-finetuning.py and /reference-solution/GPT-neo-IMDB-finetuning.py. I'm not sure how to add the continuation from checkpoint.</p>
+<p>Got this error: 
+    <div class="highlight"><pre><span></span><code>+ srun singularity exec /appl/local/containers/sif-images/lumi-pytorch-rocm-6.2.4-python-3.12-pytorch-v2.6.0.sif /users/sharmavi/test.py --output-path /scratch/project_465002178/sharmavi/data/ --logging-path /scratch/project_465002178/sharmavi/runs/
+**FATAL:   permission denied **
+</code></pre></div></p>
 <ul>
-<li>The differences are not in the python file but in the slurm job script <code>run.sh</code></li>
-</ul>
+<li>
+<p>This will try to run the script <code>test.py</code>. So </p>
+<ol>
+<li>This has to be an executable script, and</li>
+<li>It has to start with the correct shebang line to tell Linux to use Python
+     (and which Python), i.e., that line that starts with <code>#!</code>.</li>
+</ol>
 </li>
 <li>
-<p>Will you please repeat how often you should have checkpointing? and is it set up in the finetuning.py document?</p>
-<ul>
-<li>Every couple of hours, depending how long you run. Do more checkpointings if unstable.</li>
+<p>Or you just forgot the <code>python</code> after the sif-file.</p>
+</li>
 </ul>
 </li>
 </ol>
