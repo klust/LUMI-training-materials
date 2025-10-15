@@ -917,7 +917,7 @@
   
   
   <span class="md-ellipsis">
-    Supercomputing with LUMI October 2025
+    Ann.: Supercomputing with LUMI October 2025
     
   </span>
   
@@ -934,7 +934,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Supercomputing with LUMI October 2025
+            Ann.: Supercomputing with LUMI October 2025
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4477,7 +4477,7 @@
 #SBATCH --account=&lt;project_id&gt;      # Project for billing
 
 module load LUMI/24.03
-module load lumi-CPEtools/1.2a-cpeGNU-24.03
+module load lumi-CPEtools/1.2-cpeGNU-24.03
 
 srun --cpus-per-task=$SLURM_CPUS_PER_TASK hybrid_check -n -r
 </code></pre></div>
@@ -4511,7 +4511,7 @@ some start with <code>SLURM_</code> but a few start with <code>SRUN_</code> whil
 #SBATCH --account=&lt;project_id&gt;      # Project for billing
 
 module load LUMI/24.03
-module load lumi-CPEtools/1.2a-cpeGNU-24.03
+module load lumi-CPEtools/1.2-cpeGNU-24.03
 
 export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
 
@@ -4561,7 +4561,7 @@ slides and we only need to adapt the CPU mask:</p>
 #SBATCH --hint=nomultithread
 
 module load LUMI/24.03 partition/G
-module load lumi-CPEtools/1.2a-cpeGNU-24.03
+module load lumi-CPEtools/1.2-cpeGNU-24.03
 
 cat &lt;&lt; EOF &gt; select_gpu_$SLURM_JOB_ID
 #!/bin/bash
