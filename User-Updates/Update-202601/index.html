@@ -5361,6 +5361,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="The LUMI software stacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#known-issues-so-far-with-the-software-stacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known issues so far with the software stacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5591,6 +5608,22 @@ of the LUMI stacks for which we already indicated before the maintenance
 that there would be problems.**
 -->
 
+<h3 id="known-issues-so-far-with-the-software-stacks">Known issues so far with the software stacks<a class="headerlink" href="#known-issues-so-far-with-the-software-stacks" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Basic software stacks using partition/G may give issues, in particular when trying to
+    build software on it now.</p>
+<p>The only solutions are to either move to LUMI/25.03, or we have to rebuild 24.03 for 
+partition/G completely which can only be done in downtime and therefore was not done
+yet to minimise the maintenance period. So the only practical solution is to move on
+to 25.03 if you are affected...</p>
+</li>
+<li>
+<p>We haven't been able to test yet on the production system, but software using the
+    <code>libpsl</code> module from the older LUMI software stacks, may fail. A solution has been
+    implemented in 25.03 and we are considering options for 24.03 and 23.09.</p>
+</li>
+</ol>
 <h2 id="other-software-stacks">Other software stacks<a class="headerlink" href="#other-software-stacks" title="Permanent link">&para;</a></h2>
 <p>Local software stacks, with the one provided in <code>/appl/local/csc</code> as the most prominent example,
 are not managed by the LUMI User Support Team. They have to be updated by the organisation who
