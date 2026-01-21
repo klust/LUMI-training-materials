@@ -5444,9 +5444,29 @@
 <h1 id="changes-after-the-update-of-january-2026">Changes after the update of January 2026<a class="headerlink" href="#changes-after-the-update-of-january-2026" title="Permanent link">&para;</a></h1>
 <!--
 **See also the 
-[recording of the user update webinar of Feburary 11, 2026](../../User-Coffee-Breaks/20260211-user-coffee-break-LUMI-update.md).**
+[recording of the user update webinar of February 11, 2026](../../User-Coffee-Breaks/20260211-user-coffee-break-LUMI-update.md).**
 -->
 
+<div class="admonition note">
+<p class="admonition-title">State of the system</p>
+<p><span style="color:DarkRed">
+<strong>The choice was made to make LUMI available to users before all software in the 
+LUMI stacks could be checked and recompiled where possible and before the new stack
+could be installed, so that advanced users who do not depend on software preinstalled
+on the system beyond the programming environment, can start working again.</strong>
+</span></p>
+<p><span style="color:DarkRed">
+<strong>As the version of the <code>rocm</code> and <code>amd</code> modules has changed, we expect a lot of GPU software
+to fail if not recompiled. This is particularly true for anything using cpeAMD/24.03 as there
+even the base compilers have changed. One can try recompiling, but the cpeAMD toolchain needs to
+be recompiled first which could not be done before the system was released to users.</strong>
+</span></p>
+<p><span style="color:DarkRed">
+<strong>Experience has taught us that hard-coded paths can be hidden where you wouldn't expect them,
+e.g., because a library or application uses so-called rpath linking in its installation 
+scripts. See below for known packages of that type.</strong>
+</span></p>
+</div>
 <p><span style="color:DarkBlue">Recent changes are in dark blue.</span></p>
 <p>This page will be updated as we learn about problems with the system after the
 update and figure out workarounds for problems. Even though we had the
