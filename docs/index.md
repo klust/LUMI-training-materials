@@ -10,6 +10,8 @@ Upcoming or currently running events with materials already partly available:
 
 -   [Intro to Supercomputing with LUMI (April 22-23, 2026)](2day-20260422/index.md) on-stie in Riga and online.
 
+-   [LUMI-G hackathon, 18-22 May 2026, in Antwerp, Belgium](Hackathon-20260518/index.md)
+
 
 Most recently completed main training events:
 
@@ -120,6 +122,7 @@ By theme in reverse chronological order:
     -   [HPE and AMD profiling tools (November 22, 2023)](Profiling-20231122/index.md)
     -   [HPE and AMD profiling tools (April 13, 2023)](Profiling-20230413/index.md)
 -   Materials from Hackathons 
+    -   [LUMI-G hackathon (May 18-22, 2026)](Hackathon-20260518/index.md)
     -   [LUMI-G hackathon (May 12-16, 2025)](Hackathon-20250512/index.md)
     -   [LUMI-G hackathon (October 14-18, 2024)](Hackathon-20241014/index.md)
     -   [LUMI-G hackathon (April 17-21, 2023)](Hackathon-20230417/index.md)
