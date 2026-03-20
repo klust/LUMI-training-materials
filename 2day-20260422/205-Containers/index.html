@@ -6075,6 +6075,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#extending-containers-with-the-unprivileged-proot-build-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extending containers with the unprivileged PRoot build process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending containers with the unprivileged PRoot build process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6980,6 +7008,21 @@ only a part of that file.</p>
 <p>As a test that everything works, we can import the <code>mace</code> package and print its version:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import mace; print( mace.__version__ )&#39;</span>
 </code></pre></div>
+<h3 id="extending-containers-with-the-unprivileged-proot-build-process">Extending containers with the unprivileged PRoot build process<a class="headerlink" href="#extending-containers-with-the-unprivileged-proot-build-process" title="Permanent link">&para;</a></h3>
+<h4 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h4>
+<p>Relevant documentation for this section:</p>
+<ul>
+<li>
+<p><a href="https://docs.sylabs.io/guides/4.1/user-guide/build_a_container.html#unprivilged-proot-builds">"Unprivileged PRoot builds" in the SingularityCE 4.1 manual</a></p>
+</li>
+<li>
+<p><a href="https://docs.sylabs.io/guides/4.1/user-guide/definition_files.html">"The Definition File" in the SingularityCE 4.1 manual</a></p>
+<p>Note that the <code>%setup</code> section cannot be used with the PRoot build process. The manual
+also says at some point that <code>%pre</code> cannot be used, but that simply does not exist in 
+singularity. There are other restrictions also that are clearly mentioned on the
+<a href="https://docs.sylabs.io/guides/4.1/user-guide/build_a_container.html#unprivilged-proot-builds">"Unprivivileged proot builds" section</a>.</p>
+</li>
+</ul>
 <h1 id="materials-under-revision-most-will-be-removed">Materials under revision (most will be removed)<a class="headerlink" href="#materials-under-revision-most-will-be-removed" title="Permanent link">&para;</a></h1>
 <h3 id="pre-built-ai-containers">Pre-built AI containers<a class="headerlink" href="#pre-built-ai-containers" title="Permanent link">&para;</a></h3>
 <figure style="border: 1px solid #000">
