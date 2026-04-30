@@ -124,6 +124,10 @@ Some good suggestions:
     in China Town is a relatively cheap place, but the food is good. It is a rather
     busy place. Closed on Wednesday.
 
+-   Hot Pot - Antwerpia is a very small and rather primitive Polish restaurant in
+    Antwerpen.
+    ([Google Maps](https://maps.app.goo.gl/pMuLcREP18TKspcP8))
+
 -   Some other places that drew the attention of the author of this text but where
     he has never been:
 
@@ -139,6 +143,26 @@ Some good suggestions:
     -   [Georgian House](https://georgianhouseantwerpen.be/), close to the Central Station.
         ([Google Maps](https://maps.app.goo.gl/wRasnpKAvEA4kHdC7))
 
+    -   [Yalla Yalla](https://yallayalla.be/) is a lebanese restaurant a bit further
+        away on the Draakplaats, but at the corner of the renowned Cogels-Osylei
+        with beautiful Belle Époque houses.
+        ([Google Maps](https://maps.app.goo.gl/qus9vMguXjnUEzcEA))
+
+        There are a few more restaurants on the Draakplaats that also get good reviews.
+
+    -   Not far from the Draakplaats there is the Dageraadplaats, with the
+        Vietnamese restaurant [Dang's Kitchen](https://dangs.be/) 
+        and Thai restaurant [May's](https://mays.be/)
+        that also get good reviews.
+        ([Google Maps Dang's Kitchen](https://maps.app.goo.gl/V87kkZEoeZGEQjJF6))
+        ([Google Maps May's](https://maps.app.goo.gl/vpKdKewWynQSgKXx9))
+
+-   If you don't want to walk far, there are plenty of restaurants in the 
+    "Statiestraat" and "Breydelstraat" close to the station. Some are tourist traps
+    (and that definitely holds for several of the place on de "De Keyserlei"),
+    but some get good reviews. 
+    ([Google Maps](https://maps.app.goo.gl/qzD13H6PMnPSLfaa6))
+    
 
 ## Drinks in the evening
 
