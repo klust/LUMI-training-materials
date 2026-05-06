@@ -5994,43 +5994,37 @@ for more information on public transportation in Stockholm.</p>
 
 -   Reservations:
 
-    -   Day 1: `Workshop_Day1` (on the `standard` Slurm partition)
+    -   Day 1: `LUMI_Advanced_Day1` (on the `standard` Slurm partition)
 
-    -   Day 2: `Workshop_Day2` for CPU (on the `standard` Slurm partition)
-        and `Workshop_Day2_gpu` for GPU (on the `standard-g` Slurm partition)
+    -   Day 2: `LUMI_Advanced_Day2` for CPU (on the `standard` Slurm partition)
+        and `LUMI_Advanced_Day2_gpu` for GPU (on the `standard-g` Slurm partition)
 
-    -   Day 3: `Workshop_Day3` (on the `standard-g` Slurm partition)
-
--   [Some suggestions for the night](evening_suggestions.md)
+    -   Day 3: `LUMI_Advanced_Day3_gpu` (on the `standard-g` Slurm partition)
 -->
 
 <!--
-ReservationName=Workshop_Day1 StartTime=2025-10-22T09:00:00 EndTime=2025-10-22T18:00:00 Duration=09:00:00
-   Nodes=nid[001000-001015] NodeCnt=16 CoreCnt=2048 Features=(null) PartitionName=standard Flags=
+ReservationName=LUMI_Advanced_Day1 StartTime=2026-05-11T10:00:00 EndTime=2026-05-11T18:00:00 Duration=08:00:00
+   Nodes=nid[002006-002008,002703-002715] NodeCnt=16 CoreCnt=2048 Features=(null) PartitionName=standard Flags=
    TRES=cpu=4096
-   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null) Watts=n/a
+   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null)
    MaxStartDelay=(null)
 
-ReservationName=Workshop_Day2 StartTime=2025-10-23T09:00:00 EndTime=2025-10-23T18:00:00 Duration=09:00:00
-   Nodes=nid[001000-001015] NodeCnt=16 CoreCnt=2048 Features=(null) PartitionName=standard Flags=
+ReservationName=LUMI_Advanced_Day2 StartTime=2026-05-12T10:00:00 EndTime=2026-05-12T18:00:00 Duration=08:00:00
+   Nodes=nid[002006-002008,002703-002715] NodeCnt=16 CoreCnt=2048 Features=(null) PartitionName=standard Flags=
    TRES=cpu=4096
-   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null) Watts=n/a
+   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null)
    MaxStartDelay=(null)
 
-ReservationName=Workshop_Day2_gpu StartTime=2025-10-23T09:00:00 EndTime=2025-10-23T18:00:00 Duration=09:00:00
-
-   Nodes=nid[005124-005139] NodeCnt=16 CoreCnt=1024 Features=(null) PartitionName=standard-g Flags=
-
+ReservationName=LUMI_Advanced_Day2_gpu StartTime=2026-05-12T10:00:00 EndTime=2026-05-12T18:00:00 Duration=08:00:00
+   Nodes=nid[005206,005304,005921,005923,005929,006040,006158,006235,006261,006980,007204,007364,007530,007552,007751,007753] NodeCnt=16 CoreCnt=1024 Features=(null) PartitionName=standard-g Flags=
    TRES=cpu=2048
-
-   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null) Watts=n/a
-
+   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null)
    MaxStartDelay=(null)
 
-ReservationName=Workshop_Day3 StartTime=2025-10-24T09:00:00 EndTime=2025-10-24T18:00:00 Duration=09:00:00
-   Nodes=nid[005124-005139] NodeCnt=16 CoreCnt=1024 Features=(null) PartitionName=standard-g Flags=
+ReservationName=LUMI_Advanced_Day3_gpu StartTime=2026-05-13T10:00:00 EndTime=2026-05-13T18:00:00 Duration=08:00:00
+   Nodes=nid[005206,005304,005921,005923,005929,006040,006158,006235,006261,006980,007204,007206,007364,007530,007552,007751] NodeCnt=16 CoreCnt=1024 Features=(null) PartitionName=standard-g Flags=
    TRES=cpu=2048
-   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null) Watts=n/a
+   Users=(null) Groups=(null) Accounts=project_465002770 Licenses=(null) State=INACTIVE BurstBuffer=(null)
    MaxStartDelay=(null)
 -->
 
@@ -6051,7 +6045,7 @@ downloaded from LUMI.</p>
 <td colspan="3"><strong>Day 1</strong></td>
 </tr>
 <tr>
-<td><a href="M100_Course_Introduction/">Introduction</a></td>
+<td><a href="M100_Course_Introduction/">Welcome and introduction</a></td>
 <td>/</td>
 <td><a href="M100_Course_Introduction/">recording</a></td>
 </tr>
@@ -6091,11 +6085,6 @@ downloaded from LUMI.</p>
 <td>/</td>
 </tr>
 <tr>
-<td><a href="M105_Demo_Optimizing_Code/">Interactive demo: Strategies for code optimization</a></td>
-<td><a href="M105_Demo_Optimizing_Code/#materials">lumi</a></td>
-<td>/</td>
-</tr>
-<tr>
 <td colspan="3"><strong>Day 2</strong></td>
 </tr>
 <tr>
@@ -6104,7 +6093,7 @@ downloaded from LUMI.</p>
 <td><a href="M201_MPI/">lumi</a></td>
 </tr>
 <tr>
-<td><a href="ME201_MPI/">Exercises #5</a></td>
+<td><a href="ME201_MPI/">Exercises #4</a></td>
 <td>/</td>
 <td>/</td>
 </tr>
@@ -6114,7 +6103,7 @@ downloaded from LUMI.</p>
 <td><a href="M202_IO/">lumi</a></td>
 </tr>
 <tr>
-<td><a href="ME202_IO/">Exercises #6</a></td>
+<td><a href="ME202_IO/">Exercises #5</a></td>
 <td>/</td>
 <td>/</td>
 </tr>
@@ -6124,7 +6113,7 @@ downloaded from LUMI.</p>
 <td><a href="M203_AMD_tools_1/">recording</a></td>
 </tr>
 <tr>
-<td><a href="ME203_AMD_tools_1/">Exercises #7</a></td>
+<td><a href="ME203_AMD_tools_1/">Exercises #6</a></td>
 <td>/</td>
 <td>/</td>
 </tr>
@@ -6134,7 +6123,7 @@ downloaded from LUMI.</p>
 <td><a href="M204_AMD_tools_2/">recording</a></td>
 </tr>
 <tr>
-<td><a href="ME204_AMD_tools_2/">Exercises #8</a></td>
+<td><a href="ME204_AMD_tools_2/">Exercises #7</a></td>
 <td>/</td>
 <td>/</td>
 </tr>
@@ -6147,7 +6136,7 @@ downloaded from LUMI.</p>
 <td><a href="M301_Best_Practices_GPU_Optimization/">recording</a></td>
 </tr>
 <tr>
-<td><a href="ME301_Best_Practices_GPU_Optimization/">Exercises #9</a></td>
+<td><a href="ME301_Best_Practices_GPU_Optimization/">Exercises #8</a></td>
 <td>/</td>
 <td>/</td>
 </tr>
@@ -6161,7 +6150,9 @@ downloaded from LUMI.</p>
 </tr>
 </table>
 </div>
-<!-- -->
+<!-- 
+| [Interactive demo: Strategies for code optimization](M105_Demo_Optimizing_Code.md) | [lumi](M105_Demo_Optimizing_Code.md#materials) | / |
+-->
 
 <!--
 -->
