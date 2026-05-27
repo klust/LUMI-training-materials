@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20260511/ME104b_Session_3/">
+        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20260511/exercises_AMD_hackmd/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Exercises session 3 - LUMI training materials</title>
+        <title>LUMI Performance Workshop - Stockholm, Sweden (May 2026) - LUMI training materials</title>
       
     
     
@@ -145,9 +145,9 @@
 
   
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LUMI training materials - Exercises session 3" />
+  <meta property="og:title" content="LUMI training materials - LUMI Performance Workshop - Stockholm, Sweden (May 2026)" />
   <meta property="og:description" content="None" />
-  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20260511/ME104b_Session_3/" />
+  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/paow-20260511/exercises_AMD_hackmd/" />
   <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1080" />
@@ -157,7 +157,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LUMIhpc" />
   <meta name="twitter:creator" content="@LUMIhpc" />
-  <meta name="twitter:title" content="LUMI training materials - Exercises session 3" />
+  <meta name="twitter:title" content="LUMI training materials - LUMI Performance Workshop - Stockholm, Sweden (May 2026)" />
   <meta name="twitter:description" content="None" />
   <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
 
@@ -219,7 +219,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercises-session-3" class="md-skip">
+        <a href="#lumi-performance-workshop-stockholm-sweden-may-2026" class="md-skip">
           Skip to content
         </a>
       
@@ -276,7 +276,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercises session 3
+              LUMI Performance Workshop - Stockholm, Sweden (May 2026)
             
           </span>
         </div>
@@ -5919,13 +5919,402 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#materials" class="md-nav__link">
+  <a href="#login-to-lumi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Materials
+        Login to Lumi
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Login to Lumi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#during-the-course-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        During the course only:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-the-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After the course:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hip-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HIP Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HIP Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hipify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipify
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hipify">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipify-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipify Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hipify Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-manual-code-conversion-from-cuda-to-hip-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 1: Manual code conversion from CUDA to HIP (10 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-code-conversion-from-cuda-to-hip-using-hipify-tools-10-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2: Code conversion from CUDA to HIP using HIPify tools (10 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rocprof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rocprof
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rocprof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exploring-rocprofiler-v3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exploring Rocprofiler-v3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rocprof-sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rocprof-sys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rocprof-sys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-instrumentation-the-commands-take-a-significant-ammount-of-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic instrumentation (the commands take a significant ammount of time)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-rewriting-to-be-used-with-mpi-codes-and-decreases-overhead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary rewriting (to be used with MPI codes and decreases overhead)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-counters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware counters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-timings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernel timings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rocprof-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rocprof-compute
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorch-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pytorch example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hip-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HIP optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HIP optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-daxpy-hip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimizing DAXPY HIP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run exercises
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-to-ponder-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Things to ponder about
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Things to ponder about">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daxpy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        daxpy_1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daxpy_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        daxpy_2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daxpy_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        daxpy_3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daxpy_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        daxpy_4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daxpy_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        daxpy_5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5946,43 +6335,648 @@
 
 
 
-<h1 id="exercises-session-3">Exercises session 3<a class="headerlink" href="#exercises-session-3" title="Permanent link">&para;</a></h1>
-<p>Exercises on advanced performance analysis.</p>
-<p>Exercises are in <code>Exercises/HPE/day1/perftools</code>.</p>
-<p>See <code>Exercises/HPE/day1/perftools/README.md</code></p>
-<h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
-<p>No materials available at the moment.</p>
+<h1 id="lumi-performance-workshop-stockholm-sweden-may-2026">LUMI Performance Workshop - Stockholm, Sweden (May 2026)<a class="headerlink" href="#lumi-performance-workshop-stockholm-sweden-may-2026" title="Permanent link">&para;</a></h1>
+<h3 id="login-to-lumi">Login to Lumi<a class="headerlink" href="#login-to-lumi" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ssh USERNAME@lumi.csc.fi
+</code></pre></div>
+To simplify the login to LUMI, you can add the following to your <code>.ssh/config</code> file.</p>
+<div class="highlight"><pre><span></span><code># LUMI
+Host lumi
+User &lt;USERNAME&gt;
+   Hostname lumi.csc.fi
+   IdentityFile &lt;HOME_DIRECTORY&gt;/.ssh/id_rsa 
+   ServerAliveInterval 600
+   ServerAliveCountMax 30
+</code></pre></div>
+<p>The <code>ServerAlive*</code> lines in the config file may be added to avoid timeouts when idle.</p>
+<p>Now you can shorten your login command to the following.</p>
+<div class="highlight"><pre><span></span><code>ssh lumi
+</code></pre></div>
+<h4 id="during-the-course-only">During the course only:<a class="headerlink" href="#during-the-course-only" title="Permanent link">&para;</a></h4>
+<p>If you are able to log in with the ssh command, you should be able to use the secure copy command to transfer files. For example, you can 
+copy the presentation slides from lumi to view them.
+project_465002770</p>
+<div class="highlight"><pre><span></span><code>scp lumi:/project/project_465002770/Slides/AMD/&lt;file_name&gt; &lt;local_filename&gt;
+</code></pre></div>
+<p>You can also copy all the slides with the . From your local system:</p>
+<div class="highlight"><pre><span></span><code>mkdir slides
+scp -r lumi:/project/project_465002770/Slides/AMD/* slides
+</code></pre></div>
+<p>If you don't have the additions to the config file, you would need a longer command:</p>
+<div class="highlight"><pre><span></span><code>mkdir slides
+scp -r -i &lt;HOME_DIRECTORY&gt;/.ssh/&lt;public ssh key file&gt; &lt;username&gt;@lumi.csc.fi:/project/project_465002770/slides/AMD/ slides
+</code></pre></div>
+<p>or for a single file</p>
+<div class="highlight"><pre><span></span><code>scp -i &lt;HOME_DIRECTORY&gt;/.ssh/&lt;public ssh key file&gt; &lt;username&gt;@lumi.csc.fi:/project/project_465002770/slides/AMD/&lt;file_name&gt; &lt;local_filename&gt;
+</code></pre></div>
+<h4 id="after-the-course">After the course:<a class="headerlink" href="#after-the-course" title="Permanent link">&para;</a></h4>
+<p>All materials are also available via the <a href="../">course pages on the training website</a>.
+Slides can be found at their respective talks and exercises can be 
+<a href="../#amd">installed from a downloadable tar file</a>.</p>
+<h2 id="hip-exercises">HIP Exercises<a class="headerlink" href="#hip-exercises" title="Permanent link">&para;</a></h2>
+<p>We assume that you have already allocated resources with <code>salloc</code></p>
+<p>While the course project is active, you can get the examples with</p>
+<div class="highlight"><pre><span></span><code>cp -r /project/project_465002770/Exercises/AMD/HPCTrainingExamples/ .
+</code></pre></div>
+<p>After the course, follow the instructions on the
+<a href="../#amd">course page on the training website</a>.</p>
+<div class="highlight"><pre><span></span><code>salloc -N 1 -p standard-g --gpus=1 -t 10:00 -A project_46YXXXXXX
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>module load craype-accel-amd-gfx90a
+module load PrgEnv-amd
+module load rocm
+</code></pre></div>
+<p>The examples are also available on github:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/amd/HPCTrainingExamples
+</code></pre></div>
+<p>Alternatively, you can copy them from <code>Exercises/AMD/HPCTrainingExamples</code> after uncompressing the 
+downloadable tar-archive of the exercises.</p>
+<h3 id="basic-examples">Basic examples<a class="headerlink" href="#basic-examples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>cd HPCTrainingExamples/HIP/vectorAdd
+</code></pre></div>
+<p>Examine files here – README, Makefile and vectoradd_hip.cpp Notice that Makefile requires HIP_PATH to be set. Check with module show rocm or echo $HIP_PATH Also, the Makefile builds and runs the code. We’ll do the steps separately. Check also the HIPFLAGS in the Makefile.</p>
+<div class="highlight"><pre><span></span><code>export HCC_AMDGPU_TARGET=gfx90a
+make
+srun -n 1 ./vectoradd
+</code></pre></div>
+<p>We can use SLURM submission script, let's call it <code>hip_batch.sh</code>:</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+#SBATCH -p standard-g
+#SBATCH -N 1
+#SBATCH --gpus=1
+#SBATCH -t 10:00
+#SBATCH -A project_46YXXXXXX
+
+module load craype-accel-amd-gfx90a
+module load rocm
+cd $PWD/HPCTrainingExamples/HIP/vectorAdd 
+
+export HCC_AMDGPU_TARGET=gfx90a
+make vectoradd
+srun -n 1 --gpus 1 ./vectoradd
+</code></pre></div>
+<p>Submit the script</p>
+<div class="highlight"><pre><span></span><code>sbatch hip_batch.sh
+</code></pre></div>
+<p>Check for output in <code>slurm-&lt;job-id&gt;.out</code> or error in <code>slurm-&lt;job-id&gt;.err</code></p>
+<p>Compile and run with Cray compiler</p>
+<div class="highlight"><pre><span></span><code>CC -x hip vectoradd.hip -o vectoradd
+srun -n 1 --gpus 1 ./vectoradd
+</code></pre></div>
+<p>Now let’s try the cuda-stream example from <code>https://github.com/ROCm-Developer-Tools/HIP-Examples</code>. This example is from the original McCalpin code as ported to CUDA by Nvidia. This version has been ported to use HIP. See add4 for another similar stream example.</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/ROCm/HIP-Examples
+export HCC_AMDGPU_TARGET=gfx90a
+cd HIP-Examples/cuda-stream
+make
+srun -n 1 ./stream
+</code></pre></div>
+<p>Note that it builds with the hipcc compiler. You should get a report of the Copy, Scale, Add, and Triad cases.
+The variable <code>export HCC_AMDGPU_TARGET=gfx90a</code> is not needed in case one sets the target GPU for MI250x as part of the compiler flags as <code>--offload-arch=gfx90a</code>.</p>
+<p>Now check the other examples in <code>HPCTrainingExamples/HIP</code> like jacobi etc.</p>
+<h2 id="hipify">Hipify<a class="headerlink" href="#hipify" title="Permanent link">&para;</a></h2>
+<p>We’ll use the same HPCTrainingExamples that were downloaded for the first exercise.</p>
+<p>Get a node allocation. </p>
+<div class="highlight"><pre><span></span><code>salloc -N 1 --ntasks=1 --gpus=1 -p standard-g -A project_46YXXXXXX –-t 00:10:00
+</code></pre></div>
+<p>A batch version of the example is also shown.</p>
+<h3 id="hipify-examples">Hipify Examples<a class="headerlink" href="#hipify-examples" title="Permanent link">&para;</a></h3>
+<h4 id="exercise-1-manual-code-conversion-from-cuda-to-hip-10-min">Exercise 1: Manual code conversion from CUDA to HIP (10 min)<a class="headerlink" href="#exercise-1-manual-code-conversion-from-cuda-to-hip-10-min" title="Permanent link">&para;</a></h4>
+<p>Choose one or more of the CUDA samples in <code>HPCTrainingExamples/HIPIFY/mini-nbody/cuda</code> directory. Manually convert it to HIP. Tip: for example, the cudaMalloc will be called hipMalloc.
+Some code suggestions include <code>nbody-block.cu, nbody-orig.cu, nbody-soa.cu</code></p>
+<p>You’ll want to compile on the node you’ve been allocated so that hipcc will choose the correct GPU architecture.</p>
+<h4 id="exercise-2-code-conversion-from-cuda-to-hip-using-hipify-tools-10-min">Exercise 2: Code conversion from CUDA to HIP using HIPify tools (10 min)<a class="headerlink" href="#exercise-2-code-conversion-from-cuda-to-hip-using-hipify-tools-10-min" title="Permanent link">&para;</a></h4>
+<p>Use the <code>hipify-perl</code> script to “hipify” the CUDA samples you used to manually convert to HIP in Exercise 1. hipify-perl is in <code>$ROCM_PATH/bin</code> directory and should be in your path.</p>
+<p>First test the conversion to see what will be converted</p>
+<div class="highlight"><pre><span></span><code>hipify-perl -no-output -print-stats nbody-orig.cu
+</code></pre></div>
+<p>You'll see the statistics of HIP APIs that will be generated.</p>
+<div class="highlight"><pre><span></span><code>[HIPIFY] info: file &#39;nbody-orig.cu&#39; statistics:
+  CONVERTED refs count: 7
+  TOTAL lines of code: 82
+  WARNINGS: 0
+[HIPIFY] info: CONVERTED refs by names:
+  cudaFree =&gt; hipFree: 1
+  cudaMalloc =&gt; hipMalloc: 1
+  cudaMemcpy =&gt; hipMemcpy: 2
+  cudaMemcpyDeviceToHost =&gt; hipMemcpyDeviceToHost: 1
+  cudaMemcpyHostToDevice =&gt; hipMemcpyHostToDevice: 1
+</code></pre></div>
+<p><code>hipify-perl</code> is in <code>$ROCM_PATH/bin</code> directory and should be in your path.</p>
+<p>Now let's actually do the conversion.</p>
+<div class="highlight"><pre><span></span><code>hipify-perl nbody-orig.cu &gt; nbody-orig.cpp
+</code></pre></div>
+<p>Compile the HIP programs.</p>
+<div class="highlight"><pre><span></span><code>hipcc -DSHMOO -I ../ nbody-orig.cpp -o nbody-orig
+</code></pre></div>
+<p>The <code>#define SHMOO</code> fixes some timer printouts. 
+Add <code>--offload-arch=&lt;gpu_type&gt;</code> if not set by the environment to specify 
+the GPU type and avoid the autodetection issues when running on a single 
+GPU on a node.</p>
+<ul>
+<li>
+<p>Fix any compiler issues, for example, if there was something that didn’t hipify correctly. </p>
+</li>
+<li>
+<p>Be on the lookout for hard-coded Nvidia specific things like warp sizes and inlined PTX code. </p>
+</li>
+</ul>
+<p>Run the program</p>
+<div class="highlight"><pre><span></span><code>srun ./nbody-orig
+</code></pre></div>
+<p>A batch version of Exercise 2 is:</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+#SBATCH -N 1
+#SBATCH --ntasks=1
+#SBATCH --gpus=1
+#SBATCH -p standard-g
+#SBATCH -A project_46YXXXXXX
+#SBATCH -t 00:10:00
+
+module load craype-accel-amd-gfx90a
+module load rocm
+
+export HCC_AMDGPU_TARGET=gfx90a
+
+cd HPCTrainingExamples/mini-nbody/cuda
+hipify-perl -print-stats nbody-orig.cu &gt; nbody-orig.cpp
+hipcc -DSHMOO -I ../ nbody-orig.cpp -o nbody-orig
+srun ./nbody-orig
+cd ../../..
+</code></pre></div>
+<p>Notes:</p>
+<ul>
+<li>
+<p>Hipify tools do not check correctness</p>
+</li>
+<li>
+<p><code>hipconvertinplace-perl</code> is a convenience script that does <code>hipify-perl -inplace -print-stats</code> command</p>
+</li>
+</ul>
+<h2 id="rocprof">Rocprof<a class="headerlink" href="#rocprof" title="Permanent link">&para;</a></h2>
+<p>Setup environment</p>
+<div class="highlight"><pre><span></span><code>salloc -N 1 --gpus=8 -p standard-g --exclusive -A project_46YXXXXXX -t 20:00
+
+module load PrgEnv-cray
+module load craype-accel-amd-gfx90a
+module load rocm
+</code></pre></div>
+<p>Obtain examples repo and navigate to the <code>HIPIFY</code> exercises</p>
+<div class="highlight"><pre><span></span><code>cd HPCTrainingExamples/HIPIFY/mini-nbody/hip/
+</code></pre></div>
+<p>Compile and run one case. We are on the front-end node, so we need to point he tools to use the correct GPU:</p>
+<div class="highlight"><pre><span></span><code>export HCC_AMDGPU_TARGET=gfx90a
+</code></pre></div>
+<p>have two ways to compile for the GPU that we want to run on. We can now complete the build with:</p>
+<div class="highlight"><pre><span></span><code>make nbody-orig
+</code></pre></div>
+<p>Now Run <code>rocprof</code> on nbody-orig to obtain hotspots list</p>
+<div class="highlight"><pre><span></span><code>srun rocprof --stats nbody-orig 65536
+</code></pre></div>
+<p>Check Results</p>
+<div class="highlight"><pre><span></span><code>cat results.csv
+</code></pre></div>
+<p>Check the statistics result file, one line per kernel, sorted in descending order of durations</p>
+<div class="highlight"><pre><span></span><code>cat results.stats.csv
+</code></pre></div>
+<p>Using <code>--basenames on</code> will show only kernel names without their parameters.</p>
+<div class="highlight"><pre><span></span><code>srun rocprof --stats --basenames on nbody-orig 65536
+</code></pre></div>
+<p>Check the statistics result file, one line per kernel, sorted in descending order of durations</p>
+<div class="highlight"><pre><span></span><code>cat results.stats.csv
+</code></pre></div>
+<p>Trace HIP calls with <code>--hip-trace</code></p>
+<div class="highlight"><pre><span></span><code>srun rocprof --stats --hip-trace nbody-orig 65536
+</code></pre></div>
+<p>Check the new file <code>results.hip_stats.csv</code></p>
+<div class="highlight"><pre><span></span><code>cat results.hip_stats.csv
+</code></pre></div>
+<p>Profile also the HSA API with the <code>--hsa-trace</code></p>
+<div class="highlight"><pre><span></span><code>srun rocprof --stats --hip-trace --hsa-trace nbody-orig 65536
+</code></pre></div>
+<p>Check the new file <code>results.hsa_stats.csv</code></p>
+<div class="highlight"><pre><span></span><code>cat results.hsa_stats.csv
+</code></pre></div>
+<p>On your laptop, download <code>results.json</code></p>
+<div class="highlight"><pre><span></span><code>scp -i &lt;HOME_DIRECTORY&gt;/.ssh/&lt;public ssh key file&gt; &lt;username&gt;@lumi.csc.fi:&lt;path_to_file&gt;/results.json results.json
+</code></pre></div>
+<p>Open a browser and go to <a href="https://ui.perfetto.dev/">https://ui.perfetto.dev/</a>.
+Click on <code>Open trace file</code> in the top left corner.
+Navigate to the <code>results.json</code> you just downloaded.
+Use the keystrokes W,A,S,D to zoom in and move right and left in the GUI</p>
+<div class="highlight"><pre><span></span><code>Navigation
+w/s Zoom in/out
+a/d Pan left/right
+</code></pre></div>
+<figure style="border: 1px solid #000">
+<p><img alt="Perfetto image..." loading="lazy" src="https://462000265.lumidata.eu/paow-20251022/img/perfetto_1.png" /></p>
+</figure>
+<p>Read about hardware counters available for the GPU on this system (look for gfx90a section)</p>
+<div class="highlight"><pre><span></span><code>less $ROCM_PATH/lib/rocprofiler/gfx_metrics.xml
+</code></pre></div>
+<p>Create a <code>rocprof_counters.txt</code> file with the counters you would like to collect</p>
+<div class="highlight"><pre><span></span><code>vi rocprof_counters.txt
+</code></pre></div>
+<p>Content for <code>rocprof_counters.txt</code>:</p>
+<div class="highlight"><pre><span></span><code>pmc : Wavefronts VALUInsts
+pmc : SALUInsts SFetchInsts GDSInsts
+pmc : MemUnitBusy ALUStalledByLDS
+</code></pre></div>
+<p>Execute with the counters we just added:</p>
+<div class="highlight"><pre><span></span><code>srun rocprof --timestamp on -i rocprof_counters.txt  nbody-orig 65536
+</code></pre></div>
+<p>You'll notice that <code>rocprof</code> runs 3 passes, one for each set of counters we have in that file.</p>
+<p>Contents of <code>rocprof_counters.csv</code></p>
+<div class="highlight"><pre><span></span><code>cat rocprof_counters.csv
+</code></pre></div>
+<h4 id="exploring-rocprofiler-v3">Exploring Rocprofiler-v3<a class="headerlink" href="#exploring-rocprofiler-v3" title="Permanent link">&para;</a></h4>
+<p>ROCm 6.3.4 - LUMI default is in the transition
+Rocprof (v1) to Rocprofv3 so we recommend users adopt the new tool as it is becoming default in ROCm 6.4. If you wich trying more recnet version, e.g., ROCm 6.4.2 you can execute:</p>
+<div class="highlight"><pre><span></span><code>module use /appl/local/containers/test-modules
+module load rocm/6.4.4
+</code></pre></div>
+<p>We can now repeat the experiment we did before and obtain a HIP trace with the kernels and copy information:</p>
+<div class="highlight"><pre><span></span><code>srun rocprofv3 --hip-trace --kernel-trace --memory-copy-trace --output-format=pftrace -- ./nbody-orig 65536
+</code></pre></div>
+<p>Notice the difference in the options in comparison to rocprof V1. One can be more selective on what to collect. You would also notice that the profiler is faster and has less overhead. It also has the choice of using <code>pftrace</code> format that are more compatible with latest versions of the Perfetto UI <a href="https://ui.perfetto.dev/">https://ui.perfetto.dev/</a>. The trace will look similar to what seen before with a slightly different convention for the namming of the different sections:</p>
+<figure style="border: 1px solid #000">
+<p><img alt="Perfetto image..." loading="lazy" src="https://462000265.lumidata.eu/paow-20251022/img/perfetto_2.png" /></p>
+</figure>
+<p>For convinience, the result files are located in a subfolder named after the node where it was run, e.g., <code>nid&lt;node ID&gt;/&lt;process ID&gt;_results.pftrace</code>. The tool should print the full path when it completes so you can just copy that to your workstation.</p>
+<h2 id="rocprof-sys">Rocprof-sys<a class="headerlink" href="#rocprof-sys" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Load suitable ROCm version</p>
+<p>Rocprof-sys is packaged with ROCm distribution. However, the default ROCm instalation on LUMI decided to not include that - so we use a different ROCm installation to provide the extra tools:</p>
+<div class="highlight"><pre><span></span><code>module load craype-accel-amd-gfx90a
+module load PrgEnv-amd
+module load cray-python
+
+module use /appl/local/containers/test-modules
+module load rocm/6.4.4
+</code></pre></div>
 <!--
-Temporary location of materials (for the lifetime of the training project):
+<div class="highlight"><pre><span></span><code>module load craype-accel-amd-gfx90a
+module load PrgEnv-amd
+module load cray-python
 
--   See the exercise assignments in
-    `/project/project_465002770/Exercises/HPE/day1/perftools/README.md`
-
--   Exercise materials in 
-    `/project/project_465002770/Exercises/HPE/day1/perftools` 
-    for the lifetime of the project and only for project members.
-
-Temporary web-available materials:
-
--    Overview exercise assignments temporarily available on
-     [this link](https://462000265.lumidata.eu/paow-20260511/files/LUMI-paow-20260511-Exercises_HPE.pdf)
+module load LUMI/25.03 partition/G rocm/6.3.4-extras
+module load LUMI/25.09 partition/G rocm/6.4.4
+</code></pre></div>
 -->
-<!--
--    Exercise notes (ProgrammingModelExamples_SLURM.pdf) on
-     [this link](https://462000265.lumidata.eu/paow-20260511/files/LUMI-paow-20260511-E-2-03-ProgrammingModelExamples_SLURM.pdf).
--->
+</li>
+<li>
+<p>Allocate resources with <code>salloc</code></p>
+<div class="highlight"><pre><span></span><code>salloc -N 1 --ntasks=1 --partition=standard-g --gpus=1 -A project_46YXXXXXX  --time=00:15:00
+</code></pre></div>
+</li>
+<li>
+<p>Check the various options and their values and also a second command for description</p>
+<div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-sys-avail --categories rocprofsys
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-sys-avail --categories rocprofsys --brief --description
+</code></pre></div>
+</li>
+<li>
+<p>Create an Rocprof-sys configuration file with description per option</p>
+<div class="highlight"><pre><span></span><code>srun -n 1 rocprof-sys-avail -G rocprofsys.cfg --all
+</code></pre></div>
+</li>
+<li>
+<p>Declare to use this configuration file: </p>
+<div class="highlight"><pre><span></span><code>export ROCPROFSYS_CONFIG_FILE=$(realpath rocprofsys.cfg)
+</code></pre></div>
+</li>
+<li>
+<p>Get the training examples:</p>
+<div class="highlight"><pre><span></span><code>cp -r /project/project_465002770/Exercises/AMD/HPCTrainingExamples/ .
+</code></pre></div>
+<p>or according to the instructions on <a href="../#amd">the course page on training website</a> after the course.</p>
+</li>
+<li>
+<p>Compile and execute saxpy</p>
+<p><div class="highlight"><pre><span></span><code>cd HPCTrainingExamples/HIP/saxpy
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>hipcc --offload-arch=gfx90a -O3 -o saxpy saxpy.hip
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>time srun -n 1 ./saxpy
+</code></pre></div></p>
+<p>Check the duration</p>
+</li>
+<li>
+<p>Compile and execute Jacobi</p>
+<div class="highlight"><pre><span></span><code>cd HPCTrainingExamples/HIP/jacobi
+</code></pre></div>
+<p>Now build the code (needs a couple of changes to accomodate the system MPI implementation)</p>
+<p><div class="highlight"><pre><span></span><code>sed -i &#39;s/USE_CRAYPE=.*/USE_CRAYPE=yes/g&#39; Makefile
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sed -i &#39;s/IS_MPICH=.*/IS_MPICH=yes/g&#39; Makefile
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>make -f Makefile
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>time srun -n 1 --gpus 1 Jacobi_hip -g 1 1
+</code></pre></div></p>
+<p>Check the duration</p>
+</li>
+</ul>
+<h4 id="dynamic-instrumentation-the-commands-take-a-significant-ammount-of-time">Dynamic instrumentation (the commands take a significant ammount of time)<a class="headerlink" href="#dynamic-instrumentation-the-commands-take-a-significant-ammount-of-time" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Execute dynamic instrumentation on the <code>saxpy</code> example: 
+    <div class="highlight"><pre><span></span><code>cd HPCTrainingExamples/HIP/saxpy
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code>time srun -n 1 -c 7 --gpus 1 rocprof-sys-instrument -- ./saxpy
+</code></pre></div>
+    Check the duration - you'd seeing the instrumentation overhead.</p>
+</li>
+<li>
+<p>Execute dynamic instrumentation on the Jacobi example: 
+    <div class="highlight"><pre><span></span><code>cd HPCTrainingExamples/HIP/jacobi
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code>time srun -n 1 -c 7 --gpus 1 rocprof-sys-instrument -- ./Jacobi_hip -g 1 1
+</code></pre></div>
+    Check the duration - it will take a while. that is the point of this exercise: instrumenting is time consuming.</p>
+</li>
+<li>
+<p>About Jacobi example, as the dynamic instrumentation would take long time, check what the binary calls and gets instrumented: 
+    <div class="highlight"><pre><span></span><code>nm --demangle Jacobi_hip | egrep -i &#39; (t|u) &#39;
+</code></pre></div></p>
+</li>
+<li>
+<p>Available functions to instrument: 
+    <div class="highlight"><pre><span></span><code>srun -n 1 -c 7 --gpus 1 rocprof-sys-instrument -v 1 --simulate --print-available functions -- ./Jacobi_hip -g 1 1
+</code></pre></div>
+    the simulate option means that it will not execute the binary </p>
+</li>
+</ul>
+<h4 id="binary-rewriting-to-be-used-with-mpi-codes-and-decreases-overhead">Binary rewriting (to be used with MPI codes and decreases overhead)<a class="headerlink" href="#binary-rewriting-to-be-used-with-mpi-codes-and-decreases-overhead" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Binary rewriting: 
+    <div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-sys-instrument -v -1 --print-instrumented functions -o jacobi.inst --function-include Jacobi -- ./Jacobi_hip
+</code></pre></div>
+    We created a new instrumented binary called jacobi.inst </p>
+</li>
+<li>
+<p>Activate text profile logic in your configuration file: 
+    <div class="highlight"><pre><span></span><code>ROCPROFSYS_PROFILE = true
+</code></pre></div></p>
+</li>
+<li>
+<p>Executing the new instrumented binary: 
+    <div class="highlight"><pre><span></span><code>time srun -n 1 --gpus 1 rocprof-sys-run -- ./jacobi.inst -g 1 1
+</code></pre></div>
+    and check the duration</p>
+</li>
+<li>
+<p>See the duration of the instrumented calls as well as GPU runtime activity: 
+    <div class="highlight"><pre><span></span><code>cat rocprofsys-jacobi.inst-output/TIMESTAMP/wall_clock-0.txt
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Copy the <code>perfetto-trace.proto</code> to your laptop, open the web page <a href="https://ui.perfetto.dev/">https://ui.perfetto.dev/</a>. Click to open the trace and select the file.</li>
+</ul>
+<h4 id="hardware-counters">Hardware counters<a class="headerlink" href="#hardware-counters" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>See a list of all the counters: 
+    <div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-sys-avail --all
+</code></pre></div></p>
+</li>
+<li>
+<p>Declare in your configuration file: 
+    <code>ROCPROFSYS_ROCM_EVENTS = _</code></p>
+</li>
+<li>
+<p>Execute: <code>l</code> and copy the perfetto file and visualize</p>
+</li>
+</ul>
+<h4 id="sampling">Sampling<a class="headerlink" href="#sampling" title="Permanent link">&para;</a></h4>
+<p>Activate in your configuration file <code>ROCPROFSYS_USE_SAMPLING = true</code> and <code>ROCPROFSYS_SAMPLING_FREQ = 100</code>, execute and visualize. You should be able to see call-stack information as part of your trace.</p>
+<p>You can execute the plain binary as sampling does not require prior instrumentation:
+<div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-sys-run -- ./Jacobi_hip  -g 1 1
+</code></pre></div></p>
+<h4 id="kernel-timings">Kernel timings<a class="headerlink" href="#kernel-timings" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Open the file <code>rocprofsys-&lt;binary&gt;-output/timestamp/wall_clock-0.txt</code>  (replace binary and timestamp with your information)</p>
+</li>
+<li>
+<p>In order to see the kernels gathered in your configuration file, make sure that <code>ROCPROFSYS_PROFILE = true</code> and <code>ROCPROFSYS_FLAT_PROFILE = true</code>, execute the code and open again the file <code>rocprofsys-&lt;binary&gt;-output/timestamp/wall_clock-0.txt</code></p>
+</li>
+</ul>
+<h2 id="rocprof-compute">Rocprof-compute<a class="headerlink" href="#rocprof-compute" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Load and prepare Rocprof-compute:</p>
+<p>Rocprof-compute uses a separate instalation as it is not part of ROCm default instalation. Let's load it in our environment.
+<div class="highlight"><pre><span></span><code>module load craype-accel-amd-gfx90a
+module load PrgEnv-amd
+module load cray-python
 
-<!--
-Archived materials on LUMI:
+module use /appl/local/containers/test-modules
+module load rocm/6.4.4
+</code></pre></div></p>
+<p>There are some Python dependencies needed. The tool is not assuming a particular Python version as that should be compatible with workload (it it uses Python). for simplicity we use an existing Python version provided by the <code>cray-python</code> module. The extra packages can be loaded into your environment with:</p>
+<div class="highlight"><pre><span></span><code>python3 -m venv venv
+source venv/bin/activate
+pip install -r $ROCM_PATH/libexec/rocprofiler-compute/requirements.txt
+</code></pre></div>
+</li>
+<li>
+<p>Reserve a GPU, compile the exercise and execute rocprof-compute, observe how many times the code is executed. Note that we use <code>rocprofv2</code> to collect the data. We could use <code>rocprofv3</code> but that requires all GPUs in the node visible - this is a limitation that will be lifted in more recent version.</p>
+<div class="highlight"><pre><span></span><code>salloc -N 1 --ntasks=1 --partition=small-g --gpus=1 -A project_465002770 --time=00:30:00
+cp -r /project/project_465002770/Exercises/AMD/HPCTrainingExamples/ .
+source venv/bin/activate
+cd HPCTrainingExamples/HIP/dgemm/
+mkdir build
+cd build
+cmake ..
+make
+cd bin
+ROCPROF=rocprofv2 srun -n 1 --gpus 1 rocprof-compute profile -n dgemm -- ./dgemm -m 8192 -n 8192 -k 8192 -i 1 -r 10 -d 0 -o dgemm.csv
+</code></pre></div>
+<p>(After the course: Replace the project on the first line with your own, and follow the 
+<a href="../#amd">instructions on the course page to get the exercise files</a>.)</p>
+</li>
+<li>
+<p>Run 
+    <div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-compute profile -h
+</code></pre></div>
+    to see all the options</p>
+</li>
+<li>
+<p>Now is created a workload in the directory workloads with the name dgemm (the argument of the -n). So, we can analyze it</p>
+<div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-compute analyze -p workloads/dgemm/MI210/ &amp;&gt; dgemm_analyze.txt
+</code></pre></div>
+</li>
+<li>
+<p>If you want to do only roofline analysis, then execute - this would also generate PDF files to facilitate visualization:
+    <div class="highlight"><pre><span></span><code>srun -n 1 rocprof-compute profile -n dgemm --roof-only --roofline-data-type FP64 -- ./dgemm -m 8192 -n 8192 -k 8192 -i 1 -r 10 -d 0 -o dgemm.csv
+</code></pre></div></p>
+<p>There is no need for srun to analyze but we want to avoid everybody to use the login node. Explore the file <code>dgemm_analyze.txt</code></p>
+</li>
+<li>
+<p>We can select specific IP Blocks, like:</p>
+<div class="highlight"><pre><span></span><code>srun -n 1 --gpus 1 rocprof-compute analyze -p workloads/dgemm/MI210/ -b 7.1.2
+</code></pre></div>
+<p>But you need to know the code of the IP Block</p>
+</li>
+<li>
+<p>If you have installed rocprof-compute on your laptop (no ROCm required for analysis) then you can download the data and execute:</p>
+<div class="highlight"><pre><span></span><code>rocprof-compute -p workloads/dgemm/MI210/ --gui
+</code></pre></div>
+</li>
+<li>
+<p>Open the web page: http://IP:8050/  The IP will be displayed in the output</p>
+<p>For more exercises, visit here: <code>https://github.com/amd/HPCTrainingExamples/tree/main/rocprof-compute</code> or locally <code>HPCTrainingExamples/rocprof-compute</code>, there are 5 exercises, in each directory there is a readme file with instructions.</p>
+</li>
+</ul>
+<h2 id="pytorch-example">Pytorch example<a class="headerlink" href="#pytorch-example" title="Permanent link">&para;</a></h2>
+<p>This example is supported by the files in <code>Exercises/AMD/Pytorch</code>.
+These script experiment with different tools with a more realistic application. They cover PyTorch, how to install it, run it and then profile and debug a MNIST based training. We selected the one in <a href="https://github.com/kubeflow/examples/blob/master/pytorch_mnist/training/ddp/mnist/mnist_DDP.py">https://github.com/kubeflow/examples/blob/master/pytorch_mnist/training/ddp/mnist/mnist_DDP.py</a> but the concept would be similar for any PyTorch-based distributed training.</p>
+<p>This is mostly based on a two node allocation.</p>
+<ul>
+<li>
+<p>Installing PyTorch directly on the filesystem using the system python installation.
+    <div class="highlight"><pre><span></span><code>./01-install-direct.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Installing PyTorch in a virtual environment based on the system python installation.
+    <div class="highlight"><pre><span></span><code>./02-install-venv.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Installing PyTorch in a conda environment based on the conda package python version.
+    <div class="highlight"><pre><span></span><code>./03-install-conda.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Testing a container prepared for LUMI that comprises PyTorch.
+    <div class="highlight"><pre><span></span><code>./04-test-container.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Test the right affinity settings.
+    <div class="highlight"><pre><span></span><code>./05-afinity-testing.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Complete example with MNIST training with all the trimmings to run it properly on LUMI.
+    <div class="highlight"><pre><span></span><code>./06-mnist-example.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Using squashfs as a way to make profilling tools available in containers.
+    <div class="highlight"><pre><span></span><code>./07-create-squashfs.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Example with rocprofv3:
+    <div class="highlight"><pre><span></span><code>./08-mnist-rocprof.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Communication tests with RCCL - effects of disabling AWS CXI plugin:
+    <div class="highlight"><pre><span></span><code>./09-rccltest.sh
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code>NCCL_NET_PLUGIN=noexist ./09-rccltest.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Examples using rocprof-sys and rocprof-compute.
+    <div class="highlight"><pre><span></span><code>./10-mnist-rocprof-sys.sh
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code>./11-mnist-rocprof-sys-python.sh
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code>./12-mnist-rocprof-compute.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Example using Pytorch built-in profiling capabilities.
+    <div class="highlight"><pre><span></span><code>./13-mnist-pytorch-profile.sh
+</code></pre></div></p>
+</li>
+</ul>
+<h2 id="hip-optimization">HIP optimization<a class="headerlink" href="#hip-optimization" title="Permanent link">&para;</a></h2>
+<h3 id="optimizing-daxpy-hip">Optimizing DAXPY HIP<a class="headerlink" href="#optimizing-daxpy-hip" title="Permanent link">&para;</a></h3>
+<p>In this exercise, we will progressively make changes to optimize the DAXPY kernel on GPU. Any AMD GPU can be used to test this.</p>
+<p>DAXPY Problem:
+<div class="highlight"><pre><span></span><code>Z = aX + Y
+</code></pre></div>
+where <code>a</code> is a scalar, <code>X</code>, <code>Y</code> and <code>Z</code> are arrays of double precision values.</p>
+<p>In DAXPY, we load 2 FP64 values (8 bytes each) and store 1 FP64 value (8 bytes). We can ignore the scalar load because it is constant. We have 1 multiplication and 1 addition operation for the 12 bytes moved per element of the array. This yields a low arithmetic intensity of 2/24. So, this kernel is not compute bound, so we will only measure the achieved memory bandwith instead of FLOPS.</p>
+<h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>N</code>, the number of elements in <code>X</code>, <code>Y</code> and <code>Z</code>. <code>N</code> may be reset to suit some optimizations.
+    Choose a sufficiently large array size to see some differences in performance.</li>
+</ul>
+<h3 id="build-code">Build Code<a class="headerlink" href="#build-code" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>module load craype-accel-amd-gfx90a
+module use /appl/local/containers/test-modules
+module load rocm/6.2.4
 
--   Exercise assignments in `/appl/local/training/paow-20260511/files/LUMI-paow-20260511-Exercises_HPE.pdf`
-
--   Exercises as bizp2-compressed tar file in
-    `/appl/local/training/paow-20260511/files/LUMI-paow-20260511-Exercises_HPE.tar.bz2`
-
--   Exercises as uncompressed tar file in
-    `/appl/local/training/paow-20260511/files/LUMI-paow-20260511-Exercises_HPE.tar`
--->
+git clone https://github.com/amd/HPCTrainingExamples.git
+cd HPCTrainingExamples/HIP-Optimizations/daxpy
+make
+</code></pre></div>
+<h3 id="run-exercises">Run exercises<a class="headerlink" href="#run-exercises" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>salloc -N 1 --ntasks=1 --partition=small-g --gpus=1 -A project_46YXXXXXX --time=00:30:00
+srun ./daxpy_1 10000000
+srun ./daxpy_2 10000000
+srun ./daxpy_3 10000000
+srun ./daxpy_4 10000000
+srun ./daxpy_5 10000000
+</code></pre></div>
+<h3 id="things-to-ponder-about">Things to ponder about<a class="headerlink" href="#things-to-ponder-about" title="Permanent link">&para;</a></h3>
+<h4 id="daxpy_1"><code>daxpy_1</code><a class="headerlink" href="#daxpy_1" title="Permanent link">&para;</a></h4>
+<p>This shows a naive implementation of the daxpy problem on the GPU where only 1 wavefront is launched and the 64 work-items in that wavefront loop over the entire array and process 64 elements at a time. We expect this kernel to perform very poorly because it simply utilizes a part of 1 CU, and leaves the rest of the GPU unutilized.</p>
+<h4 id="daxpy_2"><code>daxpy_2</code><a class="headerlink" href="#daxpy_2" title="Permanent link">&para;</a></h4>
+<p>This time, we are launching multiple wavefronts, each work-item now processing only 1 element of each array. This launches N/64 wavefronts, enough to be scheduled on all CUs. We see a big improvement in performance here.</p>
+<h4 id="daxpy_3"><code>daxpy_3</code><a class="headerlink" href="#daxpy_3" title="Permanent link">&para;</a></h4>
+<p>In this experiment, we check to see if launching larger workgroups can help lower our kernel launch overhead because we launch fewer workgroups if each workgroup has 256 work-items. In this case too, an improvement in measured bandwidth achieved is seen.</p>
+<h4 id="daxpy_4"><code>daxpy_4</code><a class="headerlink" href="#daxpy_4" title="Permanent link">&para;</a></h4>
+<p>If we ensured that the array has a multiple of <code>BLOCK_SIZE</code> elements so that all work-items in each workgroup have an element to process, then we can avoid the conditional statement in the kernel. This could reduce some instructions in the kernel.. Do we see any improvement? In this trivial case, this does not matter. Nevertheless, it is something we could keep in mind.</p>
+<p>Question: What happens if <code>BLOCK_SIZE</code> is <code>1024</code>? Why?</p>
+<h4 id="daxpy_5"><code>daxpy_5</code><a class="headerlink" href="#daxpy_5" title="Permanent link">&para;</a></h4>
+<p>In this experiment, we will use double2 type in the kernel to see if the compiler can generate <code>global_load_dwordx4</code> instructions instead of <code>global_load_dwordx2</code> instructions. So, with same number of load and store instructions, we are able to read/write two elements from each array in each thread. This should help amortize on the cost of index calculations.</p>
+<p>To show this difference, we need to generate the assembly for these two kernels. To generate the assembly code for these kernels, ensure that the <code>-g --save-temps</code> flags are passed to <code>hipcc</code>. Then you can find the assembly code in <code>daxpy_*-host-x86_64-unknown-linux-gnu.s</code> files. Examining <code>daxpy_3</code> and <code>daxpy_5</code>, we see the two cases (edited here for clarity):</p>
+<p><code>daxpy_3</code>:</p>
+<div class="highlight"><pre><span></span><code>    global_load_dwordx2 v[2:3], v[2:3], off
+    v_mov_b32_e32 v6, s5
+    global_load_dwordx2 v[4:5], v[4:5], off
+    v_add_co_u32_e32 v0, vcc, s4, v0
+    v_addc_co_u32_e32 v1, vcc, v6, v1, vcc
+    s_waitcnt vmcnt(0)
+    v_fmac_f64_e32 v[4:5], s[6:7], v[2:3]
+    global_store_dwordx2 v[0:1], v[4:5], off
+</code></pre></div>
+<p><code>daxpy_5</code>:</p>
+<div class="highlight"><pre><span></span><code>    global_load_dwordx4 v[0:3], v[0:1], off
+    v_mov_b32_e32 v10, s5
+    global_load_dwordx4 v[4:7], v[4:5], off
+    s_waitcnt vmcnt(0)
+    v_fmac_f64_e32 v[4:5], s[6:7], v[0:1]
+    v_add_co_u32_e32 v0, vcc, s4, v8
+    v_fmac_f64_e32 v[6:7], s[6:7], v[2:3]
+    v_addc_co_u32_e32 v1, vcc, v10, v9, vcc
+    global_store_dwordx4 v[0:1], v[4:7], off
+</code></pre></div>
+<p>We observe that, in the <code>daxpy_5</code> case, there are two <code>v_fmac_f64_e32</code> instructions as expected, one for each element being processed.</p>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Before timing kernels, it is best to launch the kernel at least once as warmup so that those initial GPU launch latencies do not affect your timing measurements.</p>
+</li>
+<li>
+<p>The timing loop is typically several hundred iterations.</p>
+</li>
+<li>
+<p>You may find that the various optimizations work differently in MI200 vs MI300 devices, and this may be due to differences in hardware architecture.</p>
+</li>
+</ul>
 
 
 
