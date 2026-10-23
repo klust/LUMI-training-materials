@@ -1,0 +1,7594 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lumi-supercomputer.github.io/LUMI-training-materials/EasyBuild-20270303/02-Basic-concepts/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon-LUMI.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Basic concepts - LUMI training materials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--demo:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20384%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20192h168V0h-8C71.6%200%200%2071.6%200%20160zm0%2048v112c0%2088.4%2071.6%20160%20160%20160h64c88.4%200%20160-71.6%20160-160V240zm384-48v-32C384%2071.6%20312.4%200%20224%200h-8v192z%22/%3E%3C/svg%3E');--md-admonition-icon--exercise:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M70.8-6.7c5.4-5.4%2013.8-6.2%2020.2-2l118.9%2079.2c8.9%205.9%2014.2%2015.9%2014.2%2026.6v49.6l90.8%2090.8c33.3-15%2073.9-8.9%20101.2%2018.5l126.1%20126.1c18.7%2018.7%2018.7%2049.1%200%2067.9l-60.1%2060.1c-18.7%2018.7-49.1%2018.7-67.9%200L288.1%20384c-27.4-27.4-33.5-67.9-18.5-101.2L178.8%20192h-49.6c-10.7%200-20.7-5.3-26.6-14.2L23.4%2058.9c-4.2-6.3-3.4-14.8%202-20.2zm145%20303.5c-6.3%2036.9%202.3%2075.9%2026.2%20107.2l-94.9%2095c-28.1%2028.1-73.7%2028.1-101.8%200s-28.1-73.7%200-101.8l135.4-135.5%2035.2%2035.1zM384.1%200c20.1%200%2039.4%203.7%2057.1%2010.5%2010%203.8%2011.8%2016.5%204.3%2024.1l-56.7%2056.7c-3%203-4.7%207.1-4.7%2011.3V144c0%208.8%207.2%2016%2016%2016h41.4c4.2%200%208.3-1.7%2011.3-4.7l56.7-56.7c7.6-7.5%2020.3-5.7%2024.1%204.3%206.8%2017.7%2010.5%2037%2010.5%2057.1%200%2043.2-17.2%2082.3-45%20111.1L450%20222c-33.1-33-78.5-45.7-121.1-38.4l-56.8-56.8V97.1l-.2-5c-.8-12.4-4.4-24.3-10.5-34.9C290.8%2022.2%20334.8%200%20384.1-.1z%22/%3E%3C/svg%3E');--md-admonition-icon--remark:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20480c141.4%200%20256-107.5%20256-240S397.4%200%20256%200%200%20107.5%200%20240c0%2054.3%2019.2%20104.3%2051.6%20144.5L2.8%20476.8c-4.8%209-3.3%2020%203.6%2027.5s17.8%209.8%2027.1%205.8l118.4-50.7c31.8%2013.2%2067%2020.6%20104.1%2020.6M128%20208a32%2032%200%201%201%200%2064%2032%2032%200%201%201%200-64m128%200a32%2032%200%201%201%200%2064%2032%2032%200%201%201%200-64m96%2032a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--audience:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%200a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128m96%20312c0%2025-12.7%2047-32%2059.9V464c0%2026.5-21.5%2048-48%2048h-32c-26.5%200-48-21.5-48-48v-92.1C172.7%20359%20160%20337%20160%20312v-40c0-53%2043-96%2096-96s96%2043%2096%2096zM96%2032a56%2056%200%201%201%200%20112%2056%2056%200%201%201%200-112m16%20240v32c0%2032.5%2012.1%2062.1%2032%2084.7V464c0%201.2%200%202.5.1%203.7-8.5%207.6-19.7%2012.3-32.1%2012.3H80c-26.5%200-48-21.5-48-48v-56.6c-19.1-11-32-31.7-32-55.4v-32c0-53%2043-96%2096-96%2012.7%200%2024.8%202.5%2035.9%206.9-12.6%2021.4-19.9%2046.4-19.9%2073.1m256%20192v-75.3c19.9-22.5%2032-52.2%2032-84.7v-32c0-26.7-7.3-51.6-19.9-73.1%2011.1-4.5%2023.2-6.9%2035.9-6.9%2053%200%2096%2043%2096%2096v32c0%2023.7-12.9%2044.4-32%2055.4V432c0%2026.5-21.5%2048-48%2048h-32c-12.3%200-23.6-4.6-32.1-12.3%200-1.2.1-2.5.1-3.7m48-432a56%2056%200%201%201%200%20112%2056%2056%200%201%201%200-112%22/%3E%3C/svg%3E');--md-admonition-icon--solution:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22m263.4-27%2014.8%2036.8L315%2024.6c3%201.2%205%204.2%205%207.4s-2%206.2-5%207.4l-36.8%2014.8L263.4%2091c-1.2%203-4.2%205-7.4%205s-6.2-2-7.4-5l-14.8-36.8L197%2039.4c-3-1.2-5-4.2-5-7.4s2-6.2%205-7.4l36.8-14.8L248.6-27c1.2-3%204.2-5%207.4-5s6.2%202%207.4%205M110.7%2041.7l21.5%2050.1%2050.1%2021.5c5.9%202.5%209.7%208.3%209.7%2014.7s-3.8%2012.2-9.7%2014.7l-50.1%2021.5-21.5%2050.1c-2.5%205.9-8.3%209.7-14.7%209.7s-12.2-3.8-14.7-9.7l-21.5-50.1-50.1-21.5C3.8%20140.2%200%20134.4%200%20128s3.8-12.2%209.7-14.7l50.1-21.5%2021.5-50.1C83.8%2035.8%2089.6%2032%2096%2032s12.2%203.8%2014.7%209.7M464%20304c6.4%200%2012.2%203.8%2014.7%209.7l21.5%2050.1%2050.1%2021.5c5.9%202.5%209.7%208.3%209.7%2014.7s-3.8%2012.2-9.7%2014.7l-50.1%2021.5-21.5%2050.1c-2.5%205.9-8.3%209.7-14.7%209.7s-12.2-3.8-14.7-9.7l-21.5-50.1-50.1-21.5c-5.9-2.5-9.7-8.3-9.7-14.7s3.8-12.2%209.7-14.7l50.1-21.5%2021.5-50.1c2.5-5.9%208.3-9.7%2014.7-9.7M460%200c11%200%2021.6%204.4%2029.5%2012.2l42.3%2042.3C539.6%2062.4%20544%2073%20544%2084s-4.4%2021.6-12.2%2029.5l-88.2%2088.2-101.3-101.3%2088.2-88.2C438.4%204.4%20449%200%20460%200M44.2%20398.5l264.2-264.2%20101.3%20101.3-264.2%20264.2C137.6%20507.6%20127%20512%20116%20512s-21.6-4.4-29.5-12.2l-42.3-42.3C36.4%20449.6%2032%20439%2032%20428s4.4-21.6%2012.2-29.5%22/%3E%3C/svg%3E');--md-admonition-icon--seealso:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M419.5%2096c-16.6%200-32.7%204.5-46.8%2012.7-15.8-16-34.2-29.4-54.5-39.5%2028.2-24%2064.1-37.2%20101.3-37.2C505.9%2032%20576%20102%20576%20188.5c0%2041.5-16.5%2081.3-45.8%20110.6l-71.1%2071.1C429.8%20399.5%20390%20416%20348.5%20416%20262.1%20416%20192%20346%20192%20259.5c0-1.5%200-3%20.1-4.5.5-17.7%2015.2-31.6%2032.9-31.1s31.6%2015.2%2031.1%2032.9v2.6c0%2051.1%2041.4%2092.5%2092.5%2092.5%2024.5%200%2048-9.7%2065.4-27.1l71.1-71.1c17.3-17.3%2027.1-40.9%2027.1-65.4%200-51.1-41.4-92.5-92.5-92.5zm-144.3%2077.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5%200-48%209.7-65.4%2027.1l-71.1%2071.1C73.8%20275.5%2064%20299.1%2064%20323.6c0%2051.1%2041.4%2092.5%2092.5%2092.5%2016.5%200%2032.6-4.4%2046.7-12.6%2015.8%2016%2034.2%2029.4%2054.6%2039.5-28.2%2023.9-64%2037.2-101.3%2037.2C70.1%20480.2%200%20410.2%200%20323.7c0-41.5%2016.5-81.3%2045.8-110.6l71.1-71.1c29.3-29.3%2069.1-45.8%20110.6-45.8%2086.6%200%20156.5%2070.6%20156.5%20156.9v3.9c-.4%2017.7-15.1%2031.6-32.8%2031.2s-31.6-15.1-31.2-32.8v-2.3c0-33.7-18-63.3-44.8-79.6z%22/%3E%3C/svg%3E');--md-admonition-icon--technical:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20152a88%2088%200%201%200%200-176%2088%2088%200%201%200%200%20176m0%20298.7V301.4c16.3-6.8%2032.9-13.7%2049.7-20.7%2039-16.2%2080.8-24.6%20123.1-24.6H448v160h-19.2c-59.1%200-117.7%2011.7-172.3%2034.5l-.5.2zm0-218.7-25.1-10.5C184.1%20202%20133.9%20192%2083.2%20192H48c-26.5%200-48%2021.5-48%2048v192c0%2026.5%2021.5%2048%2048%2048h35.2c50.7%200%20100.9%2010%20147.7%2029.5l12.8%205.3c7.9%203.3%2016.7%203.3%2024.6%200l12.8-5.3c46.8-19.5%2097-29.5%20147.7-29.5H464c26.5%200%2048-21.5%2048-48V240c0-26.5-21.5-48-48-48h-35.2c-50.7%200-100.9%2010-147.7%2029.5z%22/%3E%3C/svg%3E');--md-admonition-icon--intermediate:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22m48%20195.8%20209.2%2086.1c9.8%204%2020.2%206.1%2030.8%206.1s21-2.1%2030.8-6.1l242.4-99.8c9-3.7%2014.8-12.4%2014.8-22.1s-5.8-18.4-14.8-22.1L318.8%2038.1c-9.8-4-20.2-6.1-30.8-6.1s-21%202.1-30.8%206.1L14.8%20137.9C5.8%20141.6%200%20150.3%200%20160v296c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24zm48%2071.7V384c0%2053%2086%2096%20192%2096s192-43%20192-96V267.4l-142.9%2058.9c-15.6%206.4-32.2%209.7-49.1%209.7s-33.5-3.3-49.1-9.7L96%20267.4z%22/%3E%3C/svg%3E');--md-admonition-icon--advanced:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M241.3-13c-11.4-2.3-23.1-2.3-34.5%200L19.3%2024.5C8.1%2026.7%200%2036.6%200%2048c0%2010.3%206.5%2019.3%2016%2022.6V144L.3%20222.6c-.2.9-.3%201.9-.3%202.9%200%208%206.5%2014.6%2014.6%2014.6h34.9c8%200%2014.6-6.5%2014.6-14.6%200-1-.1-1.9-.3-2.9L48%20144V77.3l48%209.6V144c0%2070.7%2057.3%20128%20128%20128s128-57.3%20128-128V86.9l76.7-15.3C439.9%2069.3%20448%2059.4%20448%2048s-8.1-21.3-19.3-23.5zM224%20224c-44.2%200-80-35.8-80-80h160c0%2044.2-35.8%2080-80%2080m-103.9%2096.1C58.7%20348.3%2016%20410.3%2016%20482.3c0%2016.4%2013.3%2029.7%2029.7%2029.7H200V366l-57.4-43c-6.5-4.9-15.2-6.2-22.6-2.8zM248%20512h154.3c16.4%200%2029.7-13.3%2029.7-29.7%200-72-42.7-134-104.1-162.1-7.4-3.4-16.1-2.1-22.6%202.8l-57.4%2043v146z%22/%3E%3C/svg%3E');--md-admonition-icon--lumi-be:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%200C28.7%200%200%2028.7%200%2064v384c0%2035.3%2028.7%2064%2064%2064h256c35.3%200%2064-28.7%2064-64V64c0-35.3-28.7-64-64-64zm112%20352h32c17.7%200%2032%2014.3%2032%2032v80h-96v-80c0-17.7%2014.3-32%2032-32M96%20112c0-8.8%207.2-16%2016-16h32c8.8%200%2016%207.2%2016%2016v32c0%208.8-7.2%2016-16%2016h-32c-8.8%200-16-7.2-16-16zm144-16h32c8.8%200%2016%207.2%2016%2016v32c0%208.8-7.2%2016-16%2016h-32c-8.8%200-16-7.2-16-16v-32c0-8.8%207.2-16%2016-16M96%20240c0-8.8%207.2-16%2016-16h32c8.8%200%2016%207.2%2016%2016v32c0%208.8-7.2%2016-16%2016h-32c-8.8%200-16-7.2-16-16zm144-16h32c8.8%200%2016%207.2%2016%2016v32c0%208.8-7.2%2016-16%2016h-32c-8.8%200-16-7.2-16-16v-32c0-8.8%207.2-16%2016-16M464%200c-17.7%200-32%2014.3-32%2032v448c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32V192h112c17.7%200%2032-14.3%2032-32V64c0-17.7-14.3-32-32-32H496c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--nice-to-know:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20384%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M296.5%20291.1C321%20265.2%20336%20230.4%20336%20192c0-79.5-64.5-144-144-144S48%20112.5%2048%20192c0%2038.4%2015%2073.2%2039.5%2099.1%2021.3%2022.4%2044.9%2054%2053.3%2092.9h102.4c8.4-39%2032-70.5%2053.3-92.9m34.8%2033C307.7%20349%20288%20379.4%20288%20413.7V432c0%2044.2-35.8%2080-80%2080h-32c-44.2%200-80-35.8-80-80v-18.3c0-34.3-19.7-64.7-43.3-89.6C20%20289.7%200%20243.2%200%20192%200%2086%2086%200%20192%200s192%2086%20192%20192c0%2051.2-20%2097.7-52.7%20132.1M144%20184c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-48.6%2039.4-88%2088-88%2013.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024c-22.1%200-40%2017.9-40%2040%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+  
+      
+
+    
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.addEventListener("click", function(ev) {
+        if (ev.target instanceof HTMLElement) {
+          var el = ev.target.closest("a[href^=http]")
+          if (el)
+            ga("send", "event", "outbound", "click", el.href)
+        }
+      })
+    })
+  </script>
+
+    
+
+  
+  
+  
+    
+  
+
+  
+  
+
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LUMI training materials - Basic concepts" />
+  <meta property="og:description" content="None" />
+  <meta property="og:url" content="https://lumi-supercomputer.github.io/LUMI-training-materials/EasyBuild-20270303/02-Basic-concepts/" />
+  <meta property="og:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="568" />
+
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@LUMIhpc" />
+  <meta name="twitter:creator" content="@LUMIhpc" />
+  <meta name="twitter:title" content="LUMI training materials - Basic concepts" />
+  <meta name="twitter:description" content="None" />
+  <meta name="twitter:image" content="https://lumi-supercomputer.github.io/LUMI-training-materials/assets/images/banner.png" />
+
+  <style>
+    [data-md-color-primary="lumi"] {
+      --md-primary-fg-color: hsla(0, 0%, 100%, 1);
+      --md-primary-fg-color--light: hsla(0, 0%, 100%, 0.7);
+      --md-primary-fg-color--dark: hsla(0, 0%, 0%, 0.07);
+      --md-primary-bg-color: hsla(0, 0%, 0%, 0.87);
+      --md-primary-bg-color--light: hsla(0, 0%, 0%, 0.54);
+      --md-button-bg-color: hsla(207,100%,28%, 1);
+      --md-button-bg-color--light: hsla(207,100%,38%, 1);
+      --md-typeset-a-color: hsla(207,100%,28%, 1);
+    }
+    
+    [data-md-color-accent="lumi"] {
+      --md-accent-fg-color: hsla(0,0%,0%, 1);
+      --md-accent-fg-color--transparent: hsla(0,0%,0%, 0.1);
+      --md-accent-bg-color: hsla(0, 0%, 100%, 1);
+      --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+    }
+  </style>
+
+  
+
+
+  
+  
+
+    <link
+      rel="stylesheet"
+      href="../../assets/stylesheets/extra-50959fdd9a.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/stylesheets/overrides-5193e6f6df.css"
+    />
+    <link
+      rel="stylesheet"
+      id="typekit-fonts-css"
+      href="https://use.typekit.net/nlo5lta.css?ver=5.5.3"
+      type="text/css" media="all"
+    />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lumi" data-md-color-accent="lumi">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LUMI training materials" class="md-header__button md-logo" aria-label="LUMI training materials" data-md-component="logo">
+      
+  
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 723 212" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Layer-2" serif:id="Layer 2">
+        <g transform="matrix(1,0,0,1,0,175.883)">
+            <path d="M0,-140.304L0,0L102.89,0L102.89,-24.599L26.658,-24.599L26.658,-140.304L0,-140.304Z" style="fill:rgb(29,29,27);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,257.262,35.5793)">
+            <path d="M0,140.304C-17.585,140.304 -32.083,135.347 -43.588,125.338C-55,115.423 -60.799,103.357 -60.799,89.14L-60.799,0L-34.328,0L-34.328,81.563C-34.328,92.413 -31.054,100.645 -24.319,105.976C-17.866,111.12 -9.728,113.74 0,113.74C9.728,113.74 17.865,111.12 24.319,105.976C31.054,100.645 34.328,92.413 34.328,81.563L34.328,0L60.799,0L60.799,89.14C60.799,103.357 55.093,115.329 43.588,125.338C32.083,135.347 17.585,140.304 0,140.304" style="fill:rgb(29,29,27);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,550.374,119.668)">
+            <path d="M0,-27.874L-43.588,20.671L-87.176,-27.874L-87.176,56.215L-113.74,56.215L-113.74,-84.089L-105.695,-84.089L-43.588,-13.47L18.614,-84.089L26.658,-84.089L26.658,56.215L0.094,56.215L0,-27.874Z" style="fill:rgb(29,29,27);fill-rule:nonzero;"/>
+        </g>
+        <rect x="695.604" y="35.486" width="26.658" height="140.397" style="fill:rgb(29,29,27);"/>
+        <g transform="matrix(-1,0,0,1,722.262,-203.194)">
+            <rect x="0" y="203.194" width="722.262" height="8.175" style="fill:rgb(29,29,27);"/>
+        </g>
+        <g transform="matrix(-1,0,0,1,722.262,203.194)">
+            <rect x="0" y="0" width="722.262" height="8.175" style="fill:rgb(29,29,27);"/>
+        </g>
+    </g>
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LUMI training materials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basic concepts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LUMI training materials" class="md-nav__button md-logo" aria-label="LUMI training materials" data-md-component="logo">
+      
+  
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 723 212" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Layer-2" serif:id="Layer 2">
+        <g transform="matrix(1,0,0,1,0,175.883)">
+            <path d="M0,-140.304L0,0L102.89,0L102.89,-24.599L26.658,-24.599L26.658,-140.304L0,-140.304Z" style="fill:rgb(29,29,27);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,257.262,35.5793)">
+            <path d="M0,140.304C-17.585,140.304 -32.083,135.347 -43.588,125.338C-55,115.423 -60.799,103.357 -60.799,89.14L-60.799,0L-34.328,0L-34.328,81.563C-34.328,92.413 -31.054,100.645 -24.319,105.976C-17.866,111.12 -9.728,113.74 0,113.74C9.728,113.74 17.865,111.12 24.319,105.976C31.054,100.645 34.328,92.413 34.328,81.563L34.328,0L60.799,0L60.799,89.14C60.799,103.357 55.093,115.329 43.588,125.338C32.083,135.347 17.585,140.304 0,140.304" style="fill:rgb(29,29,27);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,550.374,119.668)">
+            <path d="M0,-27.874L-43.588,20.671L-87.176,-27.874L-87.176,56.215L-113.74,56.215L-113.74,-84.089L-105.695,-84.089L-43.588,-13.47L18.614,-84.089L26.658,-84.089L26.658,56.215L0.094,56.215L0,-27.874Z" style="fill:rgb(29,29,27);fill-rule:nonzero;"/>
+        </g>
+        <rect x="695.604" y="35.486" width="26.658" height="140.397" style="fill:rgb(29,29,27);"/>
+        <g transform="matrix(-1,0,0,1,722.262,-203.194)">
+            <rect x="0" y="203.194" width="722.262" height="8.175" style="fill:rgb(29,29,27);"/>
+        </g>
+        <g transform="matrix(-1,0,0,1,722.262,203.194)">
+            <rect x="0" y="0" width="722.262" height="8.175" style="fill:rgb(29,29,27);"/>
+        </g>
+    </g>
+</svg>
+
+    </a>
+    LUMI training materials
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../User-Updates/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Updates
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Updates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../User-Updates/Update-202601/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    January 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    January 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202601/202601_FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202601/202601_Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation links
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../User-Updates/Update-202409/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    August-September 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    August-September 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202409/202409_FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202409/202409_Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation links
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202311/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    October-November 2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../User-Updates/Update-202308/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    August 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    August 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202308/lumig-lownoise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Low-noise mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202308/lumig-devg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dev-g and eap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../User-Updates/Update-202308/responsible-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsible use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../User-Coffee-Breaks/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Coffee Breaks
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Coffee Breaks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ai-20261125/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI workshop November 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI workshop November 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20261125/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20261125/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paow-20261111/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis & Optimization November 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Performance Analysis & Optimization November 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20261111/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20261111/local_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Travel info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20261111/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../2day-20261109/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moving your HPC workloads to LUMI November 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Moving your HPC workloads to LUMI November 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20261109/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20261109/local_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Travel info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20261109/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hackathon-20260928/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI hackathon Sep-Oct 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LUMI hackathon Sep-Oct 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hackathon-20260928/localinfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ai-20260611/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI workshop June 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI workshop June 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20260611/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20260611/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paow-20260511/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis & Optimization May 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Performance Analysis & Optimization May 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20260511/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20260511/travel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Travel info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20260511/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../2day-20260422/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supercomputing with LUMI April 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supercomputing with LUMI April 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20260422/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20260422/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../smartsim-20260331/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smartsim March 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Smartsim March 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smartsim-20260331/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EasyBuild-LUST-20250604/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EasyBuild June 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EasyBuild June 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://lumi-supercomputer.github.io/easybuild-tutorial/2025-LUST" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Profiling-20250507/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling May 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Profiling May 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../2p3day-20250303/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI intensive March 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_14" id="__nav_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LUMI intensive March 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2p3day-20250303/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2p3day-20250303/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partner courses
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Partner courses
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zenodo.org/records/10610643" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GROMACS workshop 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hackathon-20260518/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI hackathon May 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_1" id="__nav_16_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LUMI hackathon May 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hackathon-20260518/localinfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paow-20251022/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis & Optimization October 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_2" id="__nav_16_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Performance Analysis & Optimization October 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20251022/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20251022/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../2day-20251020/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supercomputing with LUMI October 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_3" id="__nav_16_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supercomputing with LUMI October 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20251020/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20251020/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ai-20251008/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI workshop October 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_4" id="__nav_16_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI workshop October 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20251008/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20251008/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../2day-20250602/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supercomputing with LUMI June 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_5" id="__nav_16_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supercomputing with LUMI June 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20250602/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20250602/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ai-20250527/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI workshop May 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_6" id="__nav_16_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI workshop May 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20250527/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20250527/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hackathon-20250512/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hackathon May 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hackathon May 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ai-20250204/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI workshop February 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_8" id="__nav_16_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI workshop February 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20250204/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20250204/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../2day-20241210/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supercomputing with LUMI December 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_9" id="__nav_16_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supercomputing with LUMI December 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20241210/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20241210/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ai-20241126/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI workshop November 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_10" id="__nav_16_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI workshop November 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20241126/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20241126/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4day-20241028/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced LUMI October 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_11" id="__nav_16_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced LUMI October 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4day-20241028/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4day-20241028/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hackathon-20241014/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hackathon October 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hackathon October 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Profiling-20241009/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling October 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Profiling October 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paow-20240611/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis & Optimization June 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_14" id="__nav_16_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Performance Analysis & Optimization June 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20240611/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paow-20240611/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../2day-20240502/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supercomputing with LUMI May 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_15" id="__nav_16_15_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supercomputing with LUMI May 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20240502/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2day-20240502/index.html#course-materials" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ai-20240529/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI workshop May 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_16" id="__nav_16_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI workshop May 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-20240529/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4day-20240423/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprehensive LUMI April 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_17" id="__nav_16_17_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comprehensive LUMI April 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4day-20240423/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_18" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../1day-20240208/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1-day February 2024
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_18" id="__nav_16_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1-day February 2024
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/video_01_LUMI_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/video_02_HPE_Cray_Programming_Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HPE Cray PE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/video_03_Modules_on_LUMI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/video_04_LUMI_Software_Stacks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software stacks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/05_Exercises_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/video_06_Running_Jobs_on_LUMI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/07_Exercises_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/video_08_Introduction_to_Lustre_and_Best_Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I/O and file systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/video_09_LUMI_User_Support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20240208/A01_Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_19" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Profiling-20231122/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling November 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Profiling November 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_20" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4day-20231003/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprehensive LUMI October 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_20">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comprehensive LUMI October 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_21" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../1day-20230921/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1-day September 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_21" id="__nav_16_21_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_21">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1-day September 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/01_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/02_CPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HPE Cray PE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/03_Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/04_Software_stacks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software stacks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/05_Exercises_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/06_Running_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/07_Exercises_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/08_Lustre_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I/O and file systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/09_LUMI_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230921/A01_Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_22" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4day-20230530/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprehensive LUMI May-June 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_22">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comprehensive LUMI May-June 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_23" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../1day-20230509/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1-day May 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_23" id="__nav_16_23_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_23">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1-day May 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/01_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/02_CPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HPE Cray PE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/03_Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/04_Software_stacks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software stacks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/05_Exercises_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/06_Running_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/07_Exercises_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/08_Lustre_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I/O and file systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1day-20230509/09_LUMI_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_24" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hackathon-20230417/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hackathon April 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_24">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hackathon April 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_25" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Profiling-20230413/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling April 2013
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_25">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Profiling April 2013
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_26" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4day-20230214/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprehensive LUMI February 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_26">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comprehensive LUMI February 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_27" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../LUMI-G-20230111/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI-G January 2023
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_27">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LUMI-G January 2023
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_28" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../PEAP-Q-20221123/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PEAP-Q November 2022
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_28" id="__nav_16_28_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_28">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PEAP-Q November 2022
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PEAP-Q-20221123/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_29" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../LUMI-G-20220823/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI-G August 2022
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_29" id="__nav_16_29_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_29">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LUMI-G August 2022
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LUMI-G-20220823/hackmd_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    hackmd notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_30" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EasyBuild-CSC-20220509/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EasyBuild May 2022
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_30" id="__nav_16_30_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_30">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EasyBuild May 2022
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://lumi-supercomputer.github.io/easybuild-tutorial/2022-CSC_and_LO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_31" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../PEAP-Q-20220427/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PEAP-Q April 2022
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16_31" id="__nav_16_31_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_31">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PEAP-Q April 2022
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PEAP-Q-20220427/hackmd_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    hackmd notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PEAP-Q-20220427/software_stacks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUMI Software Stacks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps-in-software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps in software installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-installation-process-implemented-in-easybuild" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The installation process implemented in EasyBuild
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-terminology-in-more-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some terminology in more detail
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Some terminology in more detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EasyBuild framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyblocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Easyblocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Easyconfigs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundles-and-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundles and extensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolchains
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolchains-available-on-lumi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolchains available on LUMI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolchains available on LUMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolchains-in-the-lumi-software-stacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolchains in the LUMI software stacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchains-in-eessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolchains in EESSI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-lumi-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What about LUMI-AI?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easyconfig-names-and-module-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Easyconfig names and module names
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-does-easybuild-write-when-installing-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where does EasyBuild write when installing software?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="basic-concepts">Basic concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">&para;</a></h1>
+<h2 id="steps-in-software-installation">Steps in software installation<a class="headerlink" href="#steps-in-software-installation" title="Permanent link">&para;</a></h2>
+<figure style="border: 1px solid #000">
+<p><img alt="Steps in software installation 1" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/InstallationSteps1.png" /></p>
+</figure>
+<p>A typical software installation consists of a number of steps, though not all of these steps
+may be present in every installation:</p>
+<ol>
+<li>
+<p>Fetch the sources and unpack them. Often the sources can just be downloaded from the internet.
+    Some programs may have a mandatory registration even if they are free to use (such as NAMD), 
+    and software with paying licenses often requires a manual download after logging in to the
+    website of the vendor. </p>
+<p>Protection against AI scrapers is also making downloads more difficult these days. Downloads using
+<code>wgt</code> or <code>curl</code> may fail and sites may force a manual download via a web browser instead.</p>
+</li>
+<li>
+<p>Sometimes patches need to be applied for known bugs (or in the case of EasyBuild and Spack, to make
+    the installation process more compatible with the tool), and in other cases, a user may want to apply
+    a patch that extends the package.</p>
+</li>
+<li>
+<p>Create a build environment: Sometimes it is better not to build in the software directory. And one may
+    need to load other modules, such as compilers, build tools, or modules for other libraries that the
+    package uses (dependencies).</p>
+</li>
+<li>
+<p>Many software packages come with a configure tool to set up the options that need to be compiled in the
+    package. That tool will also check for system-specific properties as not all Linux distributions are equal
+    and as many packages also support other operating systems. The two most popular ones are the configure script
+    generated by <a href="https://en.wikipedia.org/wiki/GNU_Autotools">GNU Autotools</a>
+    and <a href="https://cmake.org/">CMake</a>. The first one is a tool developed specifically for a GNU UNIX-compatible
+    environment while CMake can also works with other operating systems (even Windows).</p>
+<p>Some Python-based tools are (unfortunately) also becoming more popular, such as
+<a href="https://mesonbuild.com/">Meson</a> and <a href="https://scons.org/">SCons</a>.
+These tools tend to cause a lot more issues on LUMI. In general, a good build tool does not interfere at all
+with the software it is trying to install and hence can be built in a way that it has no runtime dependencies
+of its own, and the Python build tools do violate that assumption.</p>
+<p>And some packages come with their own configuration and build tools which is rarely a good idea. They may be adapted very
+well to the software their trying to install, but their developers usually lack the knowledge about all possible
+environments a package may be used with, only leading to more issues.</p>
+<p>Other packages lack any proper configuration tool, and users must edit the Makefile (or a file included in the
+Makefile). VASP is a notorious example, and CP2K for a long time also did not use a proper configuration tool.</p>
+</li>
+<li>
+<p>Build the software. The most popular tool for this is still make, but there are other options also, with ninja
+    also gaining in popularity. Some tools mentioned above as configuration tools are also really a complete build
+    environment and can be used in the build step and the forthcoming install step also. One example is CMake that 
+    during the configuration phase can create input file for make or ninja, but can also be used directly to build
+    and install software. Autotools does also use make, but that then often calls libtool to add options to compilers
+    and linkers, so Autotools is also more than just a configuration tool but can be a complete build tool when
+    combined with some other GNU packages.</p>
+</li>
+<li>
+<p>In some cases, some testing can already be done after the build step and before the software is installed in the
+    final location. This is a good moment to, e.g., detect compiler-induced issues, as in some codes some compiler
+    optimisations may lead to wrong results (though this is often really a source code issue rather than a 
+    compiler issue).</p>
+</li>
+<li>
+<p>Install the software. It is a good idea to do that as a separate step and to build the software in the source
+    directories or a separate build directory. As such, the build process will not damage an already present installation
+    leaving the user with nothing if the build process fails. And it is then also possible to build the software 
+    on a filesystem with optimal performance for building.</p>
+<p>In fact, it is a good idea to do all previous steps, from unpacking the software to building the software, on a 
+RAM disk or local SSD for optimal performance, and only at the end copy to the parallel filesystems of LUMI. 
+After all, building software involves working with lots of small files, something that a parallel filesystem
+doesn't really like.</p>
+</li>
+<li>
+<p>You may then want to run some sanity checks, though this may require some work of the next step first. Are all 
+    the files that you would expect really installed? Can a binary find all shared libraries that it needs?</p>
+</li>
+<li>
+<p>Finally, it is good to double-check the permissions: Can everybody who needs to use the package also read and 
+    execute the software? And at the end, the software can be made more easily available to others by installing
+    a module at the right location in the module tree.</p>
+</li>
+</ol>
+<figure style="border: 1px solid #000">
+<p><img alt="Steps in software installation 2" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/InstallationSteps2.png" /></p>
+</figure>
+<p>Many packages follow a very standard install procedure, e.g.,</p>
+<ul>
+<li>
+<p>Autotools packages: <code>configure</code> — <code>make</code> — <code>make install</code>, with a lot of standard options for the <code>configure</code>
+    command to set the compilers and some compiler flags and the install location.</p>
+</li>
+<li>
+<p>CMake packages: <code>cmake</code> — <code>make</code> — <code>make install</code> (though there are other options with CMake also), again with
+    a lot of standard options for the <code>cmake</code> command to set the compilers and some compiler flags and the install location.</p>
+</li>
+<li>
+<p>Installing from a binary: Unpack the files and copy to the right location.</p>
+</li>
+<li>
+<p>Installing a package from PyPi using <code>pip</code> (though note that you may not want to use a precompiled wheel but install
+    from sources to get the most out of binaries for those packages that contain libraries and not just pure Python code).</p>
+</li>
+</ul>
+<p>However, some software comes with its own procedures. Examples are scripts that first ask a lot of questions to configure
+a package, popular with commercial software, or OpenFOAM which only supports in-place builds and uses its own <code>wmake</code> tools.</p>
+<p>Packages installed through a configuration tool can have a lot of options, including a lot of standardised ones to pass
+compiler choice and flags and installation directories, and a lot of custom ones to configure the package for a specific
+purpose. And unfortunately, one size does not always fit all. Some libraries need different conflicting combinations of
+options depending what code they will be used with.</p>
+<h2 id="the-installation-process-implemented-in-easybuild">The installation process implemented in EasyBuild<a class="headerlink" href="#the-installation-process-implemented-in-easybuild" title="Permanent link">&para;</a></h2>
+<figure style="border: 1px solid #000">
+<p><img alt="Implementation in EasyBuild" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/InstallationImplementation.png" /></p>
+</figure>
+<p>EasyBuild is Python code that implements this installation process in three layers of abstraction:</p>
+<ul>
+<li>
+<p><strong>Framework</strong> defines an <strong>abstract installation procedure</strong> with all the steps given above.
+    It also provides a lot of routines that help implementing the next layers more easily,
+    including the code to generate modulefiles and the code to control compiler flags, etc.,
+    the so-called toolchains that we will discuss later.</p>
+</li>
+<li>
+<p><strong>Easyblock</strong>: This is a Python module that implements a <strong>specific installation process</strong>.
+    We distinguish two types of Easyblocks:</p>
+<ul>
+<li>
+<p><strong>Generic easyblocks</strong> implement standard installation processes, e.g., <code>cmake</code> — <code>make</code>— <code>make install</code>.</p>
+</li>
+<li>
+<p><strong>Software-specific easyblocks</strong> are for installations that do not follow a standard installation process,
+    e.g., OpenFOAM. Some software-specific easyblocks are for packages with a very standard installation process
+    and could be installed easily with a generic easyblock, but add additional parameters for the next layer to 
+    make configuring the package more user-friendly, or predefined tests, or contain logic to add parameters to
+    the configure command based on which dependencies have been defined in the next layer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>An <strong>Easyconfig</strong> provides all the parameters for a <strong>specific software installation</strong> to the easyblock.</p>
+<p>We will discuss many of these options further on in this course.</p>
+</li>
+</ul>
+<figure style="border: 1px solid #000">
+<p><img alt="Graphical view of the stepwise installation process" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/InstallationImplementationGraphical.png" /></p>
+</figure>
+<p>This slide shows the whole process in a more graphical way, with all the steps that EasyBuild uses,
+which are even a few more than we discussed before and repeats the role of the framework, easyblocks
+and easyconfigs.</p>
+<h2 id="some-terminology-in-more-detail">Some terminology in more detail<a class="headerlink" href="#some-terminology-in-more-detail" title="Permanent link">&para;</a></h2>
+<h3 id="easybuild-framework">EasyBuild framework<a class="headerlink" href="#easybuild-framework" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Easyconfig" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildFramework.png" /></p>
+</figure>
+<p>The EasyBuild framework is the core of EasyBuild. It itself is a collection of Python
+modules, organised in several packages.</p>
+<p>The framework implements a lot of common functionality for building and installing software.
+First, it defines an abstract build procedure of which several steps remain unimplemented, but some
+are as the functionality would be the same for all easyblocks. Examples are unpacking sources, applying
+patches or generating a module file.
+Second, it provides a lot of tools that can be used in other parts of framework but also in easyblocks.
+Third, there are different ways to derive the name of a module from parameters in an easyconfig file
+and to organise those modules in either a flat space (all modules together) or in a hierarchy (where 
+some modules can only be loaded after loading another module), and several options are implemented in
+module naming schemes, though it is possible for a site to implement their own naming scheme (and
+we actually use a slight variant of an existing one on LUMI). And fourth, the so-called toolchains
+that combine a compiler with some standardised libraries for which different implementations should not
+be mixed in a single installation, are also implemented in framework. Though here too it is possible for
+a site to define site-specific toolchains which again is something we did on LUMI.</p>
+<p>EasyBuild is usually used from the command line, and for that purpose framework provides the <code>eb</code> command.
+But it is also possible to leverage EasyBuild as a library and develop tools to, e.g., extract information
+from an easyconfig.</p>
+<p>EasyBuild is developed on GitHub in the <a href="https://github.com/easybuilders">easybuilders repositories</a>
+and the specific repository for framework is
+<a href="https://github.com/easybuilders/easybuild-framework">github.com/easybuilders/easybuild-framework</a>.</p>
+<h3 id="easyblocks">Easyblocks<a class="headerlink" href="#easyblocks" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Easyconfig" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildEasyBlock.png" /></p>
+</figure>
+<p>An easyblock is a Python module that implements steps of the abstract installation procedure defined
+in framework for an actual installation process. It can be viewed as a plugin for EasyBuild framework.</p>
+<p>As we discussed already, there are two different kinds of easyblocks.</p>
+<ol>
+<li>
+<p>Generic easyblocks implement a generic process for standard installations. Popular examples are the
+    easyblock that implements the <code>configure</code> — <code>make</code> — <code>make install</code> process, one for the
+    <code>cmake</code> — <code>make</code> — <code>make install</code> process, or an easyblock to install a Python package
+    (though the latter should be used sparingly on LUMI as most Python installation are better 
+    done in containers).</p>
+</li>
+<li>
+<p>Software-specific easyblocks for more complex software that doesn't use a standard installation 
+    process, with OpenFOAM as an important example. Some of those blocks really just implement a standard
+    installation process that could also be done with a generic easyblock, but provide additional easy-to-use
+    configuration parameters that are then translated by the easyblock into options for the configure step,
+    or generate such options based on so-called dependencies specified in the easyconfig file (other packages
+    that the installation depends upon).</p>
+</li>
+</ol>
+<p>The installation procedure itself is then controlled via configuration parameters defined in the easyconfig
+files. Some of those parameters are implemented in framework, for steps in the installation process that are
+really universal, while others are defined and implemented in the easyblocks.</p>
+<p>The default easyblocks for EasyBuild can be found in the
+<a href="https://github.com/easybuilders/easybuild-easyblocks">github.com/easybuilders/easybuild-easyblocks</a>
+repository, but it is also possible to provide additional site-specific easyblocks or even specify them
+on the <code>eb</code> command line.</p>
+<h3 id="easyconfigs">Easyconfigs<a class="headerlink" href="#easyconfigs" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Easyconfig" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildEasyConfig.png" /></p>
+</figure>
+<p>An easyconfig is then the build recipe for an individual package. Each installation of an easyconfig will
+also create a corresponding environment module (for Lmod on LUMI). </p>
+<p>An easyconfig file is basically also a bit of Python code in a text file, defining a lot of parameters that
+are then used by the easyblock chosen for the installation and by EasyBuild framework to perform the 
+software installation. In principle, one might even put some simple logic in there. This is not recommended
+by the EasyBuild developers, but we do use it on LUMI in some easyconfigs to change the behaviour depending
+on which partition software is being installed in or which version of the software stack is being used in 
+cases where we want the same module name for in all those versions of the LUMI stack or in each of the 
+supported partitions. Each easyconfig is written for a particular easyblock.</p>
+<p>The filename of an easyconfig can be freely chosen unless you want EasyBuild to be able to locate the 
+easyconfig file automatically based on the name, version information and toolchain. This is something
+you want if you want EasyBuild to also automatically install any package that the package you really 
+want to install depends upon.</p>
+<p>EasyBuild comes with a large sets of easyconfigs that can be found in the GitHub repository
+<a href="https://github.com/easybuilders/easybuild-easyconfigs">github.com/easybuilders/easybuild-easyconfigs</a>.
+These are currently of little use on LUMI though for reasons that we will explain later, but many of 
+those can be used when installing software on top of the <a href="https://www.eessi.io/">EESSI stack</a>
+offered by the EuroHPC Federation Platform.</p>
+<h3 id="environment-modules">Environment modules<a class="headerlink" href="#environment-modules" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Environment modules" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildEnvironmentModules.png" /></p>
+</figure>
+<p>An HPC cluster is a multi-user machine. Different users may need different 
+versions of the same application, and each user has their own preferences for
+the environment. Hence there is no "one size fits all" for HPC and mechanisms
+are needed to support the diverse requirements of multiple users on a single machine.
+This is where modules play an important role.
+Often, you'll find multiple versions of a package on an HPC cluster and a way
+is needed to activate the correct package. 
+This is where environment modules come in.
+They are commonly used on HPC systems to enable users to create 
+custom environments and select between multiple versions of applications.
+Note that this also implies that applications on HPC systems are often not
+installed in the regular directories one would expect from the documentation
+of some packages, as that location may not even always support proper multi-version
+installations and as system administrators prefer to have a software stack which is as isolated as
+possible from the system installation to keep the image that has to be loaded
+on the compute nodes small.</p>
+<p>Instead, the module environment will take care of managing environment variables such
+as <code>PATH</code> (to find executables provided by the package) or
+<code>LD_LIBRARY_PATH</code> (to find shared libraries provided by the package) or various environment
+variables that are used by configure tools and other build tools to find a package when
+building on top of it.</p>
+<p>Another use of modules is to configure the programs
+that are being activated. E.g., some packages expect certain additional environment
+variables to be set and modules can often take care of that also.</p>
+<p>A module file is usually a shell-agnostic specification, but exceptions do exist as
+some module systems can also be used to declare a shell function (which would make it
+shell specific) or can run little shell scripts and extract changes of variables from
+it and then implement those changes in a reversible way in the shell.</p>
+<p>Modules can also provide some additional help information about a package.</p>
+<p>There are 3 systems in use for module management.
+The oldest is a C implementation of the commands using module files written in Tcl.
+The development of that system stopped around 2012, with version 3.2.10. 
+This system is supported by the HPE Cray Programming Environment.
+A second system builds upon the C implementation but now uses Tcl also for the
+module command and not only for the module files. It is developed in France at
+the CÉA compute centre. The version numbering was continued from the C implementation,
+starting with version 4.0.0. 
+The third system and currently probably the most popular one is Lmod, a version
+written in Lua with module files also written in Lua. Lmod also supports most
+Tcl module files. It is also supported by HPE Cray, though they tend to be a bit
+slow in following versions. The original developer of Lmod, Robert McLay, retired 
+at the end of August 2023, but TACC, the centre where he worked, is committed to at least
+maintain Lmod though it may not see much new development anymore.</p>
+<p>On LUMI we have chosen to use Lmod. As it is very popular, many users may already be
+familiar with it, though it does make sense to revisit some of the commands that are
+specific for Lmod and differ from those in the two other implementations.</p>
+<p>EasyBuild will generate an environment module file for each easyconfig that is installed.
+That module file also contains some EasyBuild-specific metadata in environment variables
+that start with <code>EBROOT</code> and <code>EBVERSION</code> and that information in turn can be used when
+installing packages on top of it (and especially the <code>EBROOT</code> variables are very useful).</p>
+<details class="note">
+<summary>Links</summary>
+<ul>
+<li><a href="https://sourceforge.net/projects/modules/files/Modules/modules-3.2.10/">Old-style environment modules on SourceForge</a></li>
+<li><a href="http://modules.sourceforge.net/">TCL Environment Modules home page on SourceForge</a> and the
+    <a href="https://github.com/cea-hpc/modules">development on GitHub</a></li>
+<li><a href="https://lmod.readthedocs.io/en/latest/">Lmod documentation</a> and 
+    <a href="https://github.com/TACC/Lmod">Lmod development on GitHub</a></li>
+</ul>
+</details>
+<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Dependencies" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildDependencies1.png" /></p>
+</figure>
+<p>A dependency of a package is another package that is required to build or install the package, or to run 
+the package.</p>
+<p>There exist different kinds of dependencies, and the two main types in the context of EasyBuild are:</p>
+<ol>
+<li>
+<p><strong>Build dependencies</strong> are dependencies that are only required when building or installing the software,
+    but not needed when running the package.</p>
+<p>This includes the various tools that are used to build the software such as CMake, make, the autotools 
+packages, ... Technically speaking we could also add the compilers but those are treated differently 
+in EasyBuild.</p>
+<p>A library that is linked statically can also be a build dependency if that library needs no other
+files or environment variables when running the application. So not all static libraries can be treated
+as build dependencies. <em>E.g., when fontconfig is installed with EasyBuild, it also adds a lot of 
+<code>.conf</code> files in the <code>share</code> subdirectory of its installation that need to be found through an 
+environment variable set at runtime by the module.</em></p>
+</li>
+<li>
+<p>Regular <strong>dependencies</strong>: These dependencies are also required when running the software.</p>
+<p>Any shared library used by a package is an example of such a dependency, as it needs to be found and loaded when
+running the package.</p>
+<p>However, a package may also call executable provided by another package.</p>
+<p>Another example is a Python package that needs a Python interpreter to work (and one of the correct version).</p>
+</li>
+</ol>
+<p>EasyBuild will help you manage <strong>dependency chains</strong>: dependencies of dependencies and so on. When building 
+software, EasyBuild will construct the complete dependency tree and see if all required packages are installed.
+And the environment modules it creates, automatically load the (regular) dependencies given in the easyconfig which will 
+then load in turn their dependencies, and so on.</p>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Dependencies (2)" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildDependencies2.png" /></p>
+</figure>
+<p>EasyBuild also has some special kinds of dependencies.</p>
+<p>An <strong>OS dependency</strong> is a package provided by the OS and not installed through a module.
+EasyBuild will us OS package manager commands to check if the package is installed as otherwise
+the installation might fail. It cannot however install the dependency for you as that is
+something only sysadmins can do (and usually will not do on LUMI, as the OS image has to
+remain small).</p>
+<p><strong>External dependencies</strong> where developed specifically to integrate with the HPE Cray programming
+environment, but can be used on other systems also. They are used for dependencies that are 
+provided through modules that are not created by EasyBuild.
+Those modules lack the EasyBuild-specifi metadata that is included in EasyBuild-generated modules
+(the <code>EBROOT</code> and <code>EBVERSION</code> environment variables discussed before). However, it is possible
+to specify the additional metadata to EasyBuild through a special configuration file, and EasyBuild
+will then generate the corresponding <code>EBROOT</code> environment variable that can then be used inside 
+the easyblocks and easyconfig, e.g., when specifying arguments for <code>cmake</code> or <code>configure</code> as if they
+were regular EasyBuild modules.</p>
+<p>When using <strong>rpath</strong> or <strong>runpath</strong> linking (EasyBuild can help you use the former), packages that
+would otherwise be a regular dependency may effectively become a build dependency as it is not needed
+to load the environment module for that dependency at runtime to find out where the dependency is.
+The loader will find it through the rpath or runpath records embedded in the executable.
+One could consider packages that consist only of libraries that need no further files or so at runtime
+as a special kind of dependencies: <strong>link dependencies</strong>: Their module is needed when linking, but is
+not needed at runtime if rpath or runpath linking is used. Yet this is more complicated to realise 
+than one would think, as when building on to of a package, you would still want the modules for all
+dependencies to be loaded as they may contain other libraries and information that the configuration
+tools or linker may need. Therefore EasyBuild does not yet have a special category for these dependencies
+and they should really be treated as regular dependencies.</p>
+<p>We don't use rpath or runpath linking in the LUMI software stacks (unless the package uses it automatically,
+e.g., OpenFOAM), but rpath linking is used for all packages in the EESSI software stacks.</p>
+<p>One reason to not use rpath linking on LUMI is that it may cause a lot of software to break after a system
+update. This is especially the case with the MPI library, where the older one may need a version of libfabric
+that is no longer on the system or incompatible with other elements in the network stack. The HPC Cray 
+programming environment is organised in such a way that at runtime you get a default version of the 
+MPI library rather than the one you would expect from the module that is loaded, and as that would be a
+newer one after the system update, most CPU-only packages will continue working without recompiling.
+With software that uses ROCm&trade; the situation is often more complicated though as you cannot always swap
+in a newer ROCm&trade; library for an older one.</p>
+<h3 id="bundles-and-extensions">Bundles and extensions<a class="headerlink" href="#bundles-and-extensions" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Bundles and Extensions" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildBundlesExtensions.png" /></p>
+</figure>
+<p>Each module that provides an executable will add a directory to the <code>PATH</code> environment variable.
+Each module that provides a shared library will add a directory to the <code>LD_LIBRARY_PATH</code> environment variable.
+If you would manage a Python installation through EasyBuild (which we do not do as that would kill the Lustre
+filesystem), having a separate module for each Python module would lead to an explosion of modules. 
+And each module file is itself also a small file so Lmod searching an uncached module tree alone can already
+cause stress on a parallel filesystem if the module files are on a parallel filesystem. </p>
+<p>Hence we may want to bundle packages in a single module. EasyBuild has two different mechanisms for this.</p>
+<p>A <strong>Bundle</strong> is one way to install several packages together from a single easyconfig file. An easyconfig 
+installing a Bundle uses the Bundle EasyBlock (or some other ones derived from it), but inside the easyconfig
+file multiple components are fully specified, each of them using their own easyblock (and each component can
+use a different one). A disadvantage is that when installing a component fails, one has to restart from 
+scratch. There is currently no way for EasyBuild to discover which components have already installed 
+successfully to enable a restart from the failed component after making corrections to the easyconfig.
+Hence developing an easyconfig for a large bundle is cumbersome thing which is one of the reasons why we
+use it sparingly on LUMI despite all the advantages.
+(The other reason is that we want to make porting of the standard easyconfigs to LUMI easier so we don't
+want too many changes in the dependency lists.)</p>
+<p>One example of a Bundle on LUMI is the 
+<a href="https://github.com/Lumi-supercomputer/LUMI-SoftwareStack/tree/main/easybuild/easyconfigs/b/buildtools"><code>buildtools</code> module</a>
+which provides a lot of commands often used when
+building software. It is a standard build dependency in most of the easyconfigs that we use on LUMI and guarantees
+a more reproducible build environment after a system update, without having to figure out which easyconfig
+needs which build tools and loading modules for them separately.
+Note that the commands included in the <code>buildtools</code> bundle also appear in the extensions list in Lmod, but
+that is not managed by EasyBuild. Instead the Lmod commands needed for that in the module file are added 
+manually in the easyconfig as it has a parameter to specify commands that have to be added to the module file.</p>
+<p>An <strong>extension</strong> is software that can be installed on top of other software. 
+Typical examples are Python packages, Perl modules or R libraries.
+When these are installed together with the "mother" package, we call them extensions and 
+EasyBuild treats them in a special way. One can instruct EasyBuild to declare those 
+packages/modules/libraries as extensions in the module file so that <code>module spider</code> can 
+find them and tell you which package to load. When installing an EasyConfig that defines
+extensions, it is possible to first install the easyconfig without extensions, create a module,
+and then in a subsequent build add the extensions to the already existing module. Also, when 
+the installation of an extension fails, it is possible to restart the installation of the
+extensions from the failed extension as EasyBuild knows for some popular types of extensions
+how to test if the extension is already installed.</p>
+<p>An example on LUMI of extensions is in our user-installable
+<a href="https://github.com/Lumi-supercomputer/LUMI-EasyBuild-contrib/tree/main/easybuild/easyconfigs/r/R">R package</a>.
+We install R with a number of popular extensions for parallel computing, also to ensure that those for 
+distributed computing use the proper MPI library for optimal performance.</p>
+<p>And a very complicated example of an easyconfig where we use both the Bundle and extensions functionality,
+are recent versions of our <a href="https://github.com/Lumi-supercomputer/LUMI-SoftwareStack/tree/main/easybuild/easyconfigs/e/EasyBuild">EasyBuild easyconfigs</a>.
+Together with EasyBuild we install some other software that is missing on LUMI, but there are also
+additional Python packages that EasyBuild can use to produce nicer-looking output (like the progress)
+bar, and we install those as much as possible as extensions as their installation process is easier to
+debug (as we can restart as explained).</p>
+<h3 id="toolchains">Toolchains<a class="headerlink" href="#toolchains" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Toolchain (1)" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildToolchain1.png" /></p>
+</figure>
+<p>One of the most important concepts in EasyBuild is that of a toolchain. A full toolchain consists of a
+C/C++/Fortran compiler, an MPI library and some popular math libraries with standardised APIs such as
+BLAS, Lapack, ScaLAPACK and maybe a FFT library.</p>
+<p>When building an application, one should not mix different compilers or different library implementations
+of those libraries to build a single executable as that can lead to issues at linktime or runtime.
+Mixing compilers is dangerous if advanced features that require runtime library support are used,
+as those runtimes may be incompatible. One important example is OpenMP: Though OpenMP is fully standardised
+at the source code level, how it is implemented is a choice that each compiler vendor makes, and 
+different implementations have different and incompatible runtime libraries. Another case where issues can
+occur is with the use of pre-compiled module files in Fortran. These are incompatible between compilers and 
+may even be incompatible between different versions of the same compiler. (E.g., the Cray Fortran compiler 
+has broken compatibility in the past.)</p>
+<p>The same holds for libraries that provide a standard API but are not standardised at the ABI (Application
+Binary Interface) level. If you mix multiple such libraries, they will contain common symbols and the linker
+will not know when to use which one.</p>
+<p>Technically speaking, the toolchain is also a dependency (and in fact, there should be an EasyBuild-generated
+module for all but one special toolchain, see later). However, it is treated differently by EasyBuild and you
+do not need to specify it with the other dependencies. It gets its own parameter in the easyconfig and 
+each package module will also load the module of the toolchain it was built with.</p>
+<p>Toolchains can be organised in a hierarchy. 
+A <strong>full toolchain</strong> consists of C/C++/Fortran compilers, an MPI library and libraries for BLAS and LAPACK and
+possibly some others (such as FFT). A full toolchain can have a <strong>subtoolchain</strong> which can be a compiler only,
+or compiler with MPI libraries, or compiler with some linear algebra libraries. And in fact, a subtoolchain
+can have subtoolchains itself, but we will come back to this later when we discuss the various toolchains
+offered on LUMI and through EESSI.</p>
+<p>There is one special toolchain that does not have a corresponding module: the <strong>SYSTEM toolchain</strong>, 
+using the compilers from the operating system. It is used to bootstrap the whole process, though on
+LUMI we use it for some software also. Unfortunately this toolchain also treats dependencies differently,
+as EasyBuild will not automatically detect dependencies of dependencies and is therefore a bit harder to use. 
+The EasyBuild designers had in mind that this compiler would only be used to bootstrap an EasyBuild-managed
+software stack, but on LUMI it is used for a bit more as it offers a relatively easy way to compile some
+packages also for the CrayEnv stack and do this in a way that they interact as little as possible
+with other software.</p>
+<p>You can safely load packages of one full toolchain and its subtoolchains together, but you should not
+mix packages compiled with different full toolchains or its subtoolchains. 
+Usually, you can also load packages built with the system toolchain together with those of one 
+full toolchain and its subtoolchains.</p>
+<figure style="border: 1px solid #000">
+<p><img alt="Terminology: Toolchain (2)" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildToolchain2.png" /></p>
+</figure>
+<p>The EasyBuild common toolchains are the two full toolchains and their subtoolchains that for which most
+easyconfigs are available in the EasyBuild distribution. They reflect very much the origin of EasyBuild:
+Intel-compatible x86 systems without GPUs.</p>
+<pre class="mermaid"><code>graph LR
+  A[GCCcore] --&gt; |binutils| B[GCC];
+  A --&gt; |binutils| C[intel-compilers];
+  B --&gt; |OpenMPI| E[gompi];
+  C --&gt; |impi| F[iimpi];
+  B --&gt; |"FlexiBLAS (incl. LAPACK) + FFTW"| D[gfbf];
+  D --&gt; |OpenMPI + ScaLAPACK| G[foss];
+  E --&gt; |FlexiBLAS + FFTW + ScaLAPACK| G[foss];
+  F --&gt; |imkl| Z[intel];
+  C --&gt; |imkl| H[iimkl];
+  H --&gt; |impi| Z[intel];</code></pre>
+<p>Both toolchains start at a common basis, <code>GCCcore</code> which is a compiler that cannot function without
+loading another module, <code>binutils</code>, but is used to compile a lot of OS-level libraries that do not
+use OpenMP or don't provide Fortran interfaces and don't use any special linear algebra libraries
+or MPI or other communication library and are compatible with any Linux-based compiler.
+As such, a site needs to compile those packages only once for each architecture rather than for each
+toolchain which they may use.</p>
+<p>On top of that common core, there are two full toolchains part of the common toolchains:</p>
+<ul>
+<li>
+<p>The <code>foss</code> toolchain consists entirely of open source software (with foss standing for
+    Free and Open Source Software). It provides:</p>
+<ul>
+<li>
+<p>The <a href="https://gcc.gnu.org/">GNU Compiler Collection</a> (or at least, the C, C++ and Fortran
+    compilers from that family)</p>
+</li>
+<li>
+<p><a href="https://www.open-mpi.org/">Open MPI</a> as the MPI library</p>
+</li>
+<li>
+<p><a href="https://www.mpi-magdeburg.mpg.de/projects/flexiblas">FlexiBLAS</a> which is a linear algebra
+    library offering BLAS and LAPACK and allows to switch between different libraries under the
+    hood. The default is to use <a href="http://www.openblas.net/">OpenBLAS</a> and 
+    <a href="http://netlib.org/lapack">LAPACK</a> as the backend.</p>
+</li>
+<li>
+<p><a href="http://netlib.org/scalapack">ScaLAPACK</a></p>
+</li>
+<li>
+<p><a href="http://fftw.org/">FFTW</a></p>
+</li>
+</ul>
+<p>Its subtoolchains are:</p>
+<ul>
+<li>
+<p><code>GCC</code>, only providing the compilers (essentially just loading <code>GCCcore</code> and <code>binutils</code>)</p>
+</li>
+<li>
+<p><code>gfbf</code>, building on top of <code>GCC</code> and adding the shared memory math libraries: FlexiBLAS and FFTW</p>
+</li>
+<li>
+<p><code>gompi</code>, building on top of <code>GCC</code> and adding the Open MPI libraries</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The <code>intel</code> toolchain consists of the Intel compilers and libraries, i.e.,</p>
+<ul>
+<li>
+<p>GCC in <code>GCCcore</code> and binutils as the basis,</p>
+</li>
+<li>
+<p>the <a href="https://software.intel.com/en-us/intel-compilers">Intel C/C++/Fortran compilers</a>,</p>
+</li>
+<li>
+<p><a href="https://software.intel.com/en-us/intel-mpi-library">Intel MPI</a>
+    as the MPI implementation,</p>
+</li>
+<li>
+<p>the <a href="https://software.intel.com/en-us/intel-mkl">Intel Match Kernel Library (MKL)</a>
+    for BLAS, LAPACK and FFT functionality.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Both of these toolchains have issues on LUMI which is why we don't offer them in the LUST-provided stacks.
+The issue with <code>foss</code> is that getting Open MPI to run on LUMI was simply impossible in the early years of 
+LUMI and is still hard, with often poor performance, and especially hard for GPU. Open MPI made some 
+technical choices and has some library preferences that make it hard to work on Slingshot.
+Intel compilers and their libraries have a history of breaking performance on AMD CPUs, often refusing to
+detect them correctly (even if they are just the equivalent of an Intel processor) and instead falling back
+to a very badly optimised code path basically designed for the Pentium 4. And Intel MPI, though it should
+work in theory, has also had its issues on LUMI with some versions working and others failing. Using the
+ABI compatibility between various MPICH-based implementations, it might be possible to switch it out with
+Cray MPI. We don't have a license though for a version of Cray MPICH that is fully tested with the Intel
+compilers.</p>
+<p>As you can note, the two common toolchains are purely CPU based, and one can only be used on x86-compatible
+hardware. This is for historical reasons as that was the hardware that was available when the development
+of EasyBuild was started and as that were the two most popular compiler families in those days.</p>
+<p>EasyBuild does also support GPUs though, though the support for ROCm&trade; is in the very early stages.
+There are already plenty of easyconfigs available for software that uses CUDA. Some of that software simply
+uses the <code>foss</code> toolchain with a CUDA module loaded on top of it, while other packages (e.g., VASP) use 
+another toolchain, e.g., <code>NVHPC</code> based on the NVIDIA compilers.</p>
+<p>As non-Intel processors are gaining market share, EasyBuild is also paying increasing attention to 
+the LLVM based compilers. After all, many CPU vendors have given up their own compiler development in
+favour of contributing to the LLVM compiler family. Fortran support has also greatly improved with the
+new generation Fortran compiler that became the standard Fortran compiler in LLVM 20 and now already
+often beats gfortran in performance of the generated code. So EasyBuild did introduce more toolchains
+based upon LLVM, both with Open MPI and with MPICH (to better support systems as LUMI),
+and easyconfigs are starting to appear. E.g., some recent GROMACS versions are already available
+in two LLVM-based toolchains.</p>
+<p>In all, EasyBuild nowadays includes over 100 toolchains implemented in EasyBuild framework, but some
+of those are really contributed by one site for their particular needs and some of them are not
+very well maintained or tested in recent EasyBuild versions either. So consider this more as a 
+marketing number.</p>
+<h2 id="toolchains-available-on-lumi">Toolchains available on LUMI<a class="headerlink" href="#toolchains-available-on-lumi" title="Permanent link">&para;</a></h2>
+<h3 id="toolchains-in-the-lumi-software-stacks">Toolchains in the LUMI software stacks<a class="headerlink" href="#toolchains-in-the-lumi-software-stacks" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Toolchains in the LUMI stacks" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildToolchainLUMIStack.png" /></p>
+</figure>
+<p>The LUMI software stacks build upon the HPE Cray Programming Environments,
+but we do provide other EasyBuild-generated modules to load the toolchains.
+These modules also better guarantee that the correct version of each module
+for the toolchain version is loaded and work around some issues in the 
+HPE Cray PE or bugs in specific versions.</p>
+<p>The LUMI stack toolchains are not hierarchical, so they have no subtoolchains.
+Each of them is a full toolchain, consisting of the compiler family, the Cray
+MPI libraries and Cray LibSci for the linear algebra.</p>
+<p>The table below shows the name of the HPE Cray PE programming environment module
+and the corresponding toolchain module in the LUMI stack:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">HPE Cray PE</th>
+<th style="text-align: left;">LUMI toolchain</th>
+<th style="text-align: left;">What?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>PrgEnv-cray</code></td>
+<td style="text-align: left;"><code>cpeCray</code></td>
+<td style="text-align: left;">Cray Compiling Environment</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PrgEnv-gnu</code></td>
+<td style="text-align: left;"><code>cpeGNU</code></td>
+<td style="text-align: left;">GNU C/C++ and Fortran</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PrgEnv-aocc</code></td>
+<td style="text-align: left;"><code>cpeAOCC</code></td>
+<td style="text-align: left;">AMD CPU compilers (login nodes and LUMI-C only)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PrgEnv-amd</code></td>
+<td style="text-align: left;"><code>cpeAMD</code></td>
+<td style="text-align: left;">AMD ROCm GPU compilers (LUMI-G only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toolchains-in-eessi">Toolchains in EESSI<a class="headerlink" href="#toolchains-in-eessi" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="Toolchains in EESSI (1)" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildToolchainEESSI1.png" /></p>
+</figure>
+<figure style="border: 1px solid #000">
+<p><img alt="Toolchains in EESSI (2)" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildToolchainEESSI2.png" /></p>
+</figure>
+<p>Though EESSI is based on EasyBuild and easyconfigs available in EasyBuild, it cannot support
+all software that is available through EasyBuild. EESSI is a binary distribution and it can
+only provide software for which the binaries can be freely distributed. Likewise, as EESSI 
+cannot check who is running the software, the software has to be free for everybody and
+not just for academic use. Software with restrictions on binary distributions, or with 
+license fees, or even just requiring a mandatory registration of the user, cannot be
+distributed as part of EESSI.</p>
+<p>We can see this in the toolchains also. EESSI cannot provide the Intel-based common
+toolchain. Almost all software in EESSI at the time of writing (October 2026) is built
+with <code>foss</code> and its subtoolchains, though a toolchain based on the LLVM compilers with
+Open MPI is also already set up.</p>
+<pre class="mermaid"><code>graph LR
+  A[GCCcore] --&gt; |binutils| B[GCC];
+  B --&gt; |"FlexiBLAS (incl. LAPACK) + FFTW"| C[gfbf];
+  B --&gt; |OpenMPI| D[gompi];
+  C --&gt; |OpenMPI + ScaLAPACK| E[foss];
+  D --&gt; |FlexiBLAS + FFTW + ScaLAPACK| E[foss];
+  A --&gt; |binutils + LLVM| F[llvm-compilers];
+  F --&gt; |"FlexiBLAS (incl. LAPACK) + FFTW"| G[lfbf];
+  F --&gt; |OpenMPI| H[lompi];
+  G --&gt; |OpenMPI + ScaLAPACK| I[lfoss];
+  H --&gt; |FlexiBLAS + FFTW + ScaLAPACK| I[lfoss];
+  A --&gt; |binutils + ROCm-LLVM| J[rocm-compilers];
+  J --&gt; |OpenMPI| L[rompi];</code></pre>
+<!--
+<pre class="mermaid"><code>graph LR
+  A[GCCcore] --&gt; |binutils| B[GCC];
+  B --&gt; |"FlexiBLAS (incl. LAPACK) + FFTW"| C[gfbf];
+  B --&gt; |OpenMPI| D[gompi];
+  C --&gt; |OpenMPI + ScaLAPACK| E[foss];
+  D --&gt; |FlexiBLAS + FFTW + ScaLAPACK| E[foss];
+  A --&gt; |binutils + LLVM| F[llvm-compilers];
+  F --&gt; |"FlexiBLAS (incl. LAPACK) + FFTW"| G[lfbf];
+  F --&gt; |OpenMPI| H[lompi];
+  G --&gt; |OpenMPI + ScaLAPACK| I[lfoss];
+  H --&gt; |FlexiBLAS + FFTW + ScaLAPACK| I[lfoss];
+  A --&gt; |binutils + ROCm-LLVM| J[rocm-compilers];
+  J --&gt; |"FlexiBLAS (incl. LAPACK) + FFTW"| K[rfbf]
+  J --&gt; |OpenMPI| L[rompi];
+  K --&gt; |OpenMPI + ScaLAPACK| M[rfoss];
+  L --&gt; |FlexiBLAS + FFTW + ScaLAPACK| M[rfoss];</code></pre>
+-->
+<p>For now, EESSI is still very much focused on Open MPI, which is a problem on LUMI and the reason
+why as of today (late October 2026) they still have to announce that performance on multiple nodes
+on LUMI is subpar.</p>
+<p>At the time of writing (October 2026), ROCm&trade; support was still in full development. Though EasyBuild
+did already define a <code>rfoss</code> toolchain based on the ROCm&trade; compiler, there were no easyconfigs 
+available to already install that toolchain apart from the subtoolchains <code>rocm-compilers</code> and
+<code>rompi</code>, the latter providing the ROCm&trade; compilers and Open MPI. There will also be a
+<code>rfbf</code> toolchain combining the ROCm&trade; compilers with FlexiBLAS and FFTW, but these easyconfigs
+are also still missing.</p>
+<p>At the time of writing, no NVIDIA toolchains were used in EESSI. All CUDA software used the <code>foss</code> 
+toolchain with the CUDA module loaded on top of it, which is enough to build software that does
+not use OpenMP offload or OpenACC. 
+On LUMI, the CUDA software is not included as the LUMI-D GPUs are not
+really meant to be used for compute and only for visualisation tasks and some other interactive
+work.</p>
+<h3 id="what-about-lumi-ai">What about LUMI-AI?<a class="headerlink" href="#what-about-lumi-ai" title="Permanent link">&para;</a></h3>
+<figure style="border: 1px solid #000">
+<p><img alt="LUMI-AI" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildToolchainLUMIAI.png" /></p>
+</figure>
+<p>LUMI-AI is a supercomputer based on AMD CPUs (Zen6 generation) and GPUs (MI430x), so just as LUMI,
+the main programming environment for the GPU nodes is ROCm&trade;. 
+However, the machine is delivered by Bull and not by HPE. This implies that the HPE Cray
+Programming Environment will not be available (and it wouldn't on an HPE machine either
+as it is end-of-life) nor its successor HPE SUPS, the HPE Supercomputer Programming Software
+distribution. 
+LUMI-AI also uses a different interconnect, BXI3, and at the time of writing (October 2026) it
+is not yet clear what communication libraries it will use (though certainly not UCX).
+The proprietary network implies that we will again depend very much on a vendor-specific
+MPI implementation. Bull bases its MPI on Open MPI rather than MPICH though.</p>
+<p>As it may be easier to integrate EESSI in a system that uses Open MPI as its primary implementation,
+we currently expect that we will be offering the EESSI toolchains for users who want to use the 
+regular EasyBuild easyconfigs (after injecting a specially optimised Open MPI in EESSI on LUMI-AI).
+However, we also expect to develop our own toolchain variants based on the AOCC (CPU) and AMD ROCm&trade;
+compilers (GPU). In these developments, we will aim for a simpler setup of the linear algebra 
+libraries, skipping FlexiBLAS and instead use one choice, likely AMD AOCL (so the BLIS library for
+BLAS) as that is what we can get most vendor support for. We also expect to install ROCm&trade;
+from binaries rather tan building from sources so that we can support new versions quicker
+(at least if the driver permits) and so that we can offer ROCm&trade; as a single module rather than
+the zoo of modules that EasyBuild seems to be moving to.</p>
+<p>There is a small chance that the Intel compilers will also be available, but then likely using
+Open MPI and with some compromises and little support for performance issues. We also may not
+develop an EasyBuild toolchain for it as there will certainly be higher priorities and as we 
+will focus first on things for which we can get proper vendor support.</p>
+<h2 id="easyconfig-names-and-module-names">Easyconfig names and module names<a class="headerlink" href="#easyconfig-names-and-module-names" title="Permanent link">&para;</a></h2>
+<figure style="border: 1px solid #000">
+<p><img alt="easyconfig names and module names" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyConfigModuleNames.png" /></p>
+</figure>
+<p>We have already said that if we want EasyBuild to find an easyconfig when automatically
+installing dependencies of a package, we need to ensure that the naming of the easyconfig
+follows certain rules. We know have all the bits and pieces in place to explain that naming 
+convention.</p>
+<p>Software in EasyBuild is characterised by up to 4 elements:</p>
+<ol>
+<li>
+<p>the name of the package</p>
+</li>
+<li>
+<p>the version of the package</p>
+</li>
+<li>
+<p>a version suffix providing additional information if there are multiple configurations of
+    the same package,</p>
+</li>
+<li>
+<p>and the toolchain used to build the package (which itself has a name and version).</p>
+</li>
+</ol>
+<p>Each also corresponds to a parameter in the easyconfig file.</p>
+<p>We find these elements back in the name of a package. Consider, e.g., that we want to write
+an easyconfig to install GROMACS 2024.3 in a configuration for CPU-only, using PLUMED 2.9.4 but
+not including the Python support, and build it with <code>cpeGNU/25.03</code>.
+The name for the easyconfig could then be
+<code>GROMACS-2024.3-cpeGNU-25.03-PLUMED-2.9.4-noPython-CPU.eb</code>.</p>
+<ol>
+<li>The first part of the name, <code>GROMACS</code>, is the name of the package, specified by the
+    <code>name</code> parameter in the easyconfig, and is after installation also the name of the
+    module.</li>
+<li>The second part, <code>2024.3</code>, is the version of GROMACS and specified by the
+    <code>version</code> parameter in the easyconfig.</li>
+<li>
+<p>The next part, <code>cpeGNU-25.03</code> is the name and version of the toolchain,
+    specified by the <code>toolchain</code> parameter in the easyconfig. The version of the
+    toolchain must always correspond to the version of the LUMI stack. So this is
+    an easyconfig for installation in <code>LUMI/25.03</code>.</p>
+<p>This part is not present for the SYSTEM toolchain</p>
+</li>
+<li>
+<p>The final part, <code>-PLUMED-2.9.4-noPython-CPU</code>, is the version suffix and used to provide
+    additional information and distinguish different builds with different options
+    of the same package. It is specified in the <code>version_suffix</code> parameter of the
+    easyconfig.</p>
+<p>This part is optional.</p>
+</li>
+</ol>
+<p>The version, toolchain + toolchain version and version suffix together also combine
+to the version of the module that will be generated during the installation process.
+Hence this easyconfig file will generate the module 
+<code>GROMACS/2024.3-cpeGNU-25.03-PLUMED-2.9.4-noPython-CPU</code>.</p>
+<h2 id="where-does-easybuild-write-when-installing-software">Where does EasyBuild write when installing software?<a class="headerlink" href="#where-does-easybuild-write-when-installing-software" title="Permanent link">&para;</a></h2>
+<figure style="border: 1px solid #000">
+<p><img alt="Where does EasyBuild write?" loading="lazy" src="https://462000265.lumidata.eu/easybuild-20270303/img/LUMI-UD-20270303-EasyBuild/EasyBuildWhereWrite.png" /></p>
+</figure>
+<ul>
+<li>
+<p>Software is installed in the directory with the software installation, in the LUMI stacks set by
+    the environment variable <code>EASYBUILD_INSTALLPATH_SOFTWARE</code>.</p>
+<p>A package is installed in a subdirectory of that directory with the name <code>&lt;name&gt;/&lt;version&gt;-&lt;toolchain+version&gt;-&lt;version_suffix&gt;</code>,
+e.g., <code>GROMACS/2024.3-cpeGNU-25.03-PLUMED-2.9.4-noPython-CPU</code>.</p>
+</li>
+<li>
+<p>The module file is installed in the module files directory, in the LUMI stacks set by
+    the environment variable <code>EASYBUILD_INSTALLPATH_MODULES</code>.</p>
+<p>The precise location and name in this directory depends on the naming scheme chosen and is different
+for the LUMI stacks and for EESSI (which in the future may even support multiple naming schemes).
+On LUMI, the module file is stored as <code>&lt;name&gt;/&lt;version&gt;-&lt;toolchain+version&gt;-&lt;version_suffix&gt;.lua</code>, 
+e.g., <code>GROMACS/2024.3-cpeGNU-25.03-PLUMED-2.9.4-noPython-CPU.lua</code></p>
+</li>
+<li>
+<p>Downloaded sources are saved in the sources directory. It is the first directory in a path of
+    directories that will all be searched for sources, in the LUMI stacks set by 
+    the environment variable <code>EASYBUILD_SOURCEPATH</code> (with a <code>:</code> as separator just as the <code>PATH</code> 
+    environment variable for executables).</p>
+<p>The downloaded files for a package are stored in the subdirectory
+<code>&lt;lowercase_first_letter_of_name&gt;/&lt;name&gt;</code>, e.g., <code>g/GROMACS</code>.</p>
+</li>
+<li>
+<p>EasyBuild will also save a processed copy of the easyconfig in a new repository.
+    That file has the correct name based on the name, version, toolchain+version and version suffix
+    used for the package, and may have other edits also if some of the <code>-try-*</code> flags of EasyBuild 
+    where used to experiment with a different toolchain or to try to change some versions of dependencies.</p>
+<p>At the bottom of that file, EasyBuild will also add another variable, <code>buildstats</code>, with information
+about the build. This parameter will be ignored if you use EasyBuild to install the package 
+again.</p>
+<p>In the LUMI stacks, the location of that repository is given by the environment variable
+<code>EASYBUILD_REPOSITORYPATH</code>.</p>
+<p>The processed easyconfig is stored as <code>&lt;name&gt;/&lt;name&gt;-&lt;version&gt;-&lt;toolchain+version&gt;-&lt;version_suffix&gt;.eb</code>,
+e.g., <code>GROMACS/GROMACS-2024.3-cpeGNU-25.03-PLUMED-2.9.4-noPython-CPU.eb</code>.</p>
+</li>
+<li>
+<p>Within the installation directory of a package, you will also find a subdirectory <code>easybuild</code>.
+    That subdirectory contains a log file of the installation, another copy of the processed and correctly
+    name easyconfig but this time without the additional <code>buildstats</code> parameter, and some other files to 
+    enhance reproducibility, including a copy of the easyblock that was used as those may change behaviour
+    across different versions of EasyBuild.1</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+
+
+
+
+<footer class="md-footer">
+
+  
+
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      
+    <div class="md-footer-copyright">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        <img alt="Creative Commons License" 
+             style="border-width:0" 
+             src="https://i.creativecommons.org/l/by/4.0/80x15.png"
+        />
+      </a>
+      This work is licensed under a&nbsp;
+      <a rel="license" 
+         href="http://creativecommons.org/licenses/by/4.0/"
+      >
+        Creative Commons Attribution 4.0 International License
+      </a>
+    </div>
+
+      
+      
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/channel/UCb31KOJ6Wqu0sRpIRi_k8Mw" target="_blank" rel="noopener" title="LUMI on YouTube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/company/lumi-supercomputer" target="_blank" rel="noopener" title="LUMI on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/LUMIhpc" target="_blank" rel="noopener" title="LUMI on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow", "content.code.annotate", "content.code.copy", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
